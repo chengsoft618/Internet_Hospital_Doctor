@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/include_user_center_doctor_info_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg_user_center"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/fragment_user_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:visibility="visible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fragment_user_center_doctor_photo_iv"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_below="@+id/fragment_user_bar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/bg_remark_photo_attending_doctor"
+        app:civ_border_color="@color/color_101a1a1a"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/fragment_user_center_doctor_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_user_bar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@+id/fragment_user_center_doctor_photo_iv"
+        android:text="@string/user_welcome"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:id="@+id/fragment_user_center_doctor_account_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_user_center_doctor_name_tv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/fragment_user_center_doctor_photo_iv"
+        android:text="@string/user_account"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_14" />
+
+    <ImageView
+        android:id="@+id/fg_user_center_doctor_real_state_iv"
+        android:layout_width="91dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/fragment_user_center_doctor_account_tv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/fragment_user_center_doctor_photo_iv"
+        android:src="@mipmap/ic_user_center_no_verified" />
+
+    <TextView
+        android:id="@+id/fragment_user_center_suggest_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_user_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_solid_035cc0_radius_45"
+        android:paddingLeft="10dp"
+        android:paddingTop="4dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="4dp"
+        android:text="@string/user_suggest"
+        android:textColor="@color/text_color_white_aedeff"
+        android:textSize="@dimen/font_size_14" />
+</RelativeLayout>

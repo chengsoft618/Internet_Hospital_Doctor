@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_solid_666666_patient_point" />
+
+        <TextView
+            android:id="@+id/item_dc_duty_paient_disease_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|left"
+            android:text="疾病诊断："
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_dc_duty_paient_disease_project_content"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="慢性阻塞性肺疾病反反复复发烧佛哦吼粉红佛 off 放开那就是对方 i 哦肌肤防腐剂哦素"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_dc_duty_paient_disease_project_content_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="（图）"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_dc_duty_paient_disease_project_content_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="（语音）"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:background="@drawable/bg_solid_666666_patient_point" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:gravity="center|left"-->
+    <!--            android:text="病情摘要："-->
+    <!--            android:textColor="@color/color_666666"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:gravity="center|left"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="慢性阻塞性肺疾病"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14"-->
+    <!--            android:visibility="gone" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（图）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14"-->
+    <!--            android:visibility="visible" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（语音）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14"-->
+    <!--            android:visibility="visible" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:background="@drawable/bg_solid_666666_patient_point" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="@dimen/dp_10"-->
+    <!--            android:gravity="center|left"-->
+    <!--            android:text="检查检验："-->
+    <!--            android:textColor="@color/color_666666"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:gravity="center|left"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="慢性阻塞性肺疾病"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（图）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（语音）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_marginBottom="30dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:visibility="visible">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:background="@drawable/bg_solid_666666_patient_point" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="@dimen/dp_10"-->
+    <!--            android:gravity="center|left"-->
+    <!--            android:text="用药及处方："-->
+    <!--            android:textColor="@color/color_666666"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="慢性阻塞性肺疾病"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（图）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14"-->
+    <!--            android:visibility="gone" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（语音）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14"-->
+    <!--            android:visibility="gone" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginBottom="@dimen/dp_40"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:visibility="gone">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（图）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="（语音）"-->
+    <!--            android:textColor="@color/color_1a1a1a"-->
+    <!--            android:textSize="@dimen/font_size_14" />-->
+    <!--    </LinearLayout>-->
+
+</LinearLayout>

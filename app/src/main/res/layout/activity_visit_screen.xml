@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="left_btn|title"
+        app:titleText="@string/visit_select_screen" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:text="@string/screen_time"
+        android:textColor="@color/color_36a3f0"
+        android:textSize="@dimen/font_size_16" />
+
+    <View style="@style/horizontal_line_light_1" />
+
+    <RadioGroup
+        android:id="@+id/activity_visit_screen_time_rg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/activity_visit_screen_two_month_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/screen_two_month"
+            android:textColor="@color/text_color_36a3f0_666666"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/activity_visit_screen_three_month_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/screen_three_month"
+            android:textColor="@color/text_color_36a3f0_666666"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/activity_visit_screen_half_year_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/screen_half_year"
+            android:textColor="@color/text_color_36a3f0_666666"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/activity_visit_screen_one_year_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/screen_a_year"
+            android:textColor="@color/text_color_36a3f0_666666"
+            android:textSize="@dimen/font_size_16" />
+    </RadioGroup>
+
+    <View style="@style/horizontal_line_light_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_visit_screen_start_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:hint="@string/screen_start_time"
+            android:textColor="@color/color_666666"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/font_size_18" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/screen_arrive"
+            android:textColor="@color/color_36a3f0"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/activity_visit_screen_end_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:hint="@string/screen_end_time"
+            android:textColor="@color/color_666666"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_line_light_1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#edecec" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/screen_doctor"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioGroup
+            android:id="@+id/activity_visit_screen_doctor_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/activity_visit_screen_no_doctor_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:text="@string/screen_no_doctor"
+                android:textColor="@color/text_color_333333_36a3f0"
+                android:textSize="@dimen/font_size_16" />
+
+            <RadioButton
+                android:id="@+id/activity_visit_screen_all_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/consultation_manage_all"
+                android:textColor="@color/text_color_333333_36a3f0"
+                android:textSize="@dimen/font_size_16" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/activity_visit_screen_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_visit_screen_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/activity_visit_screen_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="50dp"
+            android:text="@string/visit_screen_no_data"
+            android:textColor="@color/color_bbbbbb"
+            android:textSize="@dimen/font_size_18"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/activity_visit_screen_reset"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+
+        <Button
+            android:id="@+id/activity_visit_screen_submit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+</LinearLayout>

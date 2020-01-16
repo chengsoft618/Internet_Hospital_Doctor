@@ -1,0 +1,33 @@
+@startuml
+start
+:LoginActivity#activeAccount;
+:UserInfoManager#activeAccount#AccountActiveRequester;
+if(activeAccount is success)then(UserResultInfo)
+        :UserInfoResult-->UserInfo;
+        :UserInfoManager#saveUserInfo();
+        if(save UserInfo success)then(yes)
+            :HTTPDNSManager#insertIpData;
+            partition  insertIpData {
+                partition setPesInfo {
+                    partition getHttpDnsUrl {
+                        :url = HTTPDNSManager#getHttpDnsUrl();
+                        :httpDnsIp = HTTPDNSManager#getLongDnsIp();
+                        if(getLongDnsIp is success)then(url&httpDnsIp)
+                           :DcpManager#setPesInfo();
+                           if(setPesInfo success)then (yes)
+
+                           else
+                           end
+                           endif
+                        else(no)
+                        endif
+                    }
+                }
+            }
+        else (no)
+        endif
+    else
+    endif
+end
+@enduml
+

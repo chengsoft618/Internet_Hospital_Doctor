@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.consult.consultant.AdvanceActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_advance_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn|right_btn"
+        doctor:rightBtnClick="rightClick"
+        doctor:rightBtnImage="@drawable/bg_btn_right_consult"
+        doctor:titleText="@string/advance" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/activity_advance_view">
+
+            <LinearLayout
+                android:id="@+id/activity_advance_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/activity_advance_view"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_c8c7cc" />
+
+            <TextView
+                android:id="@+id/activity_advance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_btn_blue"
+                android:gravity="center"
+                android:text="@string/determine_advance"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_18" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

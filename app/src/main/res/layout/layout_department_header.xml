@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shading_diagonal_repeat"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/layout_select_doctor_header_department_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_app_main_color"
+            android:textSize="@dimen/font_size_18" />
+
+        <TextView
+            android:id="@+id/layout_select_doctor_header_department_name_en_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="19dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_select_doctor_header_doctor_type_ll"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/color_dcdcdc" />
+
+    <cn.longmaster.hospital.doctor.view.IconView
+        android:id="@+id/layout_select_doctor_header_empty_icv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="40dp"
+        android:paddingBottom="30dp"
+        android:visibility="gone"
+        doctor:bottomText="@string/select_doctor_no_doctor"
+        doctor:bottomTextColor="@color/color_999999"
+        doctor:bottomTextSize="@dimen/font_size_16"
+        doctor:textPaddingTop="10dp"
+        doctor:topIconImage="@drawable/bg_no_content" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/include_home_page_title_open_fl"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/include_home_page_title_open_msb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <TextView
+        android:id="@+id/include_home_page_title_open_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_below="@+id/include_home_page_title_open_msb"
+        android:background="@color/color_049eff"
+        android:gravity="center"
+        android:text="39互联网医院"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/include_home_page_title_open_bg_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

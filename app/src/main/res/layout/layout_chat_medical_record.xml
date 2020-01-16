@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_medical_record_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/bg_solid_ffffff_radius_10"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/chat_medical_records"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_e5e5e5" />
+
+    <TextView
+        android:id="@+id/chat_medical_record_appointment_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14"
+        tools:text="就诊编号:012531" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:id="@+id/chat_medical_record_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14"
+            tools:text="李二狗" />
+
+        <TextView
+            android:id="@+id/chat_medical_record_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14"
+            tools:text="男" />
+
+        <TextView
+            android:id="@+id/chat_medical_record_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14"
+            tools:text="40岁" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chat_medical_record_superior_expert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="15dp"
+        android:singleLine="@bool/abc_config_actionMenuItemAllCaps"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14"
+        tools:text="上级专家:张全蛋" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/chat_medical_record_superior_expert_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14"
+            tools:text="北京大学第一医院" />
+
+        <TextView
+            android:id="@+id/chat_medical_record_superior_expert_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14"
+            tools:text="心内科" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_e5e5e5" />
+
+    <LinearLayout
+        android:id="@+id/chat_medical_record_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/chat_medical_record_admissions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/chat_admissions"
+            android:textColor="@color/text_color_45aef8_2b91d9"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-15dp"
+            android:background="@color/color_e5e5e5" />
+
+        <TextView
+            android:id="@+id/chat_medical_record_refuse_admissions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/chat_refuse_admissions"
+            android:textColor="@color/text_color_45aef8_2b91d9"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+</LinearLayout>

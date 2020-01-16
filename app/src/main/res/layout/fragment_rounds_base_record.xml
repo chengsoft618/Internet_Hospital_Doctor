@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/fragment_rounds_base_record_medical_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/rounds_medical_id"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/fragment_rounds_base_record_in_hospital_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/rounds_in_hospital_id"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_patient_information_full_white_corners"
+            android:orientation="vertical"
+            android:padding="0.5dp"
+            android:stretchColumns="2">
+
+            <TableRow android:layout_width="wrap_content">
+
+                <TextView
+                    android:id="@+id/fragment_rounds_base_record_patient_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:maxEms="8"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View style="@style/table_vertical_line" />
+
+                <TextView
+                    android:id="@+id/fragment_rounds_base_record_gender_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View style="@style/table_vertical_line" />
+
+                <TextView
+                    android:id="@+id/fragment_rounds_base_record_age_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_size_14" />
+            </TableRow>
+
+            <View style="@style/table_horizontal_line" />
+
+            <TableRow android:layout_width="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="诊断:"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View style="@style/table_vertical_line" />
+
+                <TextView
+                    android:id="@+id/fragment_rounds_base_record_diagnosis_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_patient_information_full_white_corners"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/rounds_add_medical_record_patient_survey"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/fragment_rounds_base_record_abstract_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="10dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fragment_rounds_base_medical_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_patient_information_full_white_corners"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="病历:"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <cn.longmaster.hospital.doctor.view.ScrollGridView
+                android:id="@+id/fragment_rounds_base_medical_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:horizontalSpacing="6.7dp"
+                android:listSelector="@color/color_transport"
+                android:numColumns="4"
+                android:verticalSpacing="6.7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_rounds_base_doctor_order_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_patient_information_full_white_corners"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="医嘱单:"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <cn.longmaster.hospital.doctor.view.ScrollGridView
+                android:id="@+id/fragment_rounds_base_doctor_order_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:horizontalSpacing="6.7dp"
+                android:listSelector="@color/color_transport"
+                android:numColumns="4"
+                android:verticalSpacing="6.7dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/fragment_rounds_base_record_fragment_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_f4f4f4" />
+
+        <FrameLayout
+            android:id="@+id/fragment_rounds_base_record_fragment_layout_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:src="@mipmap/bg_logo_for_login" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_input_arc"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_login_account" />
+
+        <EditText
+            android:id="@+id/activity_login_message_phonenum_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@null"
+            android:hint="@string/change_phone_num_hint"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_b2b2b2"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_left_arc"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_verification" />
+
+            <EditText
+                android:id="@+id/activity_login_message_verification_code_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:digits="@string/password_digits"
+                android:hint="@string/change_verification_code_hint"
+                android:lines="1"
+                android:maxLength="4"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_b2b2b2"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/activity_login_message_get_verification_code_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_input_right_blue_arc"
+            android:gravity="center"
+            android:text="@string/change_get_verification_code"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <cn.longmaster.hospital.doctor.view.LoadingButton
+        android:id="@+id/activity_login_message_confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_btn_blue_arc"
+        doctor:pbLoadingText="@string/login_login_go"
+        doctor:pbText="@string/login_login"
+        doctor:pbTextColor="@color/white"
+        doctor:pbTextSize="@dimen/font_size_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_login_message_account_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="@string/login_message_password"
+            android:textColor="@color/text_color_7d666666_45aef8"
+            android:textSize="@dimen/font_size_12" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/color_cccccc" />
+
+        <TextView
+            android:id="@+id/activity_login_message_register_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="@string/login_register"
+            android:textColor="@color/text_color_7d666666_45aef8"
+            android:textSize="@dimen/font_size_12" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/color_cccccc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

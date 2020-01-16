@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_rounds_add_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.rounds.RoundsMouldInfoActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <include layout="@layout/include_toolbar_primary_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/color_f2f2f2"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/color_049eff"
+                android:paddingTop="18dp">
+
+                <RelativeLayout
+                    android:id="@+id/act_rounds_add_expert_info_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/act_rounds_add_expert_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="预约医生："
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/act_rounds_add_expert_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="32dp"
+                        android:layout_toLeftOf="@+id/act_rounds_mould_modify_expert_iv"
+                        android:layout_toRightOf="@+id/act_rounds_add_expert_tv"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:id="@+id/act_rounds_add_expert_hospital_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_rounds_add_expert_name_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <ImageView
+                        android:id="@+id/act_rounds_mould_modify_expert_iv"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:padding="6dp"
+                        android:src="@mipmap/ic_rounds_add_mod_expert" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/act_rounds_add_choose_type_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/act_rounds_add_choose_type_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom|center_horizontal">
+
+                        <TextView
+                            android:id="@+id/act_rounds_add_choose_expert_tv"
+                            android:layout_width="115dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bg_solid_0290ef_radius_45"
+                            android:gravity="center"
+                            android:paddingRight="4dp"
+                            android:text="选择专家"
+                            android:textColor="@color/color_white"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="39.5dp"
+                            android:layout_marginLeft="20dp">
+
+                            <TextView
+                                android:id="@+id/act_rounds_add_choose_triage_tv"
+                                android:layout_width="115dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/bg_solid_ffffff_radius_45"
+                                android:gravity="center"
+                                android:text="选择分诊中心"
+                                android:textColor="@color/color_049eff"
+                                android:textSize="@dimen/font_size_16" />
+
+                            <ImageView
+                                android:id="@+id/act_rounds_add_choose_triage_iv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginLeft="-16dp"
+                                android:layout_toRightOf="@+id/act_rounds_add_choose_triage_tv"
+                                android:src="@mipmap/ic_rounds_add_checked_type" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/act_rounds_add_choose_type_note_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_rounds_add_choose_type_ll"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="提示："
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/act_rounds_add_choose_type_note_desc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_rounds_add_choose_type_ll"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_toRightOf="@+id/act_rounds_add_choose_type_note_tv"
+                        android:text="分诊中心将根据您的需求，3小时内为您分诊合适的专家，您也可以点击选择专家按钮，自主选择专家"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/act_rounds_add_expert_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-44dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/act_rounds_add_expert_mod_time_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="意向时间*"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/act_rounds_add_triage_add_time_desc_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:text="时间由39大数据平台依据专家接诊数据动态计算。"
+                    android:textColor="@color/color_049eff"
+                    android:textSize="@dimen/font_size_12"
+                    android:visibility="visible" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/act_rounds_add_intention_add_time_stv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    app:sBackgroundDrawableRes="@drawable/bg_solid_ecf1fd_stroke_049eff_radius_5"
+                    app:sCenterTextColor="@color/color_049eff"
+                    app:sCenterTextSize="@dimen/font_size_16"
+                    app:sCenterTextString="添加意向查房时间"
+                    app:sCenterTvDrawableLeft="@mipmap/ic_rounds_add_choose_patient" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_rounds_add_intention_time_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/act_rounds_add_department_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="意向查房科室*"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:text="提供意向查房科室，分诊中心能更快匹配。"
+                    android:textColor="@color/color_049eff"
+                    android:textSize="@dimen/font_size_12" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/act_rounds_add_triage_add_department_stv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    app:sBackgroundDrawableRes="@drawable/bg_solid_ecf1fd_stroke_049eff_radius_5"
+                    app:sCenterTextColor="@color/color_049eff"
+                    app:sCenterTextSize="@dimen/font_size_16"
+                    app:sCenterTextString="意向查房科室"
+                    app:sCenterTvDrawableLeft="@mipmap/ic_rounds_add_choose_patient" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_rounds_add_triage_departments_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/act_rounds_add_triage_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="分诊要求"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/act_rounds_add_triage_remark_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+                    android:gravity="top"
+                    android:hint="@string/rounds_diagnosis_hint"
+                    android:padding="5dp"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/rounds_mould_info_lecture_topics"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/act_rounds_add_lecture_topics_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+                    android:gravity="top"
+                    android:hint="讲课主题，如无可不填写"
+                    android:maxLength="500"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="7dp"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="查房诉求*"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="若查房诉求不明确，请选择标准诉求类型。"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/act_rounds_add_appeal_fbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:alignContent="flex_start"
+                        app:flexWrap="wrap" />
+
+                    <EditText
+                        android:id="@+id/act_rounds_add_appeal_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+                        android:gravity="top"
+                        android:hint="@string/rounds_mould_info_appeals_standard_hint"
+                        android:maxLength="500"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="7dp"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="是否需要PPT*"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/act_rounds_add_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/act_rounds_add_radio_group_need"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:button="@drawable/ic_rounds_mould_ppt"
+                        android:checked="true"
+                        android:paddingLeft="10dp"
+                        android:text="@string/rounds_mould_info_need" />
+
+                    <RadioButton
+                        android:id="@+id/act_rounds_add_radio_group_no_need"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:button="@drawable/ic_rounds_mould_ppt"
+                        android:paddingLeft="10dp"
+                        android:text="@string/rounds_mould_info_tno_need" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_8"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="意向时长*"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/act_rounds_add_intention_cast_time_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_above="@+id/view"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/act_rounds_add_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="请选择意向时长"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <ImageView
+                        android:id="@+id/activity_not_receive_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_rounds_refusal_lower" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:paddingRight="20dp">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="14dp"
+                    android:background="@color/color_049eff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/rounds_mould_info_time_add_patient"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/act_rounds_add_patients_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/act_rounds_add_add_patient_stv"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                app:sBackgroundDrawableRes="@drawable/bg_solid_ffffff_stroke_049eff_radius_5"
+                app:sCenterTextColor="@color/color_049eff"
+                app:sCenterTextSize="@dimen/font_size_16"
+                app:sCenterTextString="添加患者"
+                app:sCenterTvDrawableHeight="16dp"
+                app:sCenterTvDrawableLeft="@mipmap/ic_rounds_add_choose_patient"
+                app:sCenterTvDrawableWidth="16dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/color_white"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/act_rounds_add_submission_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_rounds_add_submission_btn"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+    </FrameLayout>
+</LinearLayout>

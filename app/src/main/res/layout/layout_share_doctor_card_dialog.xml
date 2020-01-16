@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="@string/share_send_card_to"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_size_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/share_consult_num"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/share_doctor_card_dialog_consult_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="40dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/share_patient_name"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/share_doctor_card_dialog_patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="40dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_line_light_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_solid_cdced2_radius_2"
+            android:paddingLeft="4dp"
+            android:paddingTop="2dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="2dp"
+            android:text="@string/share_doctor_card"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/share_doctor_card_dialog_doctor_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="霍勇"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/share_doctor_card_dialog_hospital_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/share_doctor_card_dialog_suggest_et"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chat_input"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/share_suggest"
+                android:textColor="@color/color_0076ff"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_line_light_1"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/share_doctor_card_dialog_cancel_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dialog_btn_bottom_left_white_corners"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/text_color_157efb_white"
+                android:textSize="@dimen/font_size_18" />
+
+            <View
+                android:id="@+id/layout_common_dialog_line_view"
+                style="@style/vertical_line_light_1" />
+
+            <TextView
+                android:id="@+id/share_doctor_card_dialog_send_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dialog_btn_bottom_right_white_corners"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textColor="@color/text_color_157efb_white"
+                android:textSize="@dimen/font_size_18" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="86dp"
+    android:layout_height="86dp">
+
+    <ImageView
+        android:id="@+id/title_bar_left_icon"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:src="@mipmap/ic_user_center_menu_upload_material" />
+
+    <TextView
+        android:id="@+id/title_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar_left_icon"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="销售代表功能"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_size_14" />
+
+    <View
+        android:id="@+id/title_bar_red_point"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginBottom="-12dp"
+        android:layout_toRightOf="@+id/title_bar_left_icon"
+        android:background="@drawable/bg_solid_ff3600_radius_45" />
+
+    <TextView
+        android:id="@+id/title_bar_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_start_time"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/title_bar_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_right_arrow"
+        android:visibility="gone" />
+</RelativeLayout>

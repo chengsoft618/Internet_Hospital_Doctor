@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <cn.longmaster.hospital.doctor.view.MyStatusBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_049eff" />
+
+        <RelativeLayout
+            android:id="@+id/activity_doctor_detail_title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_app_main_color">
+
+            <ImageView
+                android:id="@+id/iv_tool_bar_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="14dp"
+                android:src="@mipmap/ic_actionbar_back_white" />
+
+            <TextView
+                android:id="@+id/tv_tool_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="marquee"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_18" />
+
+            <TextView
+                android:id="@+id/tv_tool_bar_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:maxLength="4"
+                android:text="帮助"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_14"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_tool_bar_sub"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/activity_doctor_modify_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/activity_doctor_share_iv"
+                android:src="@mipmap/ic_doctor_detail_modify"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/activity_doctor_share_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:src="@mipmap/ic_doctor_detail_share"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/activity_doctor_detail_content_abl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/activity_doctor_detail_content_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-20dp"
+                    android:background="@mipmap/bg_doctor_detail_head"
+                    android:orientation="vertical"
+                    android:paddingTop="28dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <RelativeLayout
+                        android:id="@+id/activity_doctor_detail_avatar_ll"
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/activity_doctor_detail_avatar_civ"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/bg_remark_photo_attending_doctor"
+                            app:civ_border_color="@color/color_101a1a1a"
+                            app:civ_border_width="4dp" />
+
+                        <TextView
+                            android:id="@+id/activity_doctor_detail_is_check_in_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_solid_4bd500_radius_2"
+                            android:paddingLeft="7dp"
+                            android:paddingRight="7dp"
+                            android:text="已入驻"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_size_10"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/activity_doctor_detail_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/activity_doctor_detail_avatar_ll"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_18" />
+
+                    <TextView
+                        android:id="@+id/activity_doctor_hospital_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_doctor_detail_name_tv"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/activity_doctor_detail_avatar_ll"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/activity_doctor_department_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_doctor_hospital_name_tv"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/activity_doctor_detail_avatar_ll"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/activity_doctor_level_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_doctor_hospital_name_tv"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/activity_doctor_department_name_tv"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <ImageView
+                        android:id="@+id/activity_doctor_detail_is_recommend_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/ic_doctor_detail_commond"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+                <FrameLayout
+                    android:id="@+id/activity_doctor_detail_tab_fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/color_f2f2f2">
+
+                    <com.flyco.tablayout.CommonTabLayout
+                        android:id="@+id/activity_doctor_detail_ctl"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/bg_solid_ffffff_radius_3"
+                        app:tl_indicator_anim_enable="true"
+                        app:tl_indicator_color="@color/color_049eff"
+                        app:tl_indicator_corner_radius="3dp"
+                        app:tl_indicator_height="3dp"
+                        app:tl_indicator_width="35dp"
+                        app:tl_textSelectColor="@color/color_049eff"
+                        app:tl_textUnselectColor="@color/color_1a1a1a"
+                        app:tl_textsize="16sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/activity_doctor_detail_fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_solid_ffffff_radius_5" />
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <Button
+            android:id="@+id/activity_doctor_detail_launch_consult_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_049eff"
+            android:text="发起预约"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+</RelativeLayout>

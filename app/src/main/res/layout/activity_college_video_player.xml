@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.college.CollegeVideoPlayerActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/activity_college_video_player_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <cn.longmaster.doctorlibrary.customview.ProportionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scaleSize="0.56">
+
+        <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+            android:id="@+id/activity_college_video_player_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </cn.longmaster.doctorlibrary.customview.ProportionLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/activity_college_video_player_radio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_course_info_tab"
+            android:gravity="center_vertical">
+
+            <RadioGroup
+                android:id="@+id/activity_college_video_player_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/activity_college_video_player_introduce"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_college_course_rg_tab"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/medical_college_introduce"
+                    android:textColor="@drawable/radio_group_text_color_45aef8_000000"
+                    android:textSize="@dimen/font_size_12" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_c9c9c9" />
+
+                <RadioButton
+                    android:id="@+id/activity_college_video_player_data"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_college_course_rg_tab"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/medical_college_data"
+                    android:textColor="@drawable/radio_group_text_color_45aef8_000000"
+                    android:textSize="@dimen/font_size_12"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/activity_college_video_player_vertical_line"
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_c9c9c9"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/activity_college_video_player_interaction"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_college_course_rg_tab"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/medical_college_interaction"
+                    android:textColor="@drawable/radio_group_text_color_45aef8_000000"
+                    android:textSize="@dimen/font_size_12" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/activity_college_video_player_data_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_rounds_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.rounds.RoundsDetailActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_rounds_detail_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn|right_btn"
+        doctor:rightBtnClick="rightClick"
+        doctor:rightBtnImage="@drawable/ic_top_share"
+        doctor:titleColor="@color/color_white"
+        doctor:titleText="@string/rounds_rounds_details" />
+
+    <View
+        android:id="@+id/act_rounds_detail_line_v"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e5e5e5" />
+
+    <RadioGroup
+        android:id="@+id/act_rounds_detail_rg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/act_rounds_detail_medical_detail_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounds_details_tab"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/rounds_medical_record_data"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_18" />
+
+        <RadioButton
+            android:id="@+id/act_rounds_detail_summary_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounds_details_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rounds_summary"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/act_rounds_detail_video_playback_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounds_details_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rounds_video_playback"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/act_rounds_detail_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+</LinearLayout>

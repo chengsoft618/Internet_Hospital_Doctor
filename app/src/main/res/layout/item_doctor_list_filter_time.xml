@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_doctor_list_filter_time_tv"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_solid_45aef8_radius_5"
+        android:gravity="center"
+        android:text="sss"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_14" />
+
+    <ImageView
+        android:id="@+id/item_doctor_list_filter_time_iv"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="-8dp"
+        android:layout_toRightOf="@+id/item_doctor_list_filter_time_tv"
+        android:src="@mipmap/ic_doctor_list_filter_time_del" />
+
+</RelativeLayout>

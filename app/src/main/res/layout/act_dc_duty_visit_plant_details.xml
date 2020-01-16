@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/act_dc_duty_visit_plan_details_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_dc_duty_visit_plant_details_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="title|left_btn"
+        app:rightText="保存"
+        app:titleText="选择患者随访计划" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fg_rounds_detail_receive_ll"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/act_dc_duty_visit_plant_details_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/color_fafafa"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/act_dc_duty_visit_plant_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center|left"
+                    android:text="慢性阻塞性肺疾病随访计划"
+                    android:textColor="#ff1a1a1a"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/act_dc_duty_visit_plant_details_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/act_dc_duty_visit_plant_details_selected"
+                android:layout_width="160dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_rounds_add_submission_btn"
+                android:gravity="center"
+                android:text="选择该随访计划"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

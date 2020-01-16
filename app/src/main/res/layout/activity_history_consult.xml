@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_edeff2"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_history_consult_appactionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="left_btn|title"
+        app:titleText="@string/home_consult_history" />
+
+    <cn.longmaster.doctorlibrary.customview.listview.PullRefreshView
+        android:id="@+id/activity_history_consult_list_prv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_history_consult_appactionbar"
+        android:layout_marginTop="35dp"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/activity_history_consult_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/bg_no_content"
+            android:drawablePadding="20dp"
+            android:text="@string/im_group_no_consult"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_history_consult_appactionbar"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_edeff2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/activity_history_consult_search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_topbar_input"
+            android:drawableStart="@drawable/ic_topbar_search"
+            android:drawableLeft="@drawable/ic_topbar_search"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="@string/search_patient_hint"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/color_white"
+            android:textColorHint="@color/color_99d5ff"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+</RelativeLayout>

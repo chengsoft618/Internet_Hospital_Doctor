@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_main_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <cn.longmaster.hospital.doctor.view.AppActionBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            doctor:barBackground="@color/color_white"
+            doctor:function="title|left_btn"
+            doctor:leftBtnImage="@drawable/ic_actionbar_back_gray"
+            doctor:statusBarColor="@color/black"
+            doctor:titleColor="@color/color_333333"
+            doctor:titleText="@string/contact_us_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="105dp"
+            android:src="@drawable/ic_contact_us_phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/contact_us_tip1"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/activity_contact_us_tel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/contact_us_num"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_30"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_contact_us_address" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_us_address"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.4"
+                android:text="@string/contact_us_address_detail"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/activity_contact_us_logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/bg_logo_for_call_us" />
+
+    </LinearLayout>
+</RelativeLayout>

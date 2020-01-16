@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_eeeeee"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_solid_ffffff_radius_4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病历编号:"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/item_rounds_record_medical_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rounds_receive_suc_time"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/item_rounds_record_medical_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上级专家:"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/item_rounds_record_medical_experts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊状态:"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/item_rounds_record_medical_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_e5e5e5" />
+
+        <TextView
+            android:id="@+id/item_rounds_record_medical_details_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_rounds_record_medical_details"
+            android:gravity="center"
+            android:text="@string/rounds_choice_doctor_choice_doctor_details"
+            android:textColor="@color/color_45aef8"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

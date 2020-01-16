@@ -1,0 +1,538 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dialog_doctor_list_filter_operation_ll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/pop_win_doctor_list_hospital_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/pop_win_doctor_list_choose_hospital_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_f9f9f9_radius_tl_5_tr_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="选择医院"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_rounds_add_choose_intention_time" />
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/pop_win_doctor_list_filter_by_hospital_fbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_win_doctor_list_department_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/pop_win_doctor_list_choose_department_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_f9f9f9_radius_tl_5_tr_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="选择科室"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_rounds_add_choose_intention_time" />
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/pop_win_doctor_list_filter_by_department_fbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_win_doctor_list_reception_time_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/pop_win_doctor_list_choose_reception_time_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_f9f9f9_radius_tl_5_tr_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="选择接诊时间"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_rounds_add_choose_intention_time" />
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/pop_win_doctor_list_filter_by_reception_time_fbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_win_doctor_list_filter_by_type_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_f9f9f9_radius_tl_5_tr_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:id="@+id/pop_win_doctor_list_filter_by_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="接诊类型"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/pop_win_doctor_list_filter_by_type_fbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pop_win_doctor_list_filter_by_type_tv"
+                    app:flexWrap="wrap">
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_no_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="不限"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_rounds_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="教学查房"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_image_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="批量影像"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_consultation_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="远程会诊"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_remote_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="远程门诊"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_local_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="实地就诊"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_win_doctor_list_filter_by_price_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_f9f9f9_radius_tl_5_tr_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:id="@+id/pop_win_doctor_list_filter_by_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="医生分成价格"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/pop_win_doctor_list_filter_by_price_intro_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/pop_win_doctor_list_filter_by_price_tv"
+                        android:text="(先选择类型才能输入价格)"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_size_12" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/pop_win_doctor_list_filter_by_price_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pop_win_doctor_list_filter_by_price_tv"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/pop_win_doctor_list_filter_by_price_min_et"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/bg_doctor_filter_price"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:hint="最低分成"
+                        android:inputType="number"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="1dp"
+                        android:background="@color/color_45aef8" />
+
+                    <EditText
+                        android:id="@+id/pop_win_doctor_list_filter_by_price_max_et"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/bg_doctor_filter_price"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:hint="最高分成"
+                        android:inputType="number"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/font_size_12" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_win_doctor_list_filter_by_order_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_solid_ffffff_radius_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_f9f9f9_radius_tl_5_tr_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:id="@+id/pop_win_doctor_list_filter_by_order_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pop_win_doctor_list_filter_by_price_ll"
+                        android:layout_marginLeft="5dp"
+                        android:text="医院复旦排名"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/pop_win_doctor_list_filter_by_order_fbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pop_win_doctor_list_filter_by_order_tv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    app:flexWrap="wrap">
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_top_no_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="不限"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_top_3_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="top3"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_top_5_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="top5"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <CheckBox
+                        android:id="@+id/pop_win_doctor_list_filter_top_10_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="7.5dp"
+                        android:background="@drawable/bg_cb_doctor_list_filter"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="top10"
+                        android:textColor="@drawable/bg_txt_color_121415_049eff"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/dialog_doctor_list_filter_operation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/dialog_doctor_list_filter_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_white"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_18" />
+
+
+        <TextView
+            android:id="@+id/dialog_doctor_list_filter_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_049eff"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+</RelativeLayout>

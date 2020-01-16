@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_personal_material_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_layout_item_common"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/item_personal_material_view_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/item_personal_material_view_operation_view"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <LinearLayout
+            android:id="@+id/item_personal_material_view_operation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_personal_material_view_upload_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/color_39d210"
+                android:textSize="@dimen/font_size_16" />
+
+            <ImageView
+                android:id="@+id/item_personal_material_view_type_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_upload_fail" />
+
+            <ImageView
+                android:id="@+id/item_personal_material_view_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/bg_upload_close" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/item_personal_material_blue_progress_bar"
+        style="@style/ProgressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="15dp"
+        android:max="100"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/item_personal_material_red_progress_bar"
+        style="@style/ProgressBarRedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="15dp"
+        android:max="100"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/item_personal_material_short_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_e5e5e5" />
+</LinearLayout>

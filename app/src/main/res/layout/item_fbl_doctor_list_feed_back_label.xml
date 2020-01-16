@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_doctor_list_feed_back_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_solid_eeeeee_radius_2"
+        android:button="@null"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text=""
+        android:textColor="@color/color_7d7e7f"
+        android:textSize="@dimen/font_size_14" />
+</FrameLayout>

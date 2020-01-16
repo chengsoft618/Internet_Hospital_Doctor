@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/color_e5ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/view_toast_message_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/campaign_consult_title"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/view_toast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_toast_btn_45aef8_corners"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/consult_room_change_voice"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_14" />
+</LinearLayout>

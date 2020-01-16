@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_meeting_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_2f2f2f"
+    tools:context="cn.longmaster.hospital.doctor.ui.user.MeetingRoomActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/activity_meeting_room_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/activity_meeting_room_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/activity_meeting_room_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="全体会议"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16" />
+
+    <cn.longmaster.hospital.doctor.view.MeetingToastView
+        android:id="@+id/activity_meeting_room_toast_tlv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:clipChildren="false" />
+
+    <TextView
+        android:id="@+id/activity_meeting_room_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_meeting_room_title_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bg_solid_000000_radius_4"
+        android:drawableLeft="@drawable/ic_meeting_room_reminder"
+        android:padding="3dp"
+        android:text=" 不说话时，请关闭麦克风"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_12" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_meeting_room_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_meeting_room_bottom_view"
+        android:layout_below="@+id/activity_meeting_room_tip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:numColumns="4" />
+
+    <LinearLayout
+        android:id="@+id/activity_meeting_room_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/activity_meeting_room_microphone_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_meeting_room_microphone_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_microphone_close" />
+
+            <TextView
+                android:id="@+id/activity_meeting_room_microphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="打开麦克"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_meeting_room_mute_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_meeting_room_mute_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_meeting_mute_open" />
+
+            <TextView
+                android:id="@+id/activity_meeting_room_mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="静音"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_meeting_room_exit_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_meeting_exit" />
+
+            <TextView
+                android:id="@+id/activity_meeting_room_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="退出"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_meeting_room_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_00ff2424"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/ic_loading" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10">
+
+        <LinearLayout
+            android:id="@+id/layout_live_video_dialog_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/layout_live_video_dialog_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/consult_member_list_dialog"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16" />
+
+            <View style="@style/horizontal_line_light_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_live_video_dialog_confirm_tv"
+            android:layout_below="@+id/layout_live_video_dialog_view"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/layout_live_video_dialog_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_eeeeee"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/layout_live_video_dialog_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="暂无成员加入房间"
+                android:textColor="@color/color_bbbbbb"
+                android:textSize="@dimen/font_size_12"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/layout_live_video_dialog_confirm_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_dialog_btn_bottom_45aef8_corners"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16" />
+    </RelativeLayout>
+</LinearLayout>

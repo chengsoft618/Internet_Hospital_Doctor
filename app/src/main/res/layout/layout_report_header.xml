@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_patient_information_middle_white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_patient_information_full_white_corners"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bg_logo_report_top" />
+
+        <TextView
+            android:id="@+id/layout_report_header_modification_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:drawableLeft="@drawable/ic_report_modification"
+            android:drawablePadding="2dp"
+            android:text="@string/change_doctor"
+            android:textColor="@color/color_45aef8"
+            android:textSize="@dimen/font_size_14" />
+    </RelativeLayout>
+</LinearLayout>

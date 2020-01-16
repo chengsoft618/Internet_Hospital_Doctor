@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/item_meeting_room_ring_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_ring_image"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_meeting_room_role_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="1.5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_meeting_room_role_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12" />
+    </LinearLayout>
+</LinearLayout>

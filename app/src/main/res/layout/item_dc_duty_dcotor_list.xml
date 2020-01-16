@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_dcdcotor_list_civ"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/bg_remark_photo_assistant_doctor" />
+
+    <TextView
+        android:id="@+id/item_dcdcotor_list_doctor_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/item_dcdcotor_list_civ"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_dcdcotor_list_doctor_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/item_dcdcotor_list_doctor_name_tv"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <View
+        android:id="@+id/item_dcdcotor_list_doctor_online_state_v"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/item_dcdcotor_list_doctor_title_tv" />
+
+    <TextView
+        android:id="@+id/item_dcdcotor_list_doctor_online_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/item_dcdcotor_list_doctor_online_state_v"
+        android:textColor="@color/color_1ada48"
+        android:textSize="@dimen/font_size_12"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/item_dcdcotor_list_doctor_hospital_department_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_dcdcotor_list_doctor_name_tv"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/item_dcdcotor_list_civ"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+</RelativeLayout>

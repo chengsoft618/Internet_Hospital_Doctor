@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_time_line_view_top"
+            android:layout_width="1dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="7dp"
+            android:background="@color/color_e6e6e6"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_time_line_view_bottom"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/color_e6e6e6"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/item_dc_duty_visit_plan_details_adapter_top_diagnostic_circular"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@+id/item_dc_duty_visit_plan_details_adpter_date_st"
+            android:layout_alignBottom="@+id/item_dc_duty_visit_plan_details_adpter_date_st"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_dc_duty_patient_disease_top_diagnostic_circular" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/item_dc_duty_visit_plan_details_adpter_date_st"
+            android:layout_width="180dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:visibility="visible"
+            app:sBackgroundDrawableRes="@drawable/bg_solid_ffffff_stroke_45aef8_radius_2"
+            app:sCenterTextColor="@color/color_049eff"
+            app:sCenterTextSize="@dimen/font_size_18"
+            app:sCenterTextString="2019年12月23日"
+            app:sCenterTvDrawableRight="@mipmap/ic_blue_down_arrow" />
+
+        <LinearLayout
+            android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_bottom_content_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_dc_duty_visit_plan_details_adpter_date_st"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_solid_049eff_radius_tl_2_tr_2"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="向患者发送"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <ImageView
+                            android:id="@+id/item_dc_duty_visit_plan_details_adapter_add_iv"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@mipmap/ic_dc_duty_paient_disease_redact_add" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_dc_duty_visit_plan_details_adapter_message_reminding_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/item_dc_duty_paient_visit_plan_details_adapter_place_holder_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_child_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

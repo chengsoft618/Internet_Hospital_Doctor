@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/layout_dialog_photo_way_album_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_solid_ffffff_t_radius_10"
+        android:text="@string/dialog_photo_way_album"
+        android:textColor="@color/color_157efb"
+        android:textSize="@dimen/font_size_20" />
+
+    <Button
+        android:id="@+id/layout_dialog_photo_way_camera_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/bg_solid_ffffff_b_radius_10"
+        android:text="@string/dialog_photo_way_camera"
+        android:textColor="@color/color_157efb"
+        android:textSize="@dimen/font_size_20" />
+
+    <Button
+        android:id="@+id/layout_dialog_photo_way_close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:text="@string/dialog_photo_way_close"
+        android:textColor="@color/color_ff3b30"
+        android:textSize="@dimen/font_size_20" />
+</LinearLayout>

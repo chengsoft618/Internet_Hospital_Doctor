@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_course_table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.user.CourseTableActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_course_table_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn"
+        doctor:titleText="@string/reservation_course" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_course_table_no_reservation_btn"
+        android:layout_below="@+id/activity_course_table_action_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/activity_course_table_project_view"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/color_app_main_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activity_course_table_project_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_size_16" />
+
+                <ImageView
+                    android:id="@+id/activity_course_table_project_choice_iv"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_project_open" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/color_app_main_color"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activity_course_table_appointment_course_number_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_size_12" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_white" />
+
+                <TextView
+                    android:id="@+id/activity_course_table_not_appointment_course_number_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_size_12" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_white" />
+
+                <TextView
+                    android:id="@+id/activity_course_table_finish_course_number_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_size_12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:id="@+id/activity_course_table_last_year"
+                    android:layout_width="35dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_course_year_and_month"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_last_year" />
+
+                <ImageView
+                    android:id="@+id/activity_course_table_last_month"
+                    android:layout_width="35dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/activity_course_table_last_year"
+                    android:background="@drawable/bg_course_year_and_month"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_last_month" />
+
+                <ImageView
+                    android:id="@+id/activity_course_table_next_month"
+                    android:layout_width="35dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toLeftOf="@+id/activity_course_table_next_year"
+                    android:background="@drawable/bg_course_year_and_month"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_next_month" />
+
+                <ImageView
+                    android:id="@+id/activity_course_table_next_year"
+                    android:layout_width="35dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_course_year_and_month"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_next_year" />
+
+                <TextView
+                    android:id="@+id/activity_course_table_title_week_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/activity_course_table_date_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="星期三"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_course_table_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:text="2019年03月12日"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_12" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周日"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周一"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周二"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周三"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周四"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周五"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周六"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <cn.longmaster.hospital.doctor.view.MyGridView
+                android:id="@+id/id_gv_select_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:clipChildren="true"
+                android:gravity="center"
+                android:listSelector="@null"
+                android:numColumns="7"
+                android:padding="1dp"
+                android:stretchMode="columnWidth"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/bg_solid_45aef8_radius_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="已预约"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_12" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_solid_dbf0ff_radius_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="可预约"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_course_table_select_tim_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="2019年3月5日（星期三）"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14" />
+
+                <LinearLayout
+                    android:id="@+id/activity_course_table_course_already_appointment_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/activity_course_table_course_already_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="今日已约课程"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_solid_f5f5f5_radius_3"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/activity_course_table_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_course_icon"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/activity_course_table_course_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toRightOf="@+id/activity_course_table_icon"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/color_1a1a1a"
+                            android:textSize="@dimen/font_size_14"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/activity_course_table_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/activity_course_table_course_name_tv"
+                            android:layout_alignLeft="@+id/activity_course_table_course_name_tv"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <TextView
+                            android:id="@+id/activity_course_table_state_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/activity_course_table_time_tv"
+                            android:layout_alignLeft="@+id/activity_course_table_time_tv"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_14" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/activity_course_table_tip_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_size_12"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/activity_course_table_bottom_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_alignBottom="@+id/activity_course_table_state_tv"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_live_video_input_enter_room"
+                        android:gravity="center"
+                        android:text="点击进入详情"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_course_table_no_reservation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_no_reservation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日未约课程"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_course_table_cannot_reservation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="15dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_cannot_reservation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日不可预约课程"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/activity_course_table_no_reservation_btn"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_live_video_input_enter_room"
+        android:gravity="center"
+        android:text="预约课程"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16"
+        android:visibility="gone" />
+</RelativeLayout>

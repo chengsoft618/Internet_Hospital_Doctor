@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><!--呼叫界面布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_333333"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.consult.video.VideoCallActivity">
+
+    <ImageView
+        android:id="@+id/activity_video_call_avatar_aiv"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="85dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_video_call_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_22" />
+
+        <TextView
+            android:id="@+id/activity_video_call_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_video_call_hospital_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/activity_video_call_department_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_video_call_patient_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/activity_video_call_patient_illness_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_video_call_tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/video_call_tip_one"
+        android:textColor="@color/color_ff4737"
+        android:textSize="@dimen/font_size_16" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/activity_video_call_calling_ll"
+        layout="@layout/layout_video_call_calling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/activity_video_call_miss_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/activity_video_call_join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_solid_049eff_radius_45"
+            android:text="@string/video_call_enter"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/activity_video_call_confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/bg_solid_ff0000_radius_45"
+            android:text="@string/video_call_confirm"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

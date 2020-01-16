@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/include_home_page_title_open_banner"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@mipmap/bg_home_page_banner"
+        app:image_scale_type="fit_xy"
+        app:indicator_drawable_selected="@drawable/bg_solid_45aef8_radius_45"
+        app:indicator_drawable_unselected="@drawable/bg_solid_00000000_stroke_45aef8_radius_45"
+        app:indicator_height="6dp"
+        app:indicator_margin="7.5dp"
+        app:indicator_width="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_home_page_title_open_banner"
+        android:background="@color/color_white"
+        android:paddingTop="14dp"
+        android:paddingBottom="25dp">
+
+        <cn.longmaster.hospital.doctor.view.IconView
+            android:id="@+id/include_home_page_title_open_scan_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bottomText="扫一扫"
+            app:bottomTextColor="@color/color_1a1a1a"
+            app:topIconImage="@mipmap/ic_home_page_scan" />
+
+        <cn.longmaster.hospital.doctor.view.IconView
+            android:id="@+id/include_home_page_title_open_consult_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bottomText="发起就诊"
+            app:bottomTextColor="@color/color_1a1a1a"
+            app:topIconImage="@mipmap/ic_home_page_consult" />
+
+        <cn.longmaster.hospital.doctor.view.IconView
+            android:id="@+id/include_home_page_title_open_department_construction_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:bottomText="专科建设"
+            app:bottomTextColor="@color/color_1a1a1a"
+            app:topIconImage="@mipmap/ic_home_page_department_construction" />
+
+        <cn.longmaster.hospital.doctor.view.IconView
+            android:id="@+id/include_home_page_title_open_material_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bottomText="材料管理"
+            app:bottomTextColor="@color/color_1a1a1a"
+            app:topIconImage="@mipmap/ic_home_page_material_manage" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/include_home_page_title_bg_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

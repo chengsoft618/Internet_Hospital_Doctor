@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/fragment_interaction_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/fragment_interaction_comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/fragment_interaction_interaction_say"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_video_player_interaction"
+                android:gravity="center"
+                android:text="@string/medical_college_say"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fragment_interaction_no_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/medical_college_no_comment"
+            android:textColor="@color/color_b7b7b7"
+            android:textSize="@dimen/font_size_20"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_interaction_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+</LinearLayout>

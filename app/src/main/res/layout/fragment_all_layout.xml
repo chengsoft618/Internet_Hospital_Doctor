@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_tips_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_solid_ecf7ff_stroke_e7dede"
+        android:gravity="center"
+        android:text="@string/consultation_manage_not_completed_tips"
+        android:textColor="@color/color_36a3f0"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="gone" />
+
+    <cn.longmaster.doctorlibrary.customview.listview.PullRefreshView
+        android:id="@+id/fragment_prv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_tips_tv"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/fragment_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_no_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_result_prompt"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/activity_rounds_patient_info_msb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <include
+        layout="@layout/include_toolbar_primary_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/activity_rounds_patient_info_msb" />
+
+    <RadioGroup
+        android:id="@+id/activity_rounds_patient_info_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tool_bar_base"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/activity_rounds_patient_info_tab_medical_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounds_patient_details_tab"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/rounds_medical_record_data"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/activity_rounds_patient_record_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounds_patient_details_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/relate_record"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/activity_rounds_patient_return_visit_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounds_patient_details_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="回访信息"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/activity_rounds_detail_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/activity_rounds_patient_info_radio_group"
+        android:background="@color/color_e5e5e5" />
+
+    <FrameLayout
+        android:id="@+id/activity_rounds_patient_info_fragment_layout_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_rounds_detail_line" />
+
+    <LinearLayout
+        android:id="@+id/activity_rounds_patient_info_enter_room_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/activity_rounds_patient_info_modification_info_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@mipmap/ic_patient_info_mod_info"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/activity_rounds_patient_info_data_manage_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@mipmap/ic_patient_info_mod_material"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/activity_rounds_patient_info_join_room_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@mipmap/ic_patient_info_join_room"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

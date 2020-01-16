@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/view_appeals_standard_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_solid_f0f0f0_radius_8">
+
+        <ImageView
+            android:id="@+id/view_appeals_standard_iv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_toRightOf="@+id/view_appeals_standard_tv"
+            android:src="@mipmap/bg_cb_wait_rounds_patient_select_sel"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/view_appeals_standard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:button="@null"
+            android:padding="7dp"
+            android:text="明确诊断是否正确"
+            android:textColor="@drawable/bg_txt_color_049eff_1a1a1a"
+            android:textSize="@dimen/font_size_12" />
+    </RelativeLayout>
+
+</FrameLayout>

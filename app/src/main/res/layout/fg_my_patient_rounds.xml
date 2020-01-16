@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fg_my_patient_rounds_search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_solid_f0f0f0_radius_45"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="12dp"
+                android:src="@mipmap/ic_doctor_list_search" />
+
+            <EditText
+                android:id="@+id/fg_my_patient_rounds_search_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入就诊编号"
+                android:imeOptions="actionSearch"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_1a1a1a"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+
+            <ImageView
+                android:id="@+id/fg_my_patient_rounds_search_clear_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="10dp"
+                android:src="@mipmap/ic_doctor_list_search_clear"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fg_my_patient_rounds_search_tv"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/fg_my_patient_rounds_srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fg_my_patient_rounds_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include
+            layout="@layout/include_new_no_data_list"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

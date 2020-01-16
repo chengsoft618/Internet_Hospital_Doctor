@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diagnosis_core"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="cn.longmaster.hospital.doctor.ui.rounds.DiagnosisCoreActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_rounds_info_confirm_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn"
+
+        doctor:titleColor="@color/color_white"
+        doctor:titleText="@string/rounds_diagnosis_core" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_diagnosis_core_determine"
+        android:layout_below="@+id/activity_rounds_info_confirm_action_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rounds_department_blue_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/rounds_diagnosis_requirement"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_light_1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/rounds_diagnosis_tip"
+                android:textColor="@color/color_45aef8"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/rounds_diagnosis_add_time_tip"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_12" />
+
+            <LinearLayout
+                android:id="@+id/activity_diagnosis_core_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/activity_diagnosis_add_intention_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f5f5f5_stroke_999999_radius_5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rounds_add_time" />
+
+                <TextView
+                    android:id="@+id/add_rounds_foot_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="@string/rounds_choice_doctor_add_rounds_time" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/rounds_diagnosis_add_department_tip"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_12" />
+
+            <LinearLayout
+                android:id="@+id/activity_diagnosis_core_department_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/activity_diagnosis_add_intention_department_view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f5f5f5_stroke_999999_radius_5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rounds_add_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="@string/rounds_choice_doctor_add_rounds_department" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/activity_diagnosis_add_intention_time_requirement_et"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+                android:gravity="top"
+                android:hint="@string/rounds_diagnosis_hint"
+                android:padding="5dp"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/activity_diagnosis_core_determine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/bg_live_video_input_enter_room"
+            android:gravity="center"
+            android:text="@string/rounds_diagnosis_determine"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+    </RelativeLayout>
+</RelativeLayout>

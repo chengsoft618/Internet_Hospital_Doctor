@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.consult.consultant.AdvanceResultActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn|right_btn"
+        doctor:rightBtnClick="rightClick"
+        doctor:rightBtnImage="@drawable/bg_btn_right_consult"
+        doctor:titleText="@string/advance_result" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eaeaea"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/activity_advance_result_top_icn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_advance_result_fail_top" />
+
+                <TextView
+                    android:id="@+id/activity_advance_result_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=""
+                    android:textColor="@color/color_ff2c2c"
+                    android:textSize="@dimen/font_size_20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_advance_result_fail_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_advance_result_fail_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/advance_result_fail_num"
+                        android:textColor="@color/color_ff2c2c"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:id="@+id/activity_advance_result_advance_again_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/advance_again"
+                        android:textColor="@color/text_color_36a3f0_00528b"
+                        android:textSize="@dimen/font_size_16" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c8c7cc" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_advance_result_fail_prv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_advance_result_suc_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="#e7e4e4" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_advance_result_suc_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/advance_result_suc_num"
+                        android:textColor="@color/text_color_36a3f0_00528b"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:id="@+id/activity_advance_result_return_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/advance_return"
+                        android:textColor="@color/text_color_36a3f0_00528b"
+                        android:textSize="@dimen/font_size_16" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_c8c7cc" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_advance_result_suc_prv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

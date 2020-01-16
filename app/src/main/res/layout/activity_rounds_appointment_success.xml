@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_rounds_appointment_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.rounds.RoundsAppointmentSuccessActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/action_bar_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <RelativeLayout
+        android:id="@+id/act_rounds_choice_doctor_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/color_app_main_color"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/act_rounds_action_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lines="1"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="@string/rounds_appointment_success"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_solid_ffffff_radius_8"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="@string/rounds_appointment_success_tip"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_appointment_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_tv"
+                android:layout_marginTop="36dp"
+                android:text="就诊编号:"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_appointment_num_desc_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="36dp"
+                android:layout_toRightOf="@+id/act_rounds_appointment_success_appointment_num_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_doctor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_appointment_num_desc_tv"
+                android:layout_marginTop="9dp"
+                android:text="预约专家:"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_doctor_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_appointment_num_desc_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/act_rounds_appointment_success_doctor_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_lecture_topics_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_doctor_name_tv"
+                android:layout_marginTop="30dp"
+                android:text="讲课主题:"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_lecture_topics_desc_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_doctor_name_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/act_rounds_appointment_success_lecture_topics_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_lecture_topics_desc_tv"
+                android:layout_marginTop="30dp"
+                android:text="意向时间:"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:id="@+id/act_rounds_appointment_success_time_desc_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_lecture_topics_desc_tv"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/act_rounds_appointment_success_time_tv"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_note_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_rounds_appointment_success_time_desc_ll"
+                android:layout_marginTop="54dp"
+                android:text="可在首页待办事项里查看预约动态。请及时上传患者的病例资料。"
+                android:textColor="@color/color_ff7404"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_see"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/act_rounds_appointment_success_note_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_solid_049eff_radius_45"
+                android:gravity="center"
+                android:text="查看预约"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_rounds_appointment_success_home"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/act_rounds_appointment_success_see"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_solid_f0f0f0_radius_45"
+                android:gravity="center"
+                android:text="返回首页"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

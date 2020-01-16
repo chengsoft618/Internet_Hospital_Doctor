@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/layout_subvisit_message_reminding_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_solid_ffffff_t_radius_10"
+            android:gravity="center"
+            android:text="复诊提醒"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <View style="@style/horizontal_line_light_1" />
+
+        <TextView
+            android:id="@+id/layout_medications_reminding_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="用药提醒"
+            android:background="@color/color_white"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <View style="@style/horizontal_line_light_1" />
+
+        <TextView
+            android:id="@+id/layout_data_uploading_reminding_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_solid_ffffff_b_radius_10"
+            android:gravity="center"
+            android:text="资料上传提醒"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/layout_cancel_message_reminding_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_size_16"
+        android:textStyle="bold" />
+</LinearLayout>

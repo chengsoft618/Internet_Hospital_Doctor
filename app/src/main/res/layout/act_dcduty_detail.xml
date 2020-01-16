@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".ui.dutyclinic.DCDutyProjectDetailActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <FrameLayout
+        android:id="@+id/act_du_duty_project_details_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/color_049eff">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/act_dc_duty_details_title_stv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            app:sCenterTextString="COPD项目测试1"
+            app:sCenterTextColor="@color/color_white"
+            app:sCenterTextSize="@dimen/font_size_16"
+            app:sCenterTvDrawableHeight="14dp"
+            app:sCenterTvDrawableRight="@mipmap/ic_dc_duty_details_arrow_bottom"
+            app:sCenterTvDrawableWidth="11dp" />
+
+        <ImageView
+            android:id="@+id/act_dc_duty_details_back_iv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="14dp"
+            android:src="@mipmap/ic_actionbar_back_white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <RadioGroup
+            android:id="@+id/act_dc_duty_project_detail_rg"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/act_dc_duty_project_info_rb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_my_patient_tab"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="项目一览"
+                android:textColor="@color/color_049eff"
+                android:textSize="@dimen/font_size_18" />
+
+            <RadioButton
+                android:id="@+id/act_dc_duty_project_patient_list_rb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_my_patient_tab"
+                android:button="@null"
+                android:gravity="center"
+                android:text="我的患者"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+        </RadioGroup>
+
+        <View style="@style/horizontal_line_light_1" />
+
+        <FrameLayout
+            android:id="@+id/act_dc_duty_project_detail_fl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

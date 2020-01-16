@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/fragment_doctor_detail_expert_info_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/fragment_doctor_detail_expert_info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_solid_ffffff_radius_4"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_expert_article_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/doctor_detail_expert_article"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontal_line_light_1"
+                    android:layout_marginTop="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_doctor_detail_expert_article_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_expert_video_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/doctor_detail_expert_practice"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontal_line_light_1"
+                    android:layout_marginTop="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_doctor_detail_expert_video_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_expert_class_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/doctor_detail_expert_class"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontal_line_light_1"
+                    android:layout_marginTop="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_doctor_detail_expert_class_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        layout="@layout/include_no_data_doctor_info"
+        android:visibility="gone" />
+</FrameLayout>

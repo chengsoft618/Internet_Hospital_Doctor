@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_dc_duty_pateint_list_civ"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/bg_remark_photo_assistant_doctor" />
+
+    <TextView
+        android:id="@+id/item_dc_duty_pateint_list_patient_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="26dp"
+        android:layout_toRightOf="@+id/item_dc_duty_pateint_list_civ"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="欧阳细档"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/item_dc_duty_pateint_list_patient_gender_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/item_dc_duty_pateint_list_patient_name_tv"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="男"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/item_dc_duty_pateint_list_patient_age_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/item_dc_duty_pateint_list_patient_gender_tv"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="34岁"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <View
+        android:id="@+id/item_dc_duty_pateint_list_patient_time_v"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="35dp"
+        android:layout_toLeftOf="@+id/item_dc_duty_pateint_list_patient_time_tv"
+        android:background="@drawable/bg_solid_ff0000_radius_45" />
+    <TextView
+        android:id="@+id/item_dc_duty_pateint_list_patient_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="2019.10.11"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/item_dc_duty_pateint_list_patient_hospital_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_dc_duty_pateint_list_patient_name_tv"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/item_dc_duty_pateint_list_civ"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="贵阳市观山湖区观山社区医院"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <View
+        style="@style/horizontal_line_light_1"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

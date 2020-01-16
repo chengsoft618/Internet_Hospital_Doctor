@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_solid_ffffff_radius_10">
+
+    <TextView
+        android:id="@+id/item_patient_data_manager_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="15dp"
+        android:maxLines="1"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/item_patient_data_manager_hospital_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="21dp"
+        android:layout_toRightOf="@+id/item_patient_data_manager_name_tv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/item_patient_data_manager_patient_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_patient_data_manager_name_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="病例号:"
+        android:textColor="@color/color_7d7e7f"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_patient_data_manager_patient_num_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_patient_data_manager_name_tv"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/item_patient_data_manager_patient_num_tv"
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_patient_data_manager_in_hospital_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_patient_data_manager_name_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/item_patient_data_manager_in_hospital_num_desc_tv"
+        android:text="住院号:"
+        android:textColor="#ff7d7e7f"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_patient_data_manager_in_hospital_num_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_patient_data_manager_name_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="9dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_size_14" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_patient_data_manager_patient_pics_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/item_patient_data_manager_patient_num_tv"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="15dp" />
+
+    <LinearLayout
+        android:id="@+id/item_patient_data_manager_patient_has_pics_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_patient_data_manager_patient_pics_rv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看更多>"
+            android:textColor="@color/color_45aef8"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+</RelativeLayout>

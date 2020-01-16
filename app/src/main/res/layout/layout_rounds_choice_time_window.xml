@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/action_bar_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/layout_rounds_choice_time_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_rounds_department_dialog_delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/rounds_choice_doctor_rounds_time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_rounds_choice_time_recommend_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_rounds_department_blue_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="接诊时间表"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="按照接诊时间表，接诊概率更大"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12" />
+
+                </LinearLayout>
+
+                <cn.longmaster.hospital.doctor.view.timetable.ReceptionScheduleView
+                    android:id="@+id/layout_rounds_choice_time_recommend_rsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:leftMargin="0dp"
+                    app:rightMargin="0dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="@string/rounds_choice_doctor_rounds_recommend_time_tip"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="28dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_rounds_department_blue_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="意向时间"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="最多5个多个时间更利于接诊"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12" />
+
+                </LinearLayout>
+
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/layout_rounds_choice_intention_time_stv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="25dp"
+                    app:sBackgroundDrawableRes="@drawable/bg_solid_ecf1fd_stroke_049eff_radius_5"
+                    app:sCenterTextColor="@color/color_049eff"
+                    app:sCenterTextSize="@dimen/font_size_16"
+                    app:sCenterTextString="添加意向时间"
+                    app:sCenterTvDrawableLeft="@mipmap/ic_rounds_add_choose_patient" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/layout_rounds_choice_time_intention_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rounds_choice_doctor_rounds_expert_time"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/font_size_16"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rounds_choice_doctor_rounds_morning_time"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="@string/rounds_choice_doctor_rounds_noon_time"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rounds_choice_doctor_rounds_afternoon_time"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="@string/rounds_choice_doctor_rounds_other_time"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/rounds_choice_doctor_rounds_specific_time"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/bg_solid_ffffff_stroke_dcdcdc">
+
+        <TextView
+            android:id="@+id/layout_rounds_choice_time_determine"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_rounds_add_submission_btn"
+            android:gravity="center"
+            android:text="@string/medical_college_determine"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+    </FrameLayout>
+
+</LinearLayout>

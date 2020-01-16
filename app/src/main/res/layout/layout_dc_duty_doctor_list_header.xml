@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="18dp"
+        android:background="@color/color_app_main_color" />
+
+    <TextView
+        android:id="@+id/layout_dcdoctor_list_header_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/user_center_menu_commend"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold" />
+
+</LinearLayout>

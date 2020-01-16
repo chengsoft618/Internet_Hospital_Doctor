@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="68dp"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg_doctor_list_dialog_filter"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_doctor_list_filter_by_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="按姓名"
+        android:textColor="@drawable/bg_rounds_doctor_tab_txt"
+        android:textSize="@dimen/font_size_13" />
+
+    <View
+        style="@style/horizontal_line_light"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp" />
+
+    <TextView
+        android:id="@+id/dialog_doctor_list_filter_by_sick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="按疾病"
+        android:textColor="@drawable/bg_rounds_doctor_tab_txt"
+        android:textSize="@dimen/font_size_13" />
+</LinearLayout>

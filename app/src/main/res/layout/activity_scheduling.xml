@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.consult.consultant.SchedulingActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/color_app_main_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_scheduing_manage_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="14dp"
+            android:src="@mipmap/ic_actionbar_back_white" />
+
+        <TextView
+            android:id="@+id/activity_scheduing_manage_input_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_topbar_input"
+            android:gravity="center_vertical"
+            android:hint="@string/consultation_manage_hint"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textColorHint="@color/color_99d5ff"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/activity_scheduing_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/ic_screen"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/appoint_screen"
+            android:textColor="@color/text_color_white_aedeff"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/activity_scheduing_manage_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/activity_scheduing_manage_radio_group_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/consultation_manage_all"
+            android:textColor="@drawable/radio_group_text_color"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/activity_scheduing_manage_radio_group_triage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/consultation_manage_triage"
+            android:textColor="@drawable/radio_group_text_color"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/activity_scheduing_manage_radio_group_carry_on"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/consultation_manage_carry_on"
+            android:textColor="@drawable/radio_group_text_color"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/activity_scheduing_manage_radio_group_finish"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rg_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/photo_picker_confirm"
+            android:textColor="@drawable/radio_group_text_color"
+            android:textSize="@dimen/font_size_16" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

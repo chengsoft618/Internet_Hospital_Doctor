@@ -1,0 +1,188 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/color_app_background</item>
+        <item name="colorPrimary">@color/color_049eff</item>
+        <item name="colorPrimaryDark">@color/color_049eff</item>
+    </style>
+
+    <!-- 应用启动页(StartingWindow)的theme -->
+    <style name="AppTheme.StartingWindowTheme" parent="AppTheme">
+        <item name="android:windowBackground">@mipmap/bg_logo_for_splash</item>
+    </style>
+
+    <style name="ActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar" />
+
+    <style name="vertical_white_divider">
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_width">0.67dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_4dffffff</item>
+    </style>
+
+    <style name="AppThemeTransparent" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="horizontal_line_black">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="horizontal_line_light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.67dp</item>
+        <item name="android:background">@color/color_cccccc</item>
+    </style>
+
+    <style name="horizontal_line_light_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_dcdcdc</item>
+    </style>
+
+    <style name="vertical_line_light_1">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_dcdcdc</item>
+    </style>
+
+    <style name="table_horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_c8c7cc</item>
+    </style>
+
+    <style name="table_vertical_line">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_c8c7cc</item>
+    </style>
+
+    <style name="rounds_table_horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_d2ecff</item>
+    </style>
+
+    <style name="rounds_table_vertical_line">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_d2ecff</item>
+    </style>
+
+    <!--升窗-->
+
+    <style name="UpDownAnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/raise_window_up_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/raise_window_down_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/raise_window_up_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/raise_window_down_out</item>
+    </style>
+
+    <style name="DialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style>
+
+    <!-- 自定义样式Dialog-->
+    <style name="custom_noActionbar_window_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+    <!-- 自定义样式Dialog-->
+    <style name="customAnimation_noActionbar_window_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="updateDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@color/color_transport</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- 自定义样式SeekBar-->
+    <style name="seekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">2.0dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/bg_video_play_seek_bar_horizontal</item>
+        <item name="android:minHeight">2.0dp</item>
+        <item name="android:thumb">@drawable/bg_video_play_seek_trumb</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/bg_progress_bar</item>
+
+    </style>
+
+    <style name="ProgressBarRedStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/bg_progress_red_bar</item>
+
+    </style>
+
+    <style name="TabLayoutTextSizeStyle">
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
+
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pophiden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/style_ratingbar_full</item>
+    </style>
+
+    <style name="ProgressBar.Horizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal" />
+    <!--https://stackoverflow.com/questions/48072438/java-lang-illegalstateexception-only-fullscreen-opaque-activities-can-request-o-->
+    <!--弹出透明Activity-->
+    <style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/color_33000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@color/color_33000000</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="select_hospital_tab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:text">请选择</item>
+        <item name="android:textColor">@drawable/bg_txt_color_049eff_1a1a1a</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

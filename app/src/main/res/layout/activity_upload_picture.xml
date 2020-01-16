@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.consult.UploadPictureActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_upload_picture_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="left_btn|title"
+        app:titleText="@string/upload_queue" />
+
+    <TextView
+        android:id="@+id/act_upload_picture_pause_note_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/act_upload_picture_aab"
+        android:background="@color/color_e0eefc"
+        android:gravity="center"
+        android:text="@string/data_queue_pause_upload_data"
+        android:textColor="@color/color_fcac2d"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/act_upload_picture_pause_note_tv"
+        android:layout_marginBottom="55dp"
+        android:orientation="vertical">
+
+        <cn.longmaster.hospital.doctor.view.MaxHeightView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mhv_HeightRatio="0.3">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/act_upload_picture_upload_result_content_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/data_queue_upload_result"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/act_upload_picture_upload_result_close_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/video_call_close"
+                            android:textColor="@color/text_color_333333_585858"
+                            android:textSize="@dimen/font_size_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_e5e5e5" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/act_upload_picture_upload_result_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </cn.longmaster.hospital.doctor.view.MaxHeightView>
+
+        <View
+            android:id="@+id/act_upload_picture_v"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_e5e5e5" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/act_upload_picture_no_data_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_upload_no_record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/data_upload_no_record"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/act_upload_picture_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/act_upload_picture_pause_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/upload_queue_pause"
+            android:textColor="@color/text_color_333333_585858"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/act_upload_picture_add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_add_picture" />
+
+        <TextView
+            android:id="@+id/act_upload_picture_clear_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:text="@string/upload_queue_empty"
+            android:textColor="@color/text_color_333333_585858"
+            android:textSize="@dimen/font_size_16" />
+    </RelativeLayout>
+</RelativeLayout>

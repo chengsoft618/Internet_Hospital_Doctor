@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_text_stat_change">您的预约有新状态，请点击查看</string>
+</resources>

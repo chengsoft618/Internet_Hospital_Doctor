@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.dutyclinic.DCDutyPatientDiseaseUpLoadActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_dc_duty_patient_data_up_load_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="left_btn|title"
+        app:titleText="上传资料" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/act_dc_duty_patient_data_up_load_treat_time_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="选择就诊日期"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_treat_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="请选择就诊日期"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textColorHint="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_dialog_home_page_visit_back" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_line_light_1" />
+
+            <LinearLayout
+                android:id="@+id/act_dc_duty_patient_data_up_load_treat_type_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="选择本次就诊类型"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_treat_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="请选择就诊类型"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textColorHint="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_dialog_home_page_visit_back" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_line_light_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:text="疾病诊断"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <EditText
+                android:id="@+id/act_dc_duty_patient_data_up_load_diagnosis_et"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/act_consult_add_patient_overview_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f8f8f8_radius_3"
+                android:gravity="top|left"
+                android:hint="请填写患者疾病诊断"
+                android:imeOptions="actionDone"
+                android:minLines="5"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/color_1a1a1a"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="病情摘要"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f8f8f8_radius_3"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/act_dc_duty_patient_data_up_load_survey_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_patient_overview_tv"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请填写患者的病情摘要与医嘱说明"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/font_size_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_survey_pic_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_survey_voice_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/act_dc_duty_patient_data_up_load_survey_pic_add_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_dc_duty_patient_disease_pic_add" />
+
+                    <ImageView
+                        android:id="@+id/act_dc_duty_patient_data_up_load_survey_voice_add_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_dc_duty_patient_disease_voice_add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="检查检验"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f8f8f8_radius_3"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/act_dc_duty_patient_data_up_load_check_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_patient_overview_tv"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请填写检查结果或上传检查报告"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/font_size_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_check_pic_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_check_voice_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/act_dc_duty_patient_data_up_load_check_pic_add_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_dc_duty_patient_disease_pic_add" />
+
+                    <ImageView
+                        android:id="@+id/act_dc_duty_patient_data_up_load_check_voice_add_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_dc_duty_patient_disease_voice_add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="用药及处方"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_solid_f8f8f8_radius_3"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/act_dc_duty_patient_data_up_load_prescription_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_patient_overview_tv"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请填写用药及处方"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/font_size_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_prescription_pic_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_prescription_voice_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/act_dc_duty_patient_data_up_load_prescription_pic_add_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_dc_duty_patient_disease_pic_add" />
+
+                    <ImageView
+                        android:id="@+id/act_dc_duty_patient_data_up_load_prescription_voice_add_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/ic_dc_duty_patient_disease_voice_add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/act_dc_duty_patient_data_up_load_operator_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="right"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="操作人:"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_operator_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="胡汉三"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_delete_tv"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/bg_solid_ff0000_radius_45"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_size_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/act_dc_duty_patient_data_up_load_confirm_tv"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_solid_049eff_radius_45"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_size_18"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

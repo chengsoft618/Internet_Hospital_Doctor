@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="按住说话"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageButton
+            android:id="@+id/dialog_dc_duty_voice_record_start_ib"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dc_duty_voice_record_start_bg"
+            android:gravity="center"
+            android:padding="18dp"
+            android:src="@mipmap/ic_dc_duty_voice_record"
+            android:textColor="@color/color_157efb"
+            android:textSize="@dimen/font_size_18" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dialog_dc_duty_voice_record_cancel_tv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_20" />
+</LinearLayout>

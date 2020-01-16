@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/act_my_patient_msb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <LinearLayout
+        android:id="@+id/act_my_patient_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_app_main_color"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/act_my_patient_back_iv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="14dp"
+            android:src="@mipmap/ic_actionbar_back_white" />
+
+        <TextView
+            android:id="@+id/act_my_patient_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="@string/home_appoint_list"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+
+        <LinearLayout
+            android:id="@+id/act_my_patient_right_view"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/act_my_patient_show_same_dep_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/bg_my_patient_show_same_dep_cb"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/user_show_section_appoint"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/act_my_patient_rg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/act_my_patient_rounds_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_my_patient_tab"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/rounds"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_18" />
+
+        <RadioButton
+            android:id="@+id/act_my_patient_consult_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_my_patient_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/consultation"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/act_my_patient_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

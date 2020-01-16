@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dutyclinic.DCDutyDoctorListActivity"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_dc_duty_doctor_list_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="left_btn|title"
+        app:titleText="当前参与医生" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/act_dc_duty_doctor_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

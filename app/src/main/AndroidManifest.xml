@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.longmaster.hospital.doctor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 录像需要的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".core.AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <meta-data
+            android:name="channel"
+            android:value="${CHANNEL_VALUE}" />
+
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="0uyyehDXbwmYACoSjBQ7XuGvrcoVvHKW" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.5" />
+
+        <activity
+            android:name=".ui.AppStartActivity"
+            android:theme="@style/AppTheme.StartingWindowTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 预约列表 -->
+        <activity
+            android:name=".ui.home.MyPatientActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <!-- 搜索医生 -->
+        <activity
+            android:name=".ui.doctor.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- 搜索医生 -->
+        <activity
+            android:name=".ui.doctor.DoctorSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- 搜索医生结果 -->
+        <activity
+            android:name=".ui.doctor.DoctorSearchResultActivity"
+            android:screenOrientation="portrait" />
+        <!-- 搜索医院 -->
+        <activity
+            android:name=".ui.hospital.HospitalSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- 搜索医院结果 -->
+        <activity
+            android:name=".ui.hospital.HospitalSearchResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!--选择医院-->
+        <activity
+            android:name=".ui.hospital.HospitalChooseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 资料管理 -->
+        <activity
+            android:name=".ui.consult.ConsultDataManageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 多图预览 -->
+        <activity
+            android:name=".ui.consult.PhotoPreviewActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择关联病历 -->
+        <activity
+            android:name=".ui.consult.record.SelectRelateRecordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 患者信息 -->
+        <activity
+            android:name=".ui.consult.record.PatientInformationActivity"
+            android:screenOrientation="portrait" />
+        <!-- 出具医嘱列表 -->
+        <!-- 文字输入 -->
+        <activity
+            android:name=".ui.consult.TextDiagnosisInputActivity"
+            android:screenOrientation="portrait" />
+        <!-- 填写会诊信息 -->
+        <activity
+            android:name=".ui.consult.ConsultAddActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 提交成功 -->
+        <activity
+            android:name=".ui.consult.SubmitSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择医生 -->
+        <activity
+            android:name=".ui.doctor.DoctorListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 按医院选择医生 -->
+        <activity
+            android:name=".ui.hospital.HospitalFilterByCityActivity"
+            android:screenOrientation="portrait" />
+        <!-- 搜索医院 -->
+        <activity
+            android:name=".ui.hospital.HospitalFilterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 按科室选择医生 -->
+        <activity
+            android:name=".ui.doctor.DepartmentChooseActivity"
+            android:screenOrientation="portrait" />
+        <!-- 科室搜索 -->
+        <activity
+            android:name=".ui.department.DepartmentSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 科室搜索结果 -->
+        <activity
+            android:name=".ui.department.DepartmentSearchResultActivity"
+            android:screenOrientation="portrait" />
+        <!-- 医生详情 -->
+        <!-- 医生详情 -->
+        <activity
+            android:name=".ui.doctor.DoctorDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 查看全部待处理事项 -->
+        <activity
+            android:name=".ui.user.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 资料管理 -->
+        <activity
+            android:name=".ui.user.PatientMaterialManagerActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="application/vnd.ms-powerpoint" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+            </intent-filter>
+        </activity>
+        <!-- 资料管理详情 -->
+        <activity
+            android:name=".ui.user.PatientDataDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 患者管理 -->
+        <activity
+            android:name=".ui.user.PatientManagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 我的账户 -->
+        <activity
+            android:name=".ui.account.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的账户 -->
+        <activity
+            android:name=".ui.user.SettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 余额提现 -->
+        <activity
+            android:name=".ui.account.WithdrawCashActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择账户 -->
+        <activity
+            android:name=".ui.user.SelectCardActivity"
+            android:screenOrientation="portrait" />
+        <!-- 新增账户 -->
+        <activity
+            android:name=".ui.user.AddAccountActivity"
+            android:screenOrientation="portrait" />
+        <!-- 联系我们 -->
+        <activity
+            android:name=".ui.user.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择服务器 -->
+        <activity
+            android:name=".ui.user.ChooseAddressActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".ui.user.PasswordChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.LoginMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.dialog.KickOffDialog"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 内置浏览器 -->
+        <activity
+            android:name=".ui.user.BrowserActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!--引导页-->
+        <activity
+            android:name=".ui.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.video.ConsultRoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.video.HelpCoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.video.VideoCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.video.KickOffActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTransparent" />
+        <activity
+            android:name=".ui.PicBrowseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.DischargedPicBrowserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SimplePicBrowseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.VideoPlayerActivity"
+            android:screenOrientation="portrait" />
+        <!--ChatActivity-->
+        <!--android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"-->
+        <activity
+            android:name=".ui.im.ChatActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.consult.HistoryConsultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.im.AdmissionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doctor.DoctorQRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.im.HistoryMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.CapturePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!--上传患者资料-->
+        <activity
+            android:name=".ui.user.PatientDataUploadActivity"
+            android:screenOrientation="portrait" />
+        <!--患者材料列表-->
+        <activity
+            android:name=".ui.user.PatientDataListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.consult.consultant.RepresentFunctionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.consult.consultant.PaymentConfirmActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.consult.consultant.VisitScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.PickPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.consultant.ConsultationSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.consult.consultant.AdvanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.consultant.AdvanceResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.consultant.SchedulingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.consult.UploadPictureActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".view.pdfviewpager.library.service.CopyAssetService"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.college.ActualCombatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.college.GuideLiteratureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.college.CollegeVideoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PDFViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsChoiceDoctorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsMouldInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!--新建患者-->
+        <activity
+            android:name=".ui.rounds.RoundsPatientAddActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.rounds.RoundsInfoConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsAppointmentSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.DiagnosisCoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.ReceiveSuccessActivity"
+            android:screenOrientation="portrait" />
+        <!--患者信息-->
+        <activity
+            android:name=".ui.rounds.RoundsPatientInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsRefusalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsDataManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsConsultRoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.rounds.SelectionTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.ReceiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.FirstJourneyPicBrowseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.RelationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.PDFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.PersonalMaterialActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.floatwindow.FloatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.WaitRoundsPatientActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.rounds.SearchPatientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.SearchPatientResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.AccountVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.MyDataBingDoctorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.MeetingRoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.FlowDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.zxing.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.rounds.RoundsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.RoundsVideoPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.rounds.IssueDoctorOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.user.CourseTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.CourseListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.MyAssessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDoctorListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCInputPatientInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyProjectDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyDoctorListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyPatientListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyPatientDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DcDutyVisitPlanListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DcDutyVisitPlanDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DcDutyVisitPlanDetailsRedactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyPatientDiseaseUpLoadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.dutyclinic.DCDutyPatientDiseaseCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.dutyclinic.DCRoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- receivers -->
+        <receiver android:name=".core.receiver.NetStateReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".core.receiver.AlarmReceiver">
+            <intent-filter>
+                <action android:name="cn.longmaster.doctorclient.action.alarm.manager" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".core.receiver.PhoneStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1105322169" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".ui.share.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- services -->
+        <service
+            android:name=".core.AppService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 百度插件部分 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name=".util.FileProvider4Camera"
+            android:authorities="${applicationId}.FileProvider4Camera"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:multiprocess="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/camera_file_paths" />
+        </provider>
+    </application>
+
+</manifest>

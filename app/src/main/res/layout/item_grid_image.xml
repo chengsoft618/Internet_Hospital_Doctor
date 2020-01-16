@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <cn.longmaster.doctorlibrary.util.photo.SquareItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_grid_image_aiv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/item_grid_dicom_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_image_consult_dcm"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/item_grid_media_control_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bg_grid_media_default" />
+
+            <cn.longmaster.hospital.doctor.view.RoundProgressBar
+                android:id="@+id/item_grid_media_progress_bar"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerInParent="true"
+                app:roundColor="@color/color_white"
+                app:roundProgressColor="@color/color_22a6ff"
+                app:roundWidth="1.5dip"
+                app:rpbTextColor="@color/color_white"
+                app:rpbTextSize="@dimen/font_size_12"
+                app:textIsDisplayable="true" />
+
+            <ImageView
+                android:id="@+id/item_grid_media_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_media_not_download" />
+
+            <ImageView
+                android:id="@+id/item_grid_media_control_btn"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_media_download_btn"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </cn.longmaster.doctorlibrary.util.photo.SquareItemLayout>
+
+    <TextView
+        android:id="@+id/item_grid_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_size_12" />
+</LinearLayout>

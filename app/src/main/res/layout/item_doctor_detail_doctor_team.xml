@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center_vertical"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/item_doctor_detail_doctor_team_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:textColor="@color/color_45aef8"
+        android:textSize="@dimen/font_size_15" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:src="@mipmap/ic_doctor_detail_team_pre" />
+
+    <TextView
+        android:id="@+id/item_doctor_detail_doctor_team_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="17dp"
+        android:textColor="@color/color_45aef8"
+        android:textSize="@dimen/font_size_14" />
+</LinearLayout>

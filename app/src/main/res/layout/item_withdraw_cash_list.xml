@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_withdraw_cash_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_withdraw_cash_normal_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_withdraw_cash_selected_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_withdraw_cash_selected" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_number_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_selected_iv"
+            android:text="编号: "
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_number_v"
+            android:text="12153"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_time_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_number_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_selected_iv"
+            android:text="视频时间:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_number_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_time_v"
+            android:text="2018.12.32 13:30"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_hospital_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_time_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_selected_iv"
+            android:text="上级专家:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_experts_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_time_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_hospital_tv"
+            android:text="长大医生"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_withdraw_cash_normal_service_fee_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="@string/account_service_fee"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/item_withdraw_cash_normal_service_fee_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="1000元"
+                android:textColor="@color/color_0096ff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/item_withdraw_cash_normal_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/item_withdraw_cash_experts_tv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/color_e5e5e5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_withdraw_cash_other_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_withdraw_cash_other_selected_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_withdraw_cash_selected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_other_selected_iv"
+            android:text="@string/chat_other"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_other_service_fee_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="500元"
+            android:textColor="@color/color_0096ff"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/item_withdraw_cash_other_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/color_e5e5e5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_withdraw_cash_arrears_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_withdraw_cash_arrears_selected_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_withdraw_cash_selected" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_arrears_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_arrears_selected_iv"
+            android:text="@string/account_arrears"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_arrears_reason_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_arrears_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/item_withdraw_cash_arrears_service_fee_tv"
+            android:layout_toRightOf="@+id/item_withdraw_cash_arrears_selected_iv"
+            android:text="说明：就诊17332由于操作错误，多分成500元，现扣除此500元。"
+            android:textColor="@color/color_ff6969"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_arrears_time_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_arrears_reason_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_arrears_selected_iv"
+            android:text="欠款操作时间："
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_arrears_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_withdraw_cash_arrears_reason_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_withdraw_cash_arrears_time_v"
+            android:ellipsize="end"
+            android:text="2018.11.25 11:00"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_withdraw_cash_arrears_service_fee_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="end"
+            android:text="-500元"
+            android:textColor="@color/color_ff6969"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/item_withdraw_cash_arrears_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/item_withdraw_cash_arrears_time_tv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/color_e5e5e5" />
+    </RelativeLayout>
+</LinearLayout>

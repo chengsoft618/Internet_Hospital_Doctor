@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_chat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_eeeeee"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/chat_center_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chat_date_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_chat_date_msg"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_12"
+            tools:text="2017.06.20 14:00" />
+
+        <include layout="@layout/layout_chat_medical_record" />
+
+        <include layout="@layout/layout_chat_system_message" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_center_msg_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp">
+
+        <LinearLayout
+            android:id="@+id/chat_left_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="66dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chat_left_avatar"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:src="@drawable/ic_chat_default_patient_avatar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chat_left_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12"
+                        tools:text="首诊：" />
+
+                    <TextView
+                        android:id="@+id/chat_left_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12"
+                        tools:text="王医生" />
+                </LinearLayout>
+
+                <include layout="@layout/layout_chat_left_text_msg" />
+
+                <include layout="@layout/layout_chat_left_doctor_card_msg" />
+
+                <include layout="@layout/layout_chat_left_pic_msg" />
+
+                <include layout="@layout/layout_chat_left_voice_msg" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/chat_right_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="51dp"
+            android:paddingRight="15dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/chat_right_avatar"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/chat_right_resend_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/ic_resend" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toLeftOf="@+id/chat_right_ll"
+                        android:text="@string/chat_resend"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_10" />
+                </LinearLayout>
+
+                <include layout="@layout/layout_chat_right_text_msg" />
+
+                <include layout="@layout/layout_chat_right_doctor_card_msg" />
+
+                <include layout="@layout/layout_chat_right_pic_msg" />
+
+                <include layout="@layout/layout_chat_right_voice_msg" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chat_right_avatar"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_chat_default_patient_avatar" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_solid_ffffff_radius_8"
+    android:gravity="center_vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/view_rounds_confirm_medical_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="病历1："
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/view_rounds_confirm_medical_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="1dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="5"
+        android:text="王大仙"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/view_rounds_confirm_medical_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:text="男"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/view_rounds_confirm_medical_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="56岁"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/view_rounds_confirm_medical_import_view"
+        android:layout_width="24dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_solid_f6ac27_radius_2"
+        android:gravity="center"
+        android:text="重点"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_10" />
+</LinearLayout>

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/color_white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_doctor_list_photo_iv"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/bg_remark_photo_attending_doctor" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_no_enter_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_name_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="未入驻"
+        android:textColor="@color/color_FF7707"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/item_doctor_list_photo_iv"
+        android:ellipsize="end"
+        android:maxEms="5"
+        android:singleLine="true"
+        android:text="杨其他"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_department_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/item_doctor_list_name_tv"
+        android:ellipsize="end"
+        android:maxEms="16"
+        android:singleLine="true"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_level_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/item_doctor_list_department_tv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_hospital_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_name_tv"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/item_doctor_list_photo_iv"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="39互联网医院"
+        android:textColor="@color/color_b48004"
+        android:textSize="@dimen/font_size_12" />
+
+
+    <TextView
+        android:id="@+id/item_doctor_list_score_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_hospital_tv"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/item_doctor_list_photo_iv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="评分："
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_score_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_hospital_tv"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/item_doctor_list_score_tv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_FF7707"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_diagnosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_hospital_tv"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/item_doctor_list_score_desc_tv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="已接诊："
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_diagnosis_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_hospital_tv"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/item_doctor_list_diagnosis"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_FF7707"
+        android:textSize="@dimen/font_size_12" />
+
+    <FrameLayout
+        android:id="@+id/item_doctor_list_mark_desc_fl"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/item_doctor_list_diagnosis_times"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/item_doctor_list_photo_iv">
+
+        <TextView
+            android:id="@+id/item_doctor_list_mark_desc_no_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_vertical"
+            android:text="暂无标签评论"
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_12" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/item_doctor_list_mark_desc_fbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:alignContent="flex_start"
+            app:flexWrap="wrap" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/item_doctor_list_mark_desc_v"
+        style="@style/horizontal_line_light_1"
+        android:layout_below="@+id/item_doctor_list_mark_desc_fl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_good_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_mark_desc_v"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="擅长疾病："
+        android:textColor="@color/color_7d7e7f"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_good_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_mark_desc_v"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/item_doctor_list_good_tv"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="1"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_14" />
+
+    <TextView
+        android:id="@+id/item_doctor_list_recommend_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_good_desc_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="推荐接诊："
+        android:textColor="@color/color_7d7e7f"
+        android:textSize="@dimen/font_size_14" />
+
+    <FrameLayout
+        android:id="@+id/item_doctor_list_recommend_desc_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_good_desc_tv"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/item_doctor_list_good_tv">
+
+        <TextView
+            android:id="@+id/item_doctor_list_recommend_desc_no_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="暂无推荐接诊"
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_12" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/item_doctor_list_recommend_desc_fbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item_doctor_list_visit_time_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_doctor_list_recommend_desc_fl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_solid_ffffff_stroke_dcdcdc_radius_5"
+        android:divider="@drawable/table_v_divider_dcdcdc"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginTop="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:background="@color/color_white">
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_tv"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_solid_ededed_tl_4"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊时间"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="周一"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="周二"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="周三"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="周四"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="周五"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:divider="@drawable/table_h_divider_dcdcdc"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_morning_tv"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_solid_ededed"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="上         午"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_1a_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_2a_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_3a_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_4a_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_5a_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:divider="@drawable/table_h_divider_dcdcdc"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_afternoon_tv"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_solid_ededed_bl_4"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="下         午"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_1p_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_2p_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_3p_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_4p_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/item_doctor_list_visit_time_5p_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="接诊"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

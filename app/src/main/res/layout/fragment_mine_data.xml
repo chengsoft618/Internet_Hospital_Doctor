@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_my_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/fragment_my_data_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_mine_data_add_stv">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_my_data_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <include
+        layout="@layout/include_new_no_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_mine_data_add_stv" />
+
+    <View
+        style="@style/horizontal_line_light_1"
+        android:layout_above="@+id/fragment_mine_data_add_stv" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/fragment_mine_data_add_stv"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        app:sBackgroundDrawableRes="@color/color_white"
+        app:sCenterTextColor="@color/color_049eff"
+        app:sCenterTextSize="16sp"
+        app:sCenterTextString="添加我的资料"
+        app:sCenterTvDrawableHeight="14dp"
+        app:sCenterTvDrawableLeft="@drawable/ic_withdrawal_add_account"
+        app:sCenterTvDrawableWidth="14dp"
+        app:sRightIconMarginRight="9dp" />
+
+</RelativeLayout>

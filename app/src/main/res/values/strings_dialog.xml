@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog_tip">提示</string>
+    <string name="sure">确&#160;定</string>
+    <string name="confirm">确&#160;认</string>
+    <string name="cancel">取&#160;消</string>
+    <string name="search">搜&#160;索</string>
+    <string name="send">发&#160;送</string>
+    <string name="close">关&#160;闭</string>
+    <string name="reset">重&#160;置</string>
+    <string name="sure_to_log_out_tip">确认要退出登录？</string>
+    <string name="withdraw_cash_success_dialog">提现申请成功，请耐心等待工作人员为您处理。</string>
+    <string name="account_login_at_other_place_tip">您的账号在另一台设备登录，您被迫下线。</string>
+    <string name="photo_upload">拍照上传</string>
+    <string name="album_select">相册选择</string>
+    <string name="voice_advice">语音医嘱</string>
+    <string name="text_input">文字输入</string>
+    <string name="save">保&#160;存</string>
+    <string name="give_advice_user_agreement">远程诊疗结束后，须按照《39互联网医院医师执业规范》、《39互联网医院诊疗操作规范》的要求为患者及发起邀请方医生，出具电子诊断报告或病历研讨意见，并在以上报告或意见中使用签名。</string>
+    <string name="del_voice_title">删除录音</string>
+    <string name="del_voice">删除后该录音将不可恢复，是否确认？</string>
+    <string name="finish_issue_diagnosis_title">确认结束</string>
+    <string name="finish_issue_diagnosis_message">您正在出具会诊意见信息，确认结束吗？</string>
+    <string name="is_delete_diagnosis_pic">是否确认删除该图片？</string>
+    <string name="choice_recure_date_picker_title">请选择提醒复诊时间</string>
+
+    <!-- 确认就诊dialog -->
+    <string name="confirm_consult_information">确认就诊信息</string>
+    <string name="confirm_patient_name">患者姓名：</string>
+    <string name="confirm_phone_num">联系电话：</string>
+    <string name="confirm_consult_doctor">会诊医生：</string>
+    <string name="confirm_reconsult_doctor">复诊医生：</string>
+    <string name="confirm_recur_doctor">复诊医生：</string>
+    <string name="confirm_consult_time">就诊时段：</string>
+    <string name="confirm_consult_cost">就诊费用：</string>
+    <string name="confirm_service_name">服务项目：</string>
+    <string name="confirm_reconsult_information">确认复诊信息</string>
+    <string name="confirm_original_consult">原就诊</string>
+    <string name="confirm_reconsult">复诊</string>
+    <string name="consult_finish_time">就诊完成时间：</string>
+    <string name="consult_num_and_predict_time">%1$s（预计就诊时间：%2$s）</string>
+
+    <!-- 提交失败 -->
+    <string name="consult_confirm_fail">提交失败</string>
+    <string name="consult_confirm_fail_text">您所预约的医生该时段预约名额已满！您可以点击选择分诊中心预约该上级专家，我们将尽快为您预约该医生</string>
+    <string name="consult_confirm_fail_reselect">重新选择时间</string>
+    <string name="confirm_drop_out_reconsult">确定不参与复诊</string>
+    <string name="confirm_drop_out_reconsult_text">确认不参与复诊，将不为该患者选择复诊时间，不参与复诊过程。</string>
+
+    <!-- 新增修改排班弹窗 -->
+    <string name="no_launch_authority">您暂无发起会诊权限</string>
+    <string name="dialog_user_informed_consent">用户知情同意</string>
+
+    <!-- 账户协议 -->
+    <string name="my_account_agreement_content">1、您可以随时查看个人名下的账户信息，包括但不限于：查看每月结算信息、收入明细等。\n
+        2、在您签署合作协议后，本网站在您配合完成下述步骤(1)和(2)后，按照下述步骤操作：\n
+（1）请您在确定您所述的专家级别后，参照《39互联网医院诊疗服务收费标准》价格标准，自行设置您认为可接受的价格；\n
+（2）通过医生助理完成与患者相关的对接工作后，在您认为可以为本例患者提供远程诊疗服务的前提下，确定可以提供远程诊疗服务的时间，并告知患者；\n
+（3）申请会诊方对您所预定的值班时间给与确认，并按照本网站规定支付对应的诊疗费用；\n
+（4）请您在约定的时间，按照约定的方式，完成远程诊疗的工作；\n
+（5）请您按照本网站规定，在完成远程诊疗工作后、规定的时间内出具书面的会诊意见，并提交到本网站指定的页面；\n
+（6）本网站将本次诊疗活动计入到您的账户；\n
+（7）本次诊疗活动对应的劳务费用，本网站将在次月进行结算并将款项支付到您的账户。</string>
+
+    <!-- 进入诊室等待 -->
+    <string name="consult_wait_title_applying">正在申请进入视频会诊</string>
+    <string name="consult_wait_title_wait">请等待会诊开始</string>
+    <string name="consult_wait_sequence_num">就诊序号：%s</string>
+    <string name="consult_wait_predict_time">（预计就诊时间：%s）</string>
+    <string name="consult_wait_consultation_doctor">会诊专家：%s</string>
+    <string name="consult_wait_attending_doctor">首诊医生：%s</string>
+    <string name="consult_wait_patient">患　　者：%s</string>
+    <string name="consult_member_list_dialog">成员列表:</string>
+    <string name="camera_permission_not_granted">无法获取摄像头数据，请在手机应用权限管理中打开39互联网医院的摄像头权限。</string>
+
+    <!-- 上传资料 -->
+    <string name="upload_capture_photo_max_num_tips">你已经拍摄的%d张图片，为保证上传质量，请先上传图片。</string>
+    <string name="upload_capture_max_tips">当前最多上传%1$d张图片</string>
+    <string name="upload_no_wifi">你还没有连接wifi，是否继续上传资料？</string>
+    <string name="upload_not_now">暂不上传</string>
+    <string name="upload_still">继续上传</string>
+    <string name="upload_no_network">你的手机还没有联网，请连入互联网。</string>
+
+    <string name="rounds_appointment">发起查房预约</string>
+    <string name="visit_appointment">发起会诊预约</string>
+</resources>

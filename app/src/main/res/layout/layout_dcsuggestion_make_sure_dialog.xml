@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_solid_ffffff_radius_5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="诊疗建议"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageView
+            android:id="@+id/layout_dcsuggestion_make_sure_dialog_close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_dcissue_order_close" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e6e6e6" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <cn.longmaster.hospital.doctor.view.DCIssueOrderTitleAndValueItem
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_name_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dciotv_divider="false"
+                app:dciotv_title="患者姓名："
+                app:dciotv_value="李大安" />
+
+            <cn.longmaster.hospital.doctor.view.DCIssueOrderTitleAndValueItem
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_phonenum_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dciotv_divider="false"
+                app:dciotv_title="手机号码："
+                app:dciotv_value="17777777777" />
+
+            <cn.longmaster.hospital.doctor.view.DCIssueOrderTitleAndValueItem
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_cardno_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dciotv_divider="false"
+                app:dciotv_title="身份证号："
+                app:dciotv_value="520121199909231109" />
+
+            <cn.longmaster.hospital.doctor.view.DCIssueOrderTitleAndValueItem
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_curedt_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dciotv_divider="false"
+                app:dciotv_title="就诊时间："
+                app:dciotv_value="2019-11-29" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="疾病诊断"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_diagnosis_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="慢性阻塞性肺"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="病情摘要"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_remark_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="胸口总是出现胸痛胸闷的情况，医院检查说是呼吸道疾病，但是吃药不怎么管用，且咳嗽加重"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="检验检测"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_inspect_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:alignContent="flex_start"
+                app:flexWrap="wrap" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="处方用药"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_drug_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:alignContent="flex_start"
+                app:flexWrap="wrap" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/layout_dcsuggestion_make_sure_dialog_drug_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_e6e6e6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/layout_dcsuggestion_make_sure_dialog_modify_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_solid_ffffff_stroke_666666_radius_45"
+                    android:gravity="center"
+                    android:text="修改"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_18" />
+
+                <Button
+                    android:id="@+id/layout_dcsuggestion_make_sure_dialog_sure_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_solid_049eff_radius_45"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

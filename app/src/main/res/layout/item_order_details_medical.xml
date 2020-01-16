@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_order_details_medical_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/bg_solid_ffffff_radius_8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/item_order_details_is_serious_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/bg_solid_f6ac27_radius_2"
+            android:padding="2dp"
+            android:text="重点"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_10"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_order_details_medical_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_order_details_medical_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="病例号:"
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_order_details_medical_num_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <ImageView
+            android:id="@+id/item_order_details_delete_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:padding="12dp"
+            android:src="@mipmap/ic_rounds_add_del_patient"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/item_order_details_medical_patient_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_order_details_medical_patient_gender_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/item_order_details_medical_patient_name_tv"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_order_details_medical_patient_age_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/item_order_details_medical_patient_gender_tv"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_order_details_medical_patient_illness_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_order_details_medical_patient_name_tv"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_size_14" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_order_details_medical_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_order_details_medical_patient_illness_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_order_details_operation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_solid_f9f9f9_radius_5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/item_order_details_data_management_tv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_medical_delete"
+            android:gravity="center"
+            android:text="@string/menu_data_manage"
+            android:textColor="@color/color_049eff"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/item_order_details_data_management_v"
+            android:layout_width="0.5dp"
+            android:layout_height="20dp"
+            android:background="@color/color_cfcfcf"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_order_details_data_details_tv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_medical_delete"
+            android:gravity="center"
+            android:text="@string/rounds_choice_doctor_choice_doctor_details"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_order_details_incomplete_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical"
+        android:text="此患者的详细检查资料在整理中，请稍后查看"
+        android:textColor="@color/color_fc8404"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="gone" />
+</LinearLayout>

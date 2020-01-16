@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_my_data_sl"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/color_white"
+    app:clickToClose="true"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+    <LinearLayout
+        android:id="@+id/item_my_data_operation_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_my_data_visible_tv"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_d3d3d3"
+            android:gravity="center"
+            android:text="可看"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/item_my_data_edit_name_tv"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_049eff"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/item_my_data_relation_tv"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_d9b800"
+            android:gravity="center"
+            android:text="@string/user_relation"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/item_my_data_delete_tv"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_ff6666"
+            android:gravity="center"
+            android:text="@string/rounds_medical_record_module_delete"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_my_data_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_my_data_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_my_data_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_size_12" />
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/fragment_home_department_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/fragment_home_department_detail_icon_iv"
+            android:drawableLeft="@drawable/ic_course_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="显示课程类型列表，点显示课程类型列表，点"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/fragment_home_department_detail_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/bg_expandable_list_view_arrow_close" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_eeeeee" />
+</LinearLayout>

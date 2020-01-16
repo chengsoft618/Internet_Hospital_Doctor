@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.user.ChooseAddressActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        doctor:function="title|left_btn"
+        doctor:titleText="@string/choose_address_choose" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.33dp"
+        android:orientation="horizontal"
+        android:padding="13.33dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_address_address_title"
+            android:textColor="@color/color_black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/choose_address_current_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/choose_address_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="13.33dp">
+
+        <RadioButton
+            android:id="@+id/choose_address_beijing_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ic_choose_service_address"
+            android:paddingLeft="10dp"
+            android:text="@string/choose_address_beijing"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/choose_address_iosask_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:button="@drawable/ic_choose_service_address"
+            android:paddingLeft="10dp"
+            android:text="@string/choose_address_iosask"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/choose_address_beijing_test_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:button="@drawable/ic_choose_service_address"
+            android:paddingLeft="10dp"
+            android:text="@string/choose_address_beijing_test"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/choose_address_sandbox_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:button="@drawable/ic_choose_service_address"
+            android:paddingLeft="10dp"
+            android:text="@string/choose_address_sandbox"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/choose_address_yg_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:button="@drawable/ic_choose_service_address"
+            android:paddingLeft="10dp"
+            android:text="@string/choose_address_yg"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:padding="13.33dp">
+
+        <TextView
+            android:id="@+id/choose_address_config_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_yellow_arc"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/color_white"
+            android:textSize="22sp" />
+    </LinearLayout>
+</LinearLayout>

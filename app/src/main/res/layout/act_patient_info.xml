@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_patient_info_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn|right_btn"
+        doctor:rightBtnClick="rightClick"
+        doctor:rightBtnImage="@drawable/ic_top_share"
+        doctor:titleColor="@color/color_white"
+        doctor:titleText="@string/title_bar_patient_information" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/act_patient_info_aab">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <TextView
+                    android:id="@+id/act_patient_info_appointment_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/chat_appointment"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/act_patient_info_appointment_num_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/act_patient_info_appointment_num_tv"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/act_patient_info_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_patient_info_appointment_num_desc_tv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/chat_visit_time"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/act_patient_info_time_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_patient_info_appointment_num_desc_tv"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/act_patient_info_time_tv"
+                    android:text="@string/chat_time_undetermined"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    android:id="@+id/act_patient_info_time_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/act_patient_info_time_desc_tv"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_f2f2f2" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_patient_info_time_v"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/act_patient_info_member_list_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="16dp"
+                            android:background="@color/color_app_main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="会诊人员"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/font_size_14"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="77dp"
+                        android:layout_below="@+id/act_patient_info_member_list_ll"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/act_patient_info_no_member_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/chat_no_member"
+                            android:textSize="@dimen/font_size_18"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/act_patient_info_member_load_pb"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/act_patient_info_member_load_fail_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="加载失败！"
+                            android:textSize="@dimen/font_size_16"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/act_patient_info_member_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="77dp"
+                        android:layout_below="@+id/act_patient_info_member_list_ll"
+                        android:layout_marginTop="15dp"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+            <View style="@style/horizontal_line_light_1" />
+
+            <RadioGroup
+                android:id="@+id/act_patient_info_tab_rg"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/color_white"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/act_patient_info_tab_medical_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_patient_information_tab"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:text="@string/rounds_medical_record_data"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_18"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/act_patient_info_tab_report_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_patient_information_tab"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:text="@string/report_consult_idea"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/act_patient_info_video_playback_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_patient_information_tab"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:text="@string/rounds_video_playback"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/act_patient_info_return_visit_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_patient_information_tab"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:text="回访信息"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="gone" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_e5e5e5" />
+
+            <FrameLayout
+                android:id="@+id/act_patient_info_content_fl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/act_patient_info_operation_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/act_patient_info_data_manage_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@mipmap/ic_patient_info_mod_material"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/act_patient_info_join_room_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@mipmap/ic_patient_info_join_room"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

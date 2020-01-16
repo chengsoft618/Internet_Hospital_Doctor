@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_time_view"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="7dp"
+    android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/item_recommend_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_16" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_rounds_time_right_arrow" />
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--辅助检查资料分类-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/layout_course_data_item_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/font_size_14" />
+
+    <cn.longmaster.hospital.doctor.view.ScrollGridView
+        android:id="@+id/layout_course_data_item_image_sgv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="6dp"
+        android:listSelector="@color/color_transport"
+        android:numColumns="5"
+        android:verticalSpacing="6dp" />
+</LinearLayout>

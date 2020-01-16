@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_refusal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/layout_refusal_inappropriate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/rounds_time_inappropriate"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_e5e5e5" />
+
+        <TextView
+            android:id="@+id/layout_refusal_not_in_scope"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/rounds_not_in_scope"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_e5e5e5" />
+
+        <TextView
+            android:id="@+id/layout_refusal_call_me"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/rounds_call_me"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_solid_f5f5f5_radius_5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_already_relation_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="@string/consult_appointment_id"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/color_666666" />
+
+        <TextView
+            android:id="@+id/item_already_relation_cancel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/user_cancel_relation"
+            android:textColor="@color/text_color_45aef8_5999c3"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+</LinearLayout>

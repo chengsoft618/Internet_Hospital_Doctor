@@ -1,0 +1,145 @@
+<resources>
+    <!--呼叫-->
+    <string name="video_call_refuse">拒绝</string>
+    <string name="video_call_accept">接听</string>
+    <string name="video_call_close">关闭</string>
+    <string name="video_call_enter">进入诊室</string>
+    <string name="video_call_confirm">关闭</string>
+    <string name="video_call_patient_name">患者：%1$s</string>
+    <string name="video_call_patient_illness">疾病：%1$s</string>
+    <string name="video_call_tip_one">该医生邀请您进入诊室进行视频会诊</string>
+    <string name="video_call_tip_one_dc">该医生邀请您进入诊室进行视频沟通</string>
+    <string name="video_call_tip_two">上级专家在%1$s邀请您进行就诊，您并未接听。</string>
+    <string name="video_call_tip_three">医生助理在%1$s邀请您进行就诊，您并未接听。</string>
+    <string name="video_call_tip_five">该医生在%1$s分邀请您进行门诊，您并未接听。</string>
+    <string name="video_call_tip_four">您被邀请加入会诊视频房间</string>
+    <string name="consult_room_call_title">医生邀请您进入诊室</string>
+
+    <!--诊室-->
+    <string name="video_room_title">%s&#160;号患者</string>
+    <string name="video_room_illness_history">病历</string>
+    <string name="video_room_call">呼 叫</string>
+    <string name="video_room_consult_list">就诊列表</string>
+    <string name="video_room_exit_room">退出诊室</string>
+
+    <!--中部提示文案-->
+    <string name="video_room_scheduling_time">预约就诊时间</string>
+    <string name="consult_room_state_net_bad">网络不稳定</string>
+    <string name="consult_room_change_voice">切换至语音</string>
+
+    <!--房间状态-->
+    <string name="video_room_state_creating_room">正在建立视频诊室</string>
+    <string name="video_room_state_created_room_success">房间已建立，点击“呼叫”按钮与患者或首诊医生进行视频问诊</string>
+    <string name="video_room_state_appoint_going">就诊正在进行</string>
+    <string name="video_room_state_switch_voice_mode">已切换为语音模式</string>
+    <string name="video_room_state_switch_video_mode">已切换为视频模式</string>
+    <string name="video_room_state_using_voice_mode">正在使用语音模式</string>
+    <string name="video_room_state_wait_patient_accept">正在等待患者接受视频问诊邀请</string>
+    <string name="video_room_state_wait_doctor_accept">正在等待首诊医生接受视频问诊邀请</string>
+    <string name="video_room_state_first_doctor_busy">首诊医生目前正忙，请稍后重试</string>
+    <string name="video_room_state_patient_busy">患者目前正忙，请稍后重试</string>
+    <string name="video_room_state_first_doctor_no_respond">首诊医生无应答，请稍后重试</string>
+    <string name="video_room_state_patient_no_respond">患者无应答，请稍后重试</string>
+    <string name="video_room_state_patient_in_room">患者已在诊室</string>
+    <string name="video_room_state_doctor_in_room">首诊医生已在诊室</string>
+    <string name="video_room_state_entered_room">%s进入诊室</string>
+    <string name="video_room_state_open_speaker">已开启外放声音</string>
+    <string name="video_room_state_close_speaker">已关闭外放声音</string>
+    <string name="video_room_state_open_mic">您的麦克风已开启，可正常发言</string>
+    <string name="video_room_state_close_mic">您的麦克风已关闭，如需发言请点击麦克风开启</string>
+    <string name="video_room_state_open_mic_error">麦克风开启失败，请重试！</string>
+    <string name="video_room_state_close_mic_error">麦克风关闭失败，请重试！</string>
+    <string name="video_room_state_no_seat_tips">视频房间发言人已满，请稍后重试！</string>
+    <string name="video_room_state_open_mic_by_admin">您的麦克风已开启，可正常发言</string>
+    <string name="video_room_state_close_mic_by_admin">您的麦克风已关闭，如需发言请点击麦克风开启</string>
+    <string name="video_room_state_leave_room">%s已离开诊室</string>
+    <string name="video_room_state_appoint_finish">%d号就诊已完成</string>
+    <string name="video_room_state_members_leave">对方已离开</string>
+    <string name="video_room_state_exist_room_failed">退出房间失败,请重试!(%d)</string>
+    <string name="video_room_state_create_room_failed">视频房间创建失败</string>
+    <string name="video_room_state_before_camera">已切换至前摄像头</string>
+    <string name="video_room_state_rear_camera">已切换至后摄像头</string>
+    <string name="video_room_toast_cannot_play_video">当前正在进行会诊，暂无法查看多媒体资料，请退出会诊后再查看</string>
+    <string name="video_room_kick_off_tip">您已被移出视频房间</string>
+    <string name="video_room_kick_off_meeting_room">您已被移出会议室</string>
+    <string name="video_room_exception_change_av_mode">切换模式异常</string>
+    <string name="video_room_no_customer_service">客服坐席全忙，请稍后重试</string>
+    <string name="video_room_customer_service_in_room">当前房间有客服人员在线</string>
+
+    <!--弹框-->
+    <string name="video_dialog_ok">确认</string>
+    <string name="video_dialog_cancel">取消</string>
+    <string name="video_dialog_close">关闭</string>
+    <string name="video_dialog_yes">是</string>
+    <string name="video_dialog_no">否</string>
+    <string name="video_dialog_going_setting">去设置</string>
+    <string name="video_dialog_retry">重试</string>
+    <string name="video_dialog_request_patient_message">患者%1$s请求进入诊室，是否同意？</string>
+    <string name="video_dialog_request_doctor_message">首诊医生请求进入诊室，是否同意？</string>
+    <string name="video_dialog_exit_title">确认要关闭视频吗？</string>
+    <string name="video_dialog_exit_message">此次问诊未完成，关闭视频后，您可随时再次与该患者进行视频问诊。</string>
+    <string name="video_dialog_finish_title">确认完成当前视频问诊</string>
+    <string name="video_dialog_finish_message">确认完成%1$d号就诊%2$s的视频问诊，并开始下一位视频问诊。</string>
+    <string name="video_dialog_finish_message_last">确认完成%1$d号就诊%2$s的视频问诊，当前就诊为最后一名患者，是否退出诊室。</string>
+    <string name="video_dialog_user_protocol_message" formatted="false">
+     由患方原因，远程会诊被取消的：\n
+    （1）约定时间前24小时以上要求终止的，甲乙双方同意不收取患方的任何费用，乙方医生也不收取任何劳务费；\n
+    （2）约定时间前24小时以内要求终止的，甲乙双方同意退还患者50%的医事服务费，乙方医生也按照约定劳务费金额的50%收取劳务费；\n
+    （3）在预定时间未按时出现的，仅退还患者医事服务费的15%，同时向医生按照约定劳务费金额的80%支付劳务。\n\n
+     由于医方原因导致会诊被取消、且不能通过另行协商时间或安排科室其他医生完成远程医疗活动的：\n
+    （1）约定时间前24小时以上被取消的，医生应当全部退还患方已经支付的诊疗服务费；\n
+    （2）约定时间前24小时以内被取消的，医生不仅应当足额退换患者的诊疗服务费，甲方有权按照诊疗服务费的15%对乙方进行罚款处罚，作为甲方的运营费用补偿；\n
+    （3）在预定时间未按时出现的，医生全额退还患者诊疗服务费的情况下，甲方有权对乙方处以诊疗服务费50%的经济处罚，用于甲方运营费用的补偿和对患者的经济安慰使用。
+    </string>
+    <string name="video_dialog_user_protocol_ok">确认</string>
+    <string name="video_dialog_permission_camera_title">无法使用相机</string>
+    <string name="video_dialog_permission_camera">摄像头启动失败，请尝试在手机“全部设置-系统/安全-应用-39互联网医院-权限-拍照”中打开权限。</string>
+    <string name="video_dialog_permission_microphone_title">麦克风被禁用</string>
+    <string name="video_dialog_permission_microphone">麦克风启动失败，请尝试在手机“全部设置-系统/安全-应用-39互联网医院-权限-麦克风”中打开权限。</string>
+
+    <!--悬浮window-->
+    <string name="video_call_together">一键呼叫</string>
+    <string name="video_call_patient">呼叫患者</string>
+    <string name="video_call_doctor">呼叫首诊医生</string>
+
+    <!--诊室-->
+    <string name="consult_room_voice_mode">语音模式</string>
+    <string name="consult_room_appoint_id">就诊编号：%1$s</string>
+    <string name="consult_room_voice_mode_voice_tip">正在使用语音模式</string>
+    <string name="consult_room_voice_mode_other_party_voice_tip">对方已切换至语音模式</string>
+    <string name="room_no_video_permission">无视频权限</string>
+    <string name="room_no_audio_permission">无音频权限</string>
+    <string name="room_camera_abnormal">摄像头异常</string>
+    <string name="consult_room_toast_change_back_cam">已切换至后置摄像头</string>
+    <string name="consult_room_toast_change_front_cam">已切换至前置摄像头</string>
+    <string name="room_state_net_disconnected">网络连接断开</string>
+    <string name="room_state_btn_retry">重试</string>
+    <string name="consult_room_higher_class_doctor">上级专家</string>
+    <string name="consult_room_first_doctor">首诊医生</string>
+    <string name="consult_room_doctor_assistant">医生助理</string>
+    <string name="consult_room_patient">患者</string>
+    <string name="consult_room_conference_staff">会议人员</string>
+    <string name="consult_room_mdt">MDT</string>
+    <string name="consult_room_mdt_doctor">MDT医生</string>
+    <string name="consult_room_mdt_patient">MDT患者家属</string>
+    <string name="consult_room_doctor">医生</string>
+    <string name="consult_room_patient_family">患者家属</string>
+    <string name="consult_room_consult_list">病历列表</string>
+    <string name="case_level_general">普通病历</string>
+    <string name="case_level_worse">危重病历</string>
+    <string name="consult_room_screen_share">屏幕共享</string>
+    <string name="consult_room_somebody_share">%s的共享</string>
+
+    <!--会议室 -->
+    <string name="meeting_mute">静音</string>
+    <string name="meeting_mute_cancel">静音已取消</string>
+    <string name="meeting_cancel_mute">取消静音</string>
+    <string name="meeting_already_mute">已静音</string>
+    <string name="meeting_exit_tip">退出提示</string>
+    <string name="meeting_exit_meeting_room">确定退出会议室吗？</string>
+    <string name="meeting_mic_open">麦克已打开</string>
+    <string name="meeting_mic_close">关闭麦克</string>
+    <string name="meeting_mic_already_close">麦克已关闭</string>
+    <string name="meeting_mic_already_open">打开麦克</string>
+
+</resources>

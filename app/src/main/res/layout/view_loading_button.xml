@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextSwitcher
+        android:id="@+id/pb_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:animateFirstView="false"
+        android:measureAllChildren="false" />
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/pb_text"
+        android:indeterminateDrawable="@drawable/ic_loading_button_progress_draw"
+        android:visibility="gone" />
+</merge>

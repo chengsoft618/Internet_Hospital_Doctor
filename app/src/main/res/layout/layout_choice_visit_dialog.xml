@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_solid_f2f2f2_radius_5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_choice_visit_dutyclinic_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/layout_choose_visit_dialog_dutyclinic_iv"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="21dp"
+            android:src="@mipmap/ic_dialog_home_page_duty_clinic" />
+
+        <TextView
+            android:id="@+id/layout_choose_visit_dialog_dutyclinic_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/layout_choose_visit_dialog_dutyclinic_iv"
+            android:text="发起门诊"
+            android:textColor="@color/color_00c8a2"
+            android:textSize="@dimen/font_size_20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_choose_visit_dialog_dutyclinic_tv"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="46dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/layout_choose_visit_dialog_dutyclinic_iv"
+            android:lines="2"
+            android:text="即时呼叫医生解决临时问题"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_12" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_dialog_home_page_visit_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_choice_visit_rounds_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/layout_choose_visit_dialog_rounds_iv"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="21dp"
+            android:src="@mipmap/ic_dialog_home_page_visit_rounds" />
+
+        <TextView
+            android:id="@+id/layout_choose_visit_dialog_rounds_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/layout_choose_visit_dialog_rounds_iv"
+            android:text="发起查房"
+            android:textColor="@color/color_049eff"
+            android:textSize="@dimen/font_size_20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_choose_visit_dialog_rounds_tv"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="46dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/layout_choose_visit_dialog_rounds_iv"
+            android:text="以教学为目的，系统性的帮助医生解决临床医学的实际问题"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_12" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_dialog_home_page_visit_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_choice_visit_consult_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/layout_choose_visit_dialog_consult_iv"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="21dp"
+            android:src="@mipmap/ic_dialog_home_page_visit_consult" />
+
+        <TextView
+            android:id="@+id/layout_choose_visit_dialog_consult_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/layout_choose_visit_dialog_consult_iv"
+            android:text="发起会诊"
+            android:textColor="@color/color_FF7707"
+            android:textSize="@dimen/font_size_20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_choose_visit_dialog_consult_tv"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="46dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/layout_choose_visit_dialog_consult_iv"
+            android:text="以解决患者疑难杂症的问题为目的，为患者制定针对性的治疗方案"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_12" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_dialog_home_page_visit_back" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/layout_choice_visit_cancel_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:padding="14dp"
+        android:src="@mipmap/ic_dialog_home_page_visit_close" />
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_user_center_menu_iv"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_user_center_menu_duty_clinic" />
+
+    <View
+        android:id="@+id/item_user_center_menu_msg_v"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_above="@+id/item_user_center_menu_iv"
+        android:layout_marginLeft="-9dp"
+        android:layout_marginBottom="-26dp"
+        android:layout_toRightOf="@+id/item_user_center_menu_iv"
+        android:background="@drawable/bg_solid_ff3600_radius_45"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_user_center_menu_dutying_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_user_center_menu_iv"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_toRightOf="@+id/item_user_center_menu_iv"
+        android:src="@mipmap/ic_user_center_menu_dutying"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_user_center_menu_tv"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_user_center_menu_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="上传资料"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_12" />
+</RelativeLayout>

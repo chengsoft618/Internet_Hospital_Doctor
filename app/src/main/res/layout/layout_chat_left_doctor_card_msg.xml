@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_chat_msg_type_left_doctor_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_chat_left_white_bubble"
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/chat_doctor_card"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/color_e5e5e5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_left_doctor_card_civ"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_chat_default_doctor_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chat_left_doctor_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxEms="4"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_size_16"
+                    tools:text="霍勇" />
+
+                <TextView
+                    android:id="@+id/chat_left_doctor_card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="7dp"
+                    android:maxEms="4"
+                    android:singleLine="true"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/font_size_12"
+                    tools:text="主任医师" />
+
+                <TextView
+                    android:id="@+id/chat_left_doctor_card_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="7dp"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/font_size_12"
+                    tools:text="心内科" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/chat_left_doctor_card_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_12"
+                tools:text="北京大学第一人民医院" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

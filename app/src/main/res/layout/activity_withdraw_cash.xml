@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_main_background"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn"
+        doctor:titleText="@string/account_withdraw_cash" />
+
+    <View
+        style="@style/horizontal_line_light"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:id="@+id/activity_withdraw_cash_layout_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_layout_item_common"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/activity_withdraw_cash_icon_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_logo_union_pay" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_withdraw_cash_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text=""
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_withdraw_cash_card_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/activity_withdraw_account_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="7dp"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_right_arrow"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_withdraw_add_account_layout_ll"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@drawable/bg_layout_item_common"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_withdrawal_add_account"
+            android:drawableLeft="@drawable/ic_withdrawal_add_account"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/account_withdraw_add_account"
+            android:textSize="@dimen/font_size_18" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_right_arrow" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_line_light" />
+
+    <View
+        style="@style/horizontal_line_light"
+        android:layout_marginTop="15dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_withdraw_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

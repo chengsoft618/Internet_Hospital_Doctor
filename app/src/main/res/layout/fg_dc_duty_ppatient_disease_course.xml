@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/fragment_doctor_detail_expert_info_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fg_dc_duty_patient_disease_course_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="78dp"/>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/fg_dcduty_patient_disease_up_load_iv"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:src="@mipmap/ic_dc_duty_patient_data_up_load" />
+
+</RelativeLayout>

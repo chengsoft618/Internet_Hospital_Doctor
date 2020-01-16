@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/ic_dc_duty_visit_plan_is_redmin_time_line"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:background="@color/color_e6e6e6" />
+
+        <RelativeLayout
+            android:id="@+id/ic_dc_duty_visit_plan_is_redmin_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignTop="@+id/ic_dc_duty_visit_plan_is_redmin_date_time_tv"
+                android:layout_alignBottom="@+id/ic_dc_duty_visit_plan_is_redmin_date_time_tv"
+                android:src="@mipmap/ic_dc_duty_visit_plan_is_redmin_time_icon" />
+
+            <TextView
+                android:id="@+id/ic_dc_duty_visit_plan_is_redmin_date_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="2015.1.02"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ic_dc_duty_visit_plan_is_redmin_bottom_content_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_dc_duty_visit_plan_is_redmin_top_rl"
+            android:paddingTop="20dp"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignTop="@+id/ic_dc_duty_visit_plan_is_redmin_bottom_content_tv"
+                android:layout_alignBottom="@+id/ic_dc_duty_visit_plan_is_redmin_bottom_content_tv"
+                android:src="@mipmap/ic_dc_duty_patient_disease_bottom_diagnostic_circular" />
+
+            <TextView
+                android:id="@+id/ic_dc_duty_visit_plan_is_redmin_bottom_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="您发布的帖子标题已被取消置顶"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_14" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

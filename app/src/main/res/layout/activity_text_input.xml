@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_text_input_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_text|right_text"
+        doctor:leftText="@string/cancel"
+        doctor:leftTextClick="leftClick"
+        doctor:rightText="@string/confirm"
+        doctor:rightTextClick="rightClick"
+        doctor:titleText="@string/text_input" />
+
+    <EditText
+        android:id="@+id/activity_text_input_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_input_fill_information"
+        android:gravity="start"
+        android:hint="@string/text_input_hint"
+        android:lineSpacingMultiplier="1.2"
+        android:minLines="7"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_b2b2b2"
+        android:textSize="@dimen/font_size_12" />
+</LinearLayout>

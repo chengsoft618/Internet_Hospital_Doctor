@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/chat_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="left_btn|title"
+        app:titleText="选择呼叫医生" />
+
+    <LinearLayout
+        android:id="@+id/activity_dcdoctor_list_project_choice_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_dcdoctor_list_project_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="COPD项目"
+            android:textColor="@color/color_049eff"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageView
+            android:id="@+id/activity_dcdoctor_list_project_title_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_blue_down_arrow" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/act_dcdoctor_list_srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_dcdoctor_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_dcdoctor_list_empty_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/bg_no_data_list"
+                android:drawablePadding="15dp"
+                android:text="暂无可呼叫医生"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

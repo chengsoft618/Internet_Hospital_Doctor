@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_guide_page_new4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/bg_guide_page_new_text4" />
+
+    <Button
+        android:id="@+id/guide_view_page4_enter"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="192dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bg_btn_guide_enter"
+        android:gravity="center"
+        android:text="@string/immediately_enter"
+        android:textColor="@color/color_45aef8"
+        android:textSize="@dimen/font_size_16" />
+</RelativeLayout>

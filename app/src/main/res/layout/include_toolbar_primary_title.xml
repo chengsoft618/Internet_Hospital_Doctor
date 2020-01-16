@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tool_bar_base"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/color_app_main_color"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_tool_bar_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:padding="14dp"
+            android:src="@mipmap/ic_actionbar_back_white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+
+        <TextView
+            android:id="@+id/tv_tool_bar_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:maxLength="4"
+            android:text="帮助"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_tool_bar_sub"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

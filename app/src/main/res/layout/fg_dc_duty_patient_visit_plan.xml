@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/fg_dc_duty_patient_visit_plan_root_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/fg_dc_duty_patient_visit_plan_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/color_fafafa"
+                android:paddingLeft="15dp"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fg_dc_duty_patient_visit_plan_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慢性阻塞性肺疾病随访计划"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fg_dc_duty_patient_visit_plan_is_remind_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fg_dc_duty_patient_visit_plan_is_remind_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已提醒"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fg_dc_duty_patient_visit_plan_is_remind_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_solid_ffffff_radius_8"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/fg_dc_duty_patient_visit_plan_divide_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginTop="30dp"
+                android:background="@color/color_f2f2f2"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/fg_dc_duty_patient_visit_plan_not_remind_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fg_dc_duty_patient_visit_plan_not_remind_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未提醒"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fg_dc_duty_patient_visit_plan_not_remind_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_solid_ffffff_radius_8"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fg_dc_duty_patient_visit_plan_redact"
+                android:layout_width="160dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="75dp"
+                android:background="@drawable/bg_rounds_add_submission_btn"
+                android:gravity="center"
+                android:text="编辑随访计划"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/fg_dc_duty_patient_visit_plan_add"
+                android:layout_width="225dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="145dp"
+                android:layout_marginBottom="178dp"
+                app:sBackgroundDrawableRes="@drawable/bg_solid_ffffff_stroke_45aef8_radius_8"
+                app:sCenterTextColor="@color/color_049eff"
+                app:sCenterTextSize="@dimen/font_size_16"
+                app:sCenterTextString="添加患者随访计划"
+                app:sCenterTvDrawableLeft="@mipmap/ic_rounds_add_choose_patient"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

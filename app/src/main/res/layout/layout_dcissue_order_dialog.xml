@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_solid_ffffff_radius_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/layout_dcissue_order_dialog_new_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_blue_white_plus"
+            android:drawablePadding="5dp"
+            android:text="新建医嘱单"
+            android:textColor="@color/color_049eff"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="开具医嘱单"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageView
+            android:id="@+id/layout_dcissue_order_dialog_close_iv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="16dp"
+            android:src="@mipmap/ic_dcissue_order_close" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/color_e6e6e6" />
+
+    <RadioGroup
+        android:id="@+id/layout_dcissue_order_dialog_type_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/layout_dcissue_order_dialog_type_referral_rb"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-1dp"
+            android:background="@drawable/bg_radio_blue_white_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="转诊单"
+            android:textColor="@color/text_color_ffffff_666666"
+            android:textSize="@dimen/font_size_16" />
+
+        <RadioButton
+            android:id="@+id/layout_dcissue_order_dialog_type_suggestion_rb"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_radio_blue_white_right"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="诊疗建议"
+            android:textColor="@color/text_color_ffffff_666666"
+            android:textSize="@dimen/font_size_16" />
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_dcissue_order_dialog_referral_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <cn.longmaster.hospital.doctor.view.DCIssueOrderInputItem
+                        android:id="@+id/layout_dcissue_order_dialog_referral_name_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:dcioii_input_hint="请输入患者姓名"
+                        app:dcioii_is_required="true"
+                        app:dcioii_title="患者姓名:" />
+
+                    <cn.longmaster.hospital.doctor.view.DCIssueOrderInputItem
+                        android:id="@+id/layout_dcissue_order_dialog_referral_phonenum_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:dcioii_input_hint="请输入患者联系方式"
+                        app:dcioii_is_required="true"
+                        app:dcioii_title="手机号码:" />
+
+                    <cn.longmaster.hospital.doctor.view.DCIssueOrderInputItem
+                        android:id="@+id/layout_dcissue_order_dialog_referral_cardno_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:dcioii_input_hint="请输入患者身份证信息"
+                        app:dcioii_title="身份证号:" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout_dcissue_order_dialog_referral_curedt_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="就诊时间:"
+                                android:textColor="@color/color_666666"
+                                android:textSize="@dimen/font_size_14" />
+
+                            <TextView
+                                android:id="@+id/layout_dcissue_order_dialog_referral_curedt_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/color_1a1a1a"
+                                android:textSize="@dimen/font_size_14" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_dcissue_order_gray_arrow_down" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/color_e6e6e6" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <cn.longmaster.hospital.doctor.view.DCIssueOrderTitleAndValueItem
+                            android:id="@+id/layout_dcissue_order_dialog_referral_sender_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:dciotv_title="转诊方"
+                            app:dciotv_value="北京医院" />
+
+                        <cn.longmaster.hospital.doctor.view.DCIssueOrderTitleAndValueItem
+                            android:id="@+id/layout_dcissue_order_dialog_referral_receiver_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:dciotv_title="接诊方"
+                            app:dciotv_value="忻州市人民医院" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/layout_dcissue_order_dialog_referral_change_sr_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:src="@mipmap/ic_dcissue_order_change_hospital" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="*转诊原因"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <EditText
+                        android:id="@+id/layout_dcissue_order_dialog_referral_send_reason_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_solid_ffffff_stroke_e5e5ef_radius_2"
+                        android:gravity="top"
+                        android:hint="请填写转诊原因"
+                        android:minHeight="105dp"
+                        android:padding="5dp"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="检查检验"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/layout_dcissue_order_dialog_referral_checks_fl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7.5dp"
+                        android:layout_marginRight="7.5dp"
+                        app:alignContent="flex_start"
+                        app:flexWrap="wrap" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/layout_dcissue_order_dialog_referral_check_item"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="自定义添加新的检查项目"
+                            android:padding="5dp"
+                            android:textColor="@color/color_1a1a1a"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <Button
+                            android:id="@+id/layout_dcissue_order_dialog_referral_add_check_btn"
+                            android:layout_width="57dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/bg_solid_049eff_radius_45"
+                            android:gravity="center"
+                            android:text="添加"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/color_e6e6e6" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/layout_dcissue_order_dialog_referral_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_solid_049eff_radius_45"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_dcissue_order_dialog_suggestion_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <cn.longmaster.hospital.doctor.view.DCIssueOrderInputItem
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_name_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:dcioii_input_hint="请输入患者姓名"
+                        app:dcioii_is_required="true"
+                        app:dcioii_title="患者姓名:" />
+
+                    <cn.longmaster.hospital.doctor.view.DCIssueOrderInputItem
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_phonenum_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:dcioii_input_hint="请输入患者联系方式"
+                        app:dcioii_title="手机号码:" />
+
+                    <cn.longmaster.hospital.doctor.view.DCIssueOrderInputItem
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_cardno_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:dcioii_input_hint="请输入患者身份证信息"
+                        app:dcioii_title="身份证号:" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout_dcissue_order_dialog_suggestion_curedt_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="就诊时间:"
+                                android:textColor="@color/color_666666"
+                                android:textSize="@dimen/font_size_14" />
+
+                            <TextView
+                                android:id="@+id/layout_dcissue_order_dialog_suggestion_curedt_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/color_1a1a1a"
+                                android:textSize="@dimen/font_size_14" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_dcissue_order_gray_arrow_down" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/color_e6e6e6" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="疾病诊断"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <EditText
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_diagnose_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_solid_ffffff_stroke_e5e5ef_radius_2"
+                        android:gravity="top"
+                        android:hint="请填写疾病诊断名称"
+                        android:minHeight="105dp"
+                        android:padding="5dp"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="病情摘要"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <EditText
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_remark_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_solid_ffffff_stroke_e5e5ef_radius_2"
+                        android:gravity="top"
+                        android:hint="请填写患者病情摘要"
+                        android:minHeight="105dp"
+                        android:padding="5dp"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="检查检验"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_check_items_fl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7.5dp"
+                        android:layout_marginRight="7.5dp"
+                        app:alignContent="flex_start"
+                        app:flexWrap="wrap" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/layout_dcissue_order_dialog_suggestion_add_check_item_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="自定义添加新的检查项目"
+                            android:padding="5dp"
+                            android:textColor="@color/color_1a1a1a"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <Button
+                            android:id="@+id/layout_dcissue_order_dialog_suggestion_add_check_item_btn"
+                            android:layout_width="57dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/bg_solid_049eff_radius_45"
+                            android:gravity="center"
+                            android:text="添加"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/color_e6e6e6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_white_shadow"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="用药及处方"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_drug_fl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7.5dp"
+                        android:layout_marginRight="7.5dp"
+                        app:alignContent="flex_start"
+                        app:flexWrap="wrap" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/layout_dcissue_order_dialog_suggestion_drug_usage_dosage_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="none" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/layout_dcissue_order_dialog_suggestion_add_drug_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="自定义添加新的药品"
+                            android:padding="5dp"
+                            android:textColor="@color/color_1a1a1a"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <Button
+                            android:id="@+id/layout_dcissue_order_dialog_suggestion_add_drug_btn"
+                            android:layout_width="57dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/bg_solid_049eff_radius_45"
+                            android:gravity="center"
+                            android:text="添加"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_14" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/color_e6e6e6" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/layout_dcissue_order_dialog_suggestion_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_solid_049eff_radius_45"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

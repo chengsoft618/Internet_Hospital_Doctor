@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_solid_ffffff_radius_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/dialog_dc_duty_room_patient_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="新建患者"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageView
+            android:id="@+id/dialog_dc_duty_room_patient_close_iv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="16dp"
+            android:src="@mipmap/ic_dcissue_order_close" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_dc_duty_room_patient_title_v"
+        style="@style/horizontal_line_light_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_solid_ffffff_radius_5">
+
+        <TextView
+            android:id="@+id/patient_name_tv"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:gravity="center_vertical|right"
+            android:text="*患者姓名:"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/patient_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/patient_name_tv"
+            android:background="@null"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="6dp"
+            android:singleLine="true"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:id="@+id/patient_name_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/patient_name_tv" />
+
+        <TextView
+            android:id="@+id/patient_phone_tv"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/patient_name_v"
+            android:gravity="center_vertical|right"
+            android:text="*手机号码:"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/patient_phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/patient_name_v"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/patient_phone_tv"
+            android:background="@null"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxEms="11"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingLeft="6dp"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:id="@+id/patient_phone_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/patient_phone_tv" />
+
+        <TextView
+            android:id="@+id/patient_id_card_tv"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/patient_phone_v"
+            android:gravity="center_vertical|right"
+            android:inputType="phone"
+            android:text="身份证号:"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/patient_id_card_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/patient_phone_v"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/patient_id_card_tv"
+            android:background="@null"
+            android:lines="1"
+            android:maxEms="18"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:paddingLeft="6dp"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:id="@+id/patient_id_card_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/patient_id_card_tv" />
+
+        <TextView
+            android:id="@+id/patient_see_doctor_time_tv"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/patient_id_card_v"
+            android:gravity="center_vertical|right"
+            android:text="就诊时间:"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/patient_see_doctor_time_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/patient_id_card_v"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/patient_see_doctor_time_tv"
+            android:gravity="center_vertical|left"
+            android:hint="请选择就诊时间"
+            android:paddingLeft="6dp"
+            android:textColor="#ff1a1a1a"
+            android:textColorHint="@color/color_666666"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/patient_see_doctor_time_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/patient_see_doctor_time_tv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patient_see_doctor_time_v"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
+            android:text="资料图片"
+            android:textColor="#ff1a1a1a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/select_album_tv"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/patient_see_doctor_time_v"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@mipmap/ic_blue_white_plus"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="相册"
+            android:textColor="@color/color_049eff"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/select_album_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/select_album_tv"
+            android:layout_marginTop="16dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialog_dc_duty_room_patient_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/commit_tv"
+            android:layout_below="@+id/select_album_v"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:id="@+id/commit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_solid_049eff_radius_45"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>

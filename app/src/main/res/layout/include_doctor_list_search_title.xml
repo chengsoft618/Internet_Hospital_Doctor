@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/color_049eff"
+    android:gravity="center_vertical">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/include_doctor_list_title_root_filter_stv"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        app:sDividerLineType="none"
+        app:sLeftLines="1"
+        app:sLeftTextColor="@color/color_white"
+        app:sLeftTextSize="@dimen/font_size_14"
+        app:sLeftTextString="按姓名"
+        app:sLeftTvDrawableRight="@mipmap/ic_doctor_list_filter_white"
+        app:sLeftViewMarginLeft="15dp" />
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/include_doctor_list_title_search_stv"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        app:sBackgroundDrawableRes="@drawable/bg_solid_fffffff_radius_17"
+        app:sDividerLineType="none"
+        app:sLeftLines="1"
+        app:sLeftTextColor="@color/color_666666"
+        app:sLeftTextSize="@dimen/font_size_13"
+        app:sLeftTextString="请输入医生姓名查找"
+        app:sLeftTvDrawableLeft="@mipmap/ic_doctor_list_search" />
+
+    <TextView
+        android:id="@+id/include_doctor_list_title_search_cancel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_14" />
+</LinearLayout>

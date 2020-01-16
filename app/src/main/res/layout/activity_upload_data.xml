@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.user.PatientDataUploadActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <include layout="@layout/include_toolbar_primary_title" />
+
+    <TextView
+        android:id="@+id/activity_upload_data_upload_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_password_change_action_bar"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="11dp"
+        android:text="@string/upload_data_upload"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_14" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_white"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp">
+
+        <TextView
+            android:id="@+id/activity_upload_data_patient_name_tv"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:text="患者姓名"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <EditText
+            android:id="@+id/activity_upload_data_patient_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/activity_upload_data_patient_name_tv"
+            android:background="@null"
+            android:hint="请输入患者姓名"
+            android:maxLength="11"
+            android:textColor="@color/color_1a1a1a"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:id="@+id/activity_upload_data_patient_name_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/activity_upload_data_patient_name_tv" />
+
+        <TextView
+            android:id="@+id/activity_upload_data_upload_type_tv"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_below="@+id/activity_upload_data_patient_name_v"
+            android:gravity="center_vertical"
+            android:text="上传方式"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <RadioGroup
+            android:id="@+id/activity_upload_data_type_rg"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/activity_upload_data_patient_name_v"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/activity_upload_data_upload_type_tv"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/activity_upload_data_by_in_hospital_num_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@drawable/bg_cb_select_wait_rounds_patient_add"
+                android:checked="true"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text="按住院号上传"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_size_14" />
+
+            <RadioButton
+                android:id="@+id/activity_upload_data_by_appointment_number_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/bg_cb_select_wait_rounds_patient_add"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text="按病例号上传"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/font_size_14" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <View style="@style/horizontal_line_light_1" />
+
+    <RelativeLayout
+        android:id="@+id/activity_upload_data_by_in_hospital_num_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/activity_upload_data_in_hospital_num_tv"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:text="住院号*"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <EditText
+            android:id="@+id/activity_upload_data_in_hospital_num_et"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/activity_upload_data_in_hospital_num_tv"
+            android:background="@null"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="请输入住院号"
+            android:lines="1"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/color_1a1a1a"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            android:id="@+id/activity_upload_data_in_hospital_num_v"
+            style="@style/horizontal_line_light_1"
+            android:layout_below="@+id/activity_upload_data_in_hospital_num_tv" />
+
+        <TextView
+            android:id="@+id/activity_upload_data_hospital_name_tv"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_below="@+id/activity_upload_data_in_hospital_num_v"
+            android:gravity="center_vertical"
+            android:text="医院名称"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <EditText
+            android:id="@+id/activity_upload_data_hospital_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/activity_upload_data_in_hospital_num_v"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/activity_upload_data_hospital_name_tv"
+            android:background="@null"
+            android:hint="请输入医院名称"
+            android:maxLength="20"
+            android:textColor="@color/color_1a1a1a"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/font_size_14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_upload_data_appointment_number_ll"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/color_white"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/activity_upload_data_appointment_number_tv"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_below="@+id/activity_upload_data_patient_name_v"
+            android:gravity="center_vertical"
+            android:text="病例号*"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_14" />
+
+        <EditText
+            android:id="@+id/activity_upload_data_appointment_number_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="11dp"
+            android:background="@null"
+            android:hint="请输入病例号"
+            android:inputType="number"
+            android:maxLength="18"
+            android:textColor="@color/color_1a1a1a"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontal_line_light_1"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/activity_upload_data_determine_tv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_049eff"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="11dp"
+        android:text="@string/upload_data_fill_in_information"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="11dp"
+        android:text="@string/upload_data_fill_in_information_one"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/upload_data_fill_in_information_two"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="@dimen/font_size_12" />
+</LinearLayout>

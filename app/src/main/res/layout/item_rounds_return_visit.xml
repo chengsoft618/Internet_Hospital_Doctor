@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_f4f4f4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="第一次回访"
+            android:textColor="@color/color_45aef8"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_e5e5e5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_return_visit_one_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_rounds_return_visit_problem" />
+
+            <TextView
+                android:id="@+id/item_return_visit_one_problem_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/item_return_visit_one_iv"
+                android:text="此次查房是否解决问题？"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_return_visit_one_answer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_return_visit_one_problem_tv"
+                android:layout_alignLeft="@+id/item_return_visit_one_problem_tv"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="解决"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/item_return_visit_one_answer_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/color_e5e5e5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_return_visit_two_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_rounds_return_visit_problem" />
+
+            <TextView
+                android:id="@+id/item_return_visit_two_problem_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/item_return_visit_two_iv"
+                android:text="是否按照会诊意见执行？"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_return_visit_two_answer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_return_visit_two_problem_tv"
+                android:layout_alignLeft="@+id/item_return_visit_two_problem_tv"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="完全按会诊意见执行"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/item_return_visit_two_answer_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/color_e5e5e5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_return_visit_three_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_rounds_return_visit_problem" />
+
+            <TextView
+                android:id="@+id/item_return_visit_three_problem_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/item_return_visit_three_iv"
+                android:text="患者病情转归情况？"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_return_visit_three_answer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_return_visit_three_problem_tv"
+                android:layout_alignLeft="@+id/item_return_visit_three_problem_tv"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="治愈"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/item_return_visit_three_answer_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/color_e5e5e5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_return_visit_four_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_rounds_return_visit_problem" />
+
+            <TextView
+                android:id="@+id/item_return_visit_four_problem_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/item_return_visit_four_iv"
+                android:text="患者目前就医状态？"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_return_visit_four_answer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_return_visit_four_problem_tv"
+                android:layout_alignLeft="@+id/item_return_visit_four_problem_tv"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="在院"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/item_return_visit_four_answer_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/color_e5e5e5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_return_visit_remarks_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_rounds_return_visit_remarks" />
+
+            <TextView
+                android:id="@+id/item_return_visit_remarks_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/item_return_visit_remarks_iv"
+                android:text="备注"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_return_visit_remarks_answer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_return_visit_remarks_tv"
+                android:layout_alignLeft="@+id/item_return_visit_remarks_tv"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="在医院治疗了很久，但是没什么好转，患者不太满意在医院治疗了很久，但是没什么好转，患者不太满意"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_consult_data_manager_title_iv"
+        android:layout_marginTop="-32.5dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_dialog_upload_bottom_btn"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginRight="13.33dp"
+                    android:gravity="center"
+                    android:text="@string/upload_instruction_title"
+                    android:textColor="@color/color_app_main_color"
+                    android:textSize="@dimen/font_size_20" />
+
+                <View
+                    style="@style/horizontal_line_light_1"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp"
+                    android:text="@string/upload_instruction_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginRight="13.33dp"
+                    android:gravity="center"
+                    android:text="@string/upload_instruction_dicom_title"
+                    android:textColor="@color/color_app_main_color"
+                    android:textSize="@dimen/font_size_20" />
+
+                <View
+                    style="@style/horizontal_line_light_1"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp"
+                    android:text="@string/upload_instruction_dicom_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="13.33dp"
+                    android:gravity="center"
+                    android:text="@string/upload_instruction_mail_title"
+                    android:textColor="@color/color_app_main_color"
+                    android:textSize="@dimen/font_size_20" />
+
+                <View
+                    style="@style/horizontal_line_light_1"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp"
+                    android:text="@string/upload_instruction_mail_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/layout_dialog_upload_bottom_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="168dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_solid_049eff_radius_45"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_16" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/layout_consult_data_manager_title_iv"
+        android:layout_width="175dp"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_consult_data_manage_up_load_note_title" />
+</RelativeLayout>

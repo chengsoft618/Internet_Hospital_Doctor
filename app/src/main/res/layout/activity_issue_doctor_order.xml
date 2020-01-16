@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_issue_doctor_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="cn.longmaster.hospital.doctor.ui.rounds.IssueDoctorOrderActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_issue_doctor_order_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn"
+        doctor:leftClick="leftClick"
+        doctor:titleColor="@color/color_white"
+        doctor:titleText="@string/give_advice_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/activity_issue_doctor_order_submission"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="会诊意见您可以输入文字或直接拍照上传"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/activity_issue_doctor_order_template_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_fragment_report_template"
+                    android:drawablePadding="3dp"
+                    android:textColor="@color/color_45aef8"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_e5e5e5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="图片上传"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="您可以将会诊意见书手写到39专用的纸上，然后拍照上传"
+                    android:textColor="@color/color_fe7725"
+                    android:textSize="@dimen/font_size_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <cn.longmaster.hospital.doctor.view.MyGridView
+                        android:id="@+id/activity_issue_doctor_order_template_GridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:numColumns="4" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_e5e5e5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="输入文字"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/activity_issue_doctor_order_text_input_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bg_solid_f5f5f5_stroke_e5e5e5_radius_5"
+                    android:gravity="left"
+                    android:hint="请输入文字"
+                    android:minLines="8"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/activity_issue_doctor_order_submission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_live_video_input_enter_room"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/activity_wait_rounds_patient_submission"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

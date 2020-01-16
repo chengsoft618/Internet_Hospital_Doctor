@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.longmaster.cameralibrary.MyJCameraView
+        android:id="@+id/activity_capture_camera_jcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_66ffffff">
+
+        <TextView
+            android:id="@+id/activity_capture_cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:text="@string/capture_cancel"
+            android:textColor="@color/text_color_333333_666666"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageButton
+            android:id="@+id/activity_capture_switch_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/activity_capture_cancel_tv"
+            android:layout_toRightOf="@id/activity_capture_cancel_tv"
+            android:background="@color/color_transport"
+            android:src="@drawable/bg_btn_capture_switch" />
+
+        <ImageButton
+            android:id="@+id/activity_capture_capture_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/color_transport"
+            android:src="@drawable/bg_btn_capture" />
+
+        <TextView
+            android:id="@+id/activity_capture_upload_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:text="@string/capture_photo_upload"
+            android:textColor="@color/text_color_333333_666666"
+            android:textSize="@dimen/font_size_16" />
+
+        <ImageView
+            android:id="@+id/activity_capture_photo_iv"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/activity_capture_upload_tv"
+            android:layout_toLeftOf="@id/activity_capture_upload_tv"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/activity_capture_photo_delete_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/activity_capture_photo_iv"
+            android:layout_alignEnd="@id/activity_capture_photo_iv"
+            android:layout_alignRight="@id/activity_capture_photo_iv"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="-3dp"
+            android:layout_marginRight="-3dp"
+            android:background="@color/color_transport"
+            android:src="@drawable/bg_btn_capture_pic_delete"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

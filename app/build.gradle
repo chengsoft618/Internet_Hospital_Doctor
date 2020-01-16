@@ -1,0 +1,173 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "cn.longmaster.hospital.doctor"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+        flavorDimensions "Dimensions"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
+    productFlavors {
+        _0 { manifestPlaceholders = [CHANNEL_VALUE: "0"] }
+        _10000 { manifestPlaceholders = [CHANNEL_VALUE: "10000"] }
+        _10001 { manifestPlaceholders = [CHANNEL_VALUE: "10001"] }
+        _10002 { manifestPlaceholders = [CHANNEL_VALUE: "10002"] }
+        _10003 { manifestPlaceholders = [CHANNEL_VALUE: "10003"] }
+        _10004 { manifestPlaceholders = [CHANNEL_VALUE: "10004"] }
+        _10005 { manifestPlaceholders = [CHANNEL_VALUE: "10005"] }
+        _10006 { manifestPlaceholders = [CHANNEL_VALUE: "10006"] }
+        _10007 { manifestPlaceholders = [CHANNEL_VALUE: "10007"] }
+        _10008 { manifestPlaceholders = [CHANNEL_VALUE: "10008"] }
+        _10009 { manifestPlaceholders = [CHANNEL_VALUE: "10009"] }
+        _10010 { manifestPlaceholders = [CHANNEL_VALUE: "10010"] }
+        _10011 { manifestPlaceholders = [CHANNEL_VALUE: "10011"] }
+        _10012 { manifestPlaceholders = [CHANNEL_VALUE: "10012"] }
+        _10013 { manifestPlaceholders = [CHANNEL_VALUE: "10013"] }
+        _10014 { manifestPlaceholders = [CHANNEL_VALUE: "10014"] }
+        _10015 { manifestPlaceholders = [CHANNEL_VALUE: "10015"] }
+        _10016 { manifestPlaceholders = [CHANNEL_VALUE: "10016"] }
+        _10017 { manifestPlaceholders = [CHANNEL_VALUE: "10017"] }
+        _10018 { manifestPlaceholders = [CHANNEL_VALUE: "10018"] }
+        _10019 { manifestPlaceholders = [CHANNEL_VALUE: "10019"] }
+        _10020 { manifestPlaceholders = [CHANNEL_VALUE: "10020"] }
+        _10021 { manifestPlaceholders = [CHANNEL_VALUE: "10021"] }
+        _10022 { manifestPlaceholders = [CHANNEL_VALUE: "10022"] }
+        _10023 { manifestPlaceholders = [CHANNEL_VALUE: "10023"] }
+        _10024 { manifestPlaceholders = [CHANNEL_VALUE: "10024"] }
+        _10025 { manifestPlaceholders = [CHANNEL_VALUE: "10025"] }
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+//                if ('release'.equals(variant.buildType.name)) {
+//                    variant.getPackageApplication().outputDirectory = new File("./apk/release")
+//                    outputFileName = "internet_hospital_doctor_${defaultConfig.versionName}${variant.productFlavors[0].name}.apk"
+//                } else if ('debug'.equals(variant.buildType.name)) {
+//                    variant.getPackageApplication().outputDirectory = new File("./apk/debug")
+//                    outputFileName = "internet_hospital_doctor_${variant.versionName}_debug_${buildTime()}.apk"
+//                }
+//            }
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        ndk {
+            abiFilters 'armeabi'//, 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+def static buildTime() {
+    def date = new Date()
+    date.format("yyyyMMddHHmm")
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':library')
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
+
+    /** link { https://github.com/jgilfelt/SystemBarTint } **/
+    implementation "com.readystatesoftware.systembartint:systembartint:$rootProject.systembartintVersion"
+    implementation "com.tencent.bugly:crashreport:$rootProject.buglySDKVersion"
+
+    /** link { https://github.com/CymChad/BaseRecyclerViewAdapterHelper } **/
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.baseRecyclerViewAdapterHelperVersion"
+
+    /** link { https://github.com/google/flexbox-layout } **/
+    implementation("com.google.android:flexbox:$rootProject.flexboxVersion") {
+        exclude module: 'support-compat'
+        exclude module: 'recyclerview-v7'
+    }
+
+    /** link { https://github.com/CarGuo/GSYVideoPlayer } **/
+    implementation "com.shuyu:GSYVideoPlayer:$rootProject.GSYVideoPlayerVersion"
+
+    /** link { https://github.com/wasabeef/recyclerview-animators } RecyclerView动画 **/
+    implementation("jp.wasabeef:recyclerview-animators:$rootProject.recyclerviewAnimatorsVersion") {
+        exclude module: 'appcompat-v7'
+        exclude module: 'recyclerview-v7'
+    }
+
+    /** link { https://help.aliyun.com/product/30100.html?spm=a2c4g.11186623.6.540.50be1d22MEIaV0 } **/
+
+    //阿里htttpdns 域名解析
+    implementation("com.aliyun.ams:alicloud-android-httpdns:$rootProject.alicloudAndroidHttpdnsVersion") {
+        transitive true
+    }
+
+    /** link { https://github.com/lygttpod/SuperTextView } **/
+    implementation "com.github.lygttpod:SuperTextView:$rootProject.superTextViewVersion"
+
+    //下拉刷新控件
+
+    /** link { https://github.com/scwang90/SmartRefreshLayout } **/
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.smartRefreshLayoutVersion"
+
+    //圆角ImageView
+
+    /** link { https://github.com/hdodenhof/CircleImageView } **/
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleimageviewVersion"
+
+    /** link { https://github.com/chrisbanes/PhotoView } **/
+    implementation('com.github.chrisbanes:PhotoView:2.1.4') {
+        exclude module: 'appcompat-v7'
+    }
+
+    //底部导航栏
+
+    /** link { https://github.com/H07000223/FlycoTabLayout } */
+    implementation "com.flyco.tablayout:FlycoTabLayout_Lib:$rootProject.flycoTabLayout_LibVersion"
+
+    //Banner
+    implementation "com.youth.banner:banner:$rootProject.bannerVersion"
+
+    //最新版本
+
+    /** link { https://github.com/bumptech/glide } **/
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    implementation "jp.wasabeef:glide-transformations:$rootProject.glideTransformationsVersion"
+    implementation "com.daimajia.swipelayout:library:$rootProject.swipelayoutVersion"
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+
+    //debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.leakcanaryVersion"
+    implementation files('src/main/libs/Msc.jar')
+}

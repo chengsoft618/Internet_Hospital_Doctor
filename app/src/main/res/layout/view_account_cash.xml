@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/view_top_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View style="@style/horizontal_line_light" />
+
+            <View
+                style="@style/horizontal_line_light"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/account_total_amount"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/view_total_amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="2500元"
+                android:textColor="@color/color_0096ff"
+                android:textSize="26sp" />
+
+            <View
+                style="@style/horizontal_line_light"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/account_withdraw_cash_success_text"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_size_14" />
+
+        <RelativeLayout
+            android:id="@+id/view_commit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_live_video_input_enter_room"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/withdraw_confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

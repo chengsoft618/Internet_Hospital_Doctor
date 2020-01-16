@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_solid_ffffff_radius_10"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/dialog_doctor_list_filter_time_all_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:button="@drawable/bg_doctor_list_filter_time_cb_all"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:text="不限" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dialog_doctor_list_filter_time_all_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_doctor_list_filter_time_all_cb"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:text="按姓名"
+        android:textColor="@drawable/bg_rounds_doctor_tab_txt"
+        android:textSize="@dimen/font_size_13" />
+
+    <ImageView
+        android:id="@+id/dialog_doctor_list_filter_time_close_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="5dp"
+        android:src="@mipmap/ic_doctor_list_filter_time_close" />
+
+    <TextView
+        android:id="@+id/dialog_doctor_list_filter_time_select_tv"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/dialog_doctor_list_filter_time_all_rv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/bg_solid_3345aef8_stroke_45aef8_dotted_4_radius_5"
+        android:gravity="center"
+        android:text="选择接诊时间"
+        android:textColor="@color/color_45aef8"
+        android:textSize="@dimen/font_size_13" />
+
+    <View
+        style="@style/horizontal_line_light"
+        android:layout_above="@+id/dialog_doctor_list_filter_operation_ll" />
+
+    <LinearLayout
+        android:id="@+id/dialog_doctor_list_filter_operation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/dialog_doctor_list_filter_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_18" />
+
+        <View style="@style/vertical_line_light_1" />
+
+        <TextView
+            android:id="@+id/dialog_doctor_list_filter_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_45aef8"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+</RelativeLayout>

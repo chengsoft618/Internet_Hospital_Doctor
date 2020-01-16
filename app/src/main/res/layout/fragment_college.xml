@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/action_bar_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_app_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_app_bar"
+        android:gravity="center"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="@string/bottom_medical_college"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_18" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            app:elevation="10dp">
+
+            <com.youth.banner.Banner
+                android:id="@+id/fragment_college_banner_avp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/bg_banner"
+                app:image_scale_type="fit_xy"
+                app:indicator_drawable_selected="@drawable/bg_solid_45aef8_radius_45"
+                app:indicator_drawable_unselected="@drawable/bg_solid_ffffff_radius_45"
+                app:indicator_height="6dp"
+                app:indicator_margin="7.5dp"
+                app:indicator_width="6dp"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/fragment_college_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/color_white"
+                app:tabIndicatorColor="@color/color_36a3f0"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/color_36a3f0"
+                app:tabTextAppearance="@style/TabLayoutTextSizeStyle"
+                app:tabTextColor="@color/color_444444" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/fragment_college_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fragment_college_tab" />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_main_background"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_text"
+        doctor:titleText="@string/consult_submit_successful" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_solid_ffffff_radius_10"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/act_consult_add_success_note_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/consult_submit_successful_text"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_24"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_consult_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_note_tv"
+                android:layout_marginTop="34dp"
+                android:text="@string/consult_number"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_consult_number_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_note_tv"
+                android:layout_marginTop="34dp"
+                android:layout_toRightOf="@+id/act_consult_add_success_consult_number_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_relation_password_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_consult_number_desc_tv"
+                android:layout_marginTop="10dp"
+                android:text="@string/relation_password"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_relation_password_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_consult_number_desc_tv"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/act_consult_add_success_relation_password_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_relation_password_desc_tv"
+                android:layout_marginTop="10dp"
+                android:text="@string/confirm_patient_name"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_patient_name_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_relation_password_desc_tv"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/act_consult_add_success_patient_name_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_phone_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_patient_name_desc_tv"
+                android:layout_marginTop="10dp"
+                android:text="@string/confirm_phone_num"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_phone_num_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_patient_name_desc_tv"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/act_consult_add_success_phone_num_tv"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+
+            <RelativeLayout
+                android:id="@+id/act_consult_add_success_choose_doctor_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_phone_num_desc_tv">
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_consult_doctor_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/confirm_consult_doctor"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_consult_doctor_name_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_toRightOf="@+id/act_consult_add_success_consult_doctor_name_tv"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_consult_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_success_consult_doctor_name_desc_tv"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/confirm_consult_time"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_consult_time_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_success_consult_doctor_name_desc_tv"
+                    android:layout_marginTop="24dp"
+                    android:layout_toRightOf="@+id/act_consult_add_success_consult_time_tv"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_sequence_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_success_consult_time_desc_tv"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/consult_sequence_number"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_sequence_number_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_success_consult_time_desc_tv"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/act_consult_add_success_sequence_number_tv"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_consult_cost_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_success_sequence_number_desc_tv"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/confirm_consult_cost"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/act_consult_add_success_consult_cost_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_consult_add_success_sequence_number_desc_tv"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/act_consult_add_success_consult_cost_tv"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/act_consult_add_success_tips_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_consult_add_success_choose_doctor_rl"
+                android:layout_marginTop="24dp"
+                android:text="@string/consult_tips_has_doctor"
+                android:textColor="@color/color_ff7404"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_data_manager_tv"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/act_consult_add_success_tips_tv"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="36dp"
+                android:background="@drawable/bg_solid_049eff_radius_45"
+                android:gravity="center"
+                android:text="管理资料"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/act_consult_add_success_back_home"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/act_consult_add_success_data_manager_tv"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_solid_f0f0f0_radius_45"
+                android:gravity="center"
+                android:text="返回首页"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

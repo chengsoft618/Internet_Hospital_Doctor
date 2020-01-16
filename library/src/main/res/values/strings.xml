@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="date_format_ymdhm">yyyy年MM月dd日 HH:mm</string>
+    <string name="date_format_ymdhm_china">yyyy年MM月dd日 HH点mm分</string>
+    <string name="date_format_ymdhm2">yyyy/MM/dd HH:mm</string>
+    <string name="date_format_ms">mm分ss秒</string>
+    <string name="day_of_week_0">日</string>
+    <string name="day_of_week_1">一</string>
+    <string name="day_of_week_2">二</string>
+    <string name="day_of_week_3">三</string>
+    <string name="day_of_week_4">四</string>
+    <string name="day_of_week_5">五</string>
+    <string name="day_of_week_6">六</string>
+    <string name="colon">：</string>
+
+    <string name="noti_channel_default">默认通知通道</string>
+    <string name="noti_channel_high">高级别通知通道</string>
+    <string name="noti_channel_low">低级别通知通道</string>
+</resources>

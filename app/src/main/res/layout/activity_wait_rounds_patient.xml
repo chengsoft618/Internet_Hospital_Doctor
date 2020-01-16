@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="cn.longmaster.hospital.doctor.ui.rounds.WaitRoundsPatientActivity">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/activity_wait_rounds_patient_msb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <include
+        layout="@layout/include_toolbar_primary_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/activity_wait_rounds_patient_msb" />
+
+    <include
+        android:id="@+id/activity_wait_rounds_patient_search_ll"
+        layout="@layout/include_no_back_search_tool_bar_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar_base"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_wait_rounds_patient_bottom_view"
+        android:layout_below="@+id/activity_wait_rounds_patient_search_ll">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/activity_wait_rounds_patient_srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f2f2f2">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_wait_rounds_patient_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include layout="@layout/include_new_no_data_list" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/activity_wait_rounds_patient_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_solid_ffffff_stroke_cccccc">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="已选择("
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_15" />
+
+        <TextView
+            android:id="@+id/activity_wait_rounds_patient_selected_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/color_45aef8"
+            android:textSize="@dimen/font_size_15" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text=")条信息"
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_15" />
+
+        <Button
+            android:id="@+id/activity_wait_rounds_patient_btn"
+            android:layout_width="147dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/color_45aef8"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+</RelativeLayout>

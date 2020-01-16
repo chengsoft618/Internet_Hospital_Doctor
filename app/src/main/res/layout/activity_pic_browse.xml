@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.longmaster.hospital.doctor.ui.HackyViewPager
+        android:id="@+id/activity_pic_browse_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_black" />
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_pic_browse_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barBackground="@color/color_b2000000"
+        app:function="left_btn|title|right_text"
+        app:rightText="@string/pic_browse_delete"
+        app:rightTextColor="@color/text_color_ff4737_c51000"
+        app:statusBarColor="@color/black"
+        app:titleColor="@color/color_white"
+        app:titleText="" />
+
+    <LinearLayout
+        android:id="@+id/activity_pic_browse_bottom_bar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_b2000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/activity_pic_browse_info_layout_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_pic_browse_hospital_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/activity_pic_browse_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/activity_pic_browse_result_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_pic_browse_fail_layout_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/activity_pic_browse_fail_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/color_ff4737"
+                android:textSize="@dimen/font_size_14" />
+
+            <Button
+                android:id="@+id/activity_pic_browse_upload_again_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_btn_orange_common"
+                android:text="@string/pic_browse_upload_again"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_18" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="7dp">
+
+    <TextView
+        android:id="@+id/item_surgical_treatment_surgical_info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:lineSpacingMultiplier="1.1"
+        android:text="心瓣膜切除术"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_size_14" />
+</FrameLayout>

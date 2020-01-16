@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.longmaster.doctorlibrary.util.photo.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_upload_photo_pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/item_upload_photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_66000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_upload_photo_mask_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_photo_mask_checkbox" />
+
+    <LinearLayout
+        android:id="@+id/item_upload_photo_pic_success_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_upload_pic_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/data_queue_upload_success"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_upload_photo_pic_ing_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_upload_pic_ing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/data_queue_upload_ing"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_upload_photo_selected_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:padding="6dp"
+        android:src="@drawable/bg_photo_checkbox"
+        android:visibility="visible" />
+</cn.longmaster.doctorlibrary.util.photo.SquareItemLayout>

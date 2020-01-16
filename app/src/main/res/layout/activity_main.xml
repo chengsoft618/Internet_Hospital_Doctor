@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/act_main_fl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/act_main_tab_ctl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_f9f9f9"
+            tl:tl_iconGravity="TOP"
+            tl:tl_iconHeight="22dp"
+            tl:tl_iconMargin="1dp"
+            tl:tl_iconWidth="22dp"
+            tl:tl_indicator_bounce_enable="false"
+            tl:tl_textSelectColor="@color/color_049eff"
+            tl:tl_textUnselectColor="@color/color_999999"
+            tl:tl_textsize="12sp"
+            tl:tl_underline_color="@color/color_dcdcdc"
+            tl:tl_underline_gravity="TOP"
+            tl:tl_underline_height="1dp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/act_main_newbie_guide_layout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_b2000000"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/act_main_newbie_guide_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/bg_btn_newbie_guide" />
+
+        <ImageButton
+            android:id="@+id/act_main_newbie_guide_close_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:paddingLeft="15dp"
+            android:paddingTop="12dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="12dp"
+            android:src="@drawable/bg_newbie_guide_close" />
+    </RelativeLayout>
+</RelativeLayout>

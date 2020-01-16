@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_solid_ffffff_radius_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/user_input_num"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_size_16" />
+
+        <EditText
+            android:id="@+id/layout_live_video_input_edt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_solid_ffffff_stroke_c8c7cc_radius_5"
+            android:inputType="number"
+            android:paddingLeft="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/layout_live_video_input_cancel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_live_video_input_cancel"
+                android:gravity="center"
+                android:text="@string/video_dialog_cancel"
+                android:textColor="@color/color_808080"
+                android:textSize="@dimen/font_size_14" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/layout_live_video_input_go_in"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_live_video_input_enter_room"
+                android:gravity="center"
+                android:text="@string/user_go_in_video_room"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

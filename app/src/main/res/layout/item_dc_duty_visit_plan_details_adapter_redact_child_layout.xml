@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_child"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="17dp"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_dc_duty_visit_plan_details_adapter_child_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="复诊提醒: 请上传近期就诊后病历资料"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_child_date"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="请于2019年12月23日到"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_10"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/item_dc_duty_visit_plan_details_adapter_redact_child_doctor_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="观山湖区社区医陈汉医生"
+                android:textColor="@color/color_049eff"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="复诊"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_dc_duty_paient_disease_redact_deleted"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/ic_dc_duty_paient_disease_redact_deleted"
+        android:visibility="gone" />
+
+</LinearLayout>
+

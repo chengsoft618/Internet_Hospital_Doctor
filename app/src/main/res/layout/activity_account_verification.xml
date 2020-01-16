@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account_verification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.longmaster.hospital.doctor.ui.account.AccountVerificationActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/activity_account_verification_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:barBackground="@color/color_white"
+        doctor:function="title|left_btn"
+        doctor:leftBtnImage="@drawable/ic_actionbar_back_gray"
+        doctor:statusBarColor="@color/black"
+        doctor:titleColor="@color/color_333333"
+        doctor:titleText="@string/user_my_account" />
+
+    <TextView
+        android:id="@+id/activity_account_verification_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_account_verification_action_bar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/account_code_tip"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14" />
+
+    <LinearLayout
+        android:id="@+id/activity_account_verification_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_account_verification_view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/activity_account_verification_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_solid_ffffff_stroke_c8c7cc_radius_5"
+            android:hint="@string/account_code_input_hin"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/font_size_14" />
+
+        <Button
+            android:id="@+id/activity_account_verification_get_code_view"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_live_video_input_enter_room"
+            android:text="@string/change_get_verification_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/activity_account_verification_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="124dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/color_e5e5e5" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_account_verification_error_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_account_verification_input_view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/account_code_error"
+        android:textColor="@color/color_ff2424"
+        android:textSize="@dimen/font_size_12"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/activity_account_verification_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/activity_account_verification_input_view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_live_video_input_enter_room"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_account_verification_action_bar"
+        android:background="@color/color_transport"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/activity_account_verification_toast_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_8084DEA0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/activity_account_verification_toast_content"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#FFE0E0"
+                android:gravity="center"
+                android:textSize="@dimen/font_size_14"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_solid_ffffff_radius_10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            android:background="@drawable/bg_solid_049eff_radius_3"
+            android:gravity="center"
+            android:text="发起"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_10" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_from_hospital_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="贵阳市第六医院"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_from_department_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="心内科"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/horizontal_line_light_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/item_confirm_list_type_tv"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:text="类         型:"
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_type_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/item_confirm_list_type_tv"
+            android:text="就诊费用"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_order_num_tv"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirm_list_type_tv"
+            android:layout_marginTop="10dp"
+            android:text="就诊编号："
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_order_num_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirm_list_type_tv"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_confirm_list_order_num_tv"
+            android:text="123456587989"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_pay_money_tv"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirm_list_order_num_desc_tv"
+            android:layout_marginTop="10dp"
+            android:text="垫付金额："
+            android:textColor="@color/color_7d7e7f"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_pay_money_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirm_list_order_num_desc_tv"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_confirm_list_pay_money_tv"
+            android:text="2000.56"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_14" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_line_light_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            android:background="@drawable/bg_solid_fbb818_radius_3"
+            android:gravity="center"
+            android:text="上级"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_10" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_to_doctor_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="张三"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_to_hospital_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="贵阳市第六医院"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/item_confirm_list_to_department_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="心内科"
+            android:textColor="@color/color_1a1a1a"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+</LinearLayout>

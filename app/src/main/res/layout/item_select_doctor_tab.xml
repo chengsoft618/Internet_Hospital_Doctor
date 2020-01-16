@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@color/transparent"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="0.67dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/item_select_doctor_tab_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="0dp"
+        android:textColor="@color/color_999999"
+        android:textSize="14sp" />
+</LinearLayout>

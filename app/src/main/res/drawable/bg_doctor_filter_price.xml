@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_solid_ffffff_stroke_45aef8_radius_8" android:state_focused="true" />
+    <item android:drawable="@drawable/bg_solid_ffffff_stroke_dcdcdc_radius_8" android:state_focused="false" />
+    <item android:drawable="@drawable/bg_solid_ffffff_stroke_dcdcdc_radius_8" />
+
+</selector>

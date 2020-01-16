@@ -1,0 +1,271 @@
+<resources>
+    <string name="app_name">39医生工作站</string>
+    <string name="loading_data">数据加载中&#8230;</string>
+    <string name="loading">加载中&#8230;</string>
+    <string name="downloading">下载中&#8230;</string>
+    <string name="load_data_faild">数据加载失败,请重试</string>
+    <string name="no_network_connection">网络环境不稳定，请重试</string>
+    <string name="request_connection_fail">服务器忙</string>
+    <string name="request_parse_fail">结果解析失败</string>
+    <string name="request_auth_code_error">鉴权值已过期</string>
+    <string name="sdcard_unable">SD卡不可用</string>
+    <string name="apply_appointment_permission_setting_tip">您的录音权限被禁止,请进入系统设置开启录音权限并重启大医生</string>
+    <string name="file_uploading">文件上传中&#8230;</string>
+    <string name="file_upload_faild">文件上传失败,请重试</string>
+    <string name="data_uploading">数据上传中&#8230;</string>
+    <string name="data_committing">正在提交&#8230;</string>
+    <string name="data_upload_faild">数据上传失败,请重试</string>
+    <string name="immediately_enter">立即进入</string>
+    <string name="add_succeed_tips">添加成功</string>
+    <string name="unit_money_rmb">元</string>
+    <string name="unit_individual">个</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="week">周</string>
+    <string name="info_birthday">生日</string>
+    <string name="gender_male">男</string>
+    <string name="gender_female">女</string>
+
+    <!-- 登录 -->
+    <string name="login_phone_num">手机号码</string>
+    <string name="login_password">密&#160;码</string>
+    <string name="login_login">登&#160;录</string>
+    <string name="login_login_go">登录中&#8230;&#8230;</string>
+    <string name="login_message_login">短信登录</string>
+    <string name="login_register">注册</string>
+    <string name="login_found_password">找回密码</string>
+    <string name="login_found_password_ques">找回密码?</string>
+    <string name="login_message_password">账号登录</string>
+    <string name="login_message_send_code_count_down">%1$d秒后重发</string>
+    <string name="login_message_again_send_code">重新\n获取验证码</string>
+    <string name="login_message_send_code_success">获取验证码成功</string>
+    <string name="login_message_code_empty_tip">请输入验证码</string>
+    <string name="login_message_code_error_tip">您输入的验证码不正确</string>
+    <string name="change_password_input_new_password">请输入新密码</string>
+    <string name="change_password_password_too_short">密码不足6位</string>
+    <string name="change_password_again_input_password">请再次输入密码</string>
+    <string name="change_password_diff_password">两次密码不一致</string>
+    <string name="change_password_code_empty_tip">请输入验证码进行重置密码</string>
+    <string name="change_password_success">修改成功</string>
+    <string name="set_new_password_hint">设置新密码</string>
+    <string name="set_new_password_again_hint">重复新密码</string>
+    <string name="reset_and_register">重置并登录</string>
+    <string name="reset_password_success">重置密码成功</string>
+    <string name="password_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <!-- 首页 -->
+    <string name="home_title">39互联网医院</string>
+    <string name="home_remote_consult">视频会诊</string>
+    <string name="home_data_manage">资料管理</string>
+    <string name="home_consult">就诊</string>
+    <string name="home_consult_history">历史就诊</string>
+    <string name="home_message_null">暂无消息</string>
+    <string name="home_todo">待办事项</string>
+    <string name="home_todo_empty">暂无待办事项</string>
+    <string name="home_appoint_list">预约列表</string>
+    <string name="home_recommend_expert">推荐专家</string>
+    <string name="message_list">消息列表</string>
+    <string name="message_read_all">全部已读</string>
+    <string name="press_again_back_home">再按一次返回键回到桌面</string>
+
+    <string name="user_show_section_appoint">显示科室预约</string>
+
+
+    <!-- 预约状态说明-->
+    <string name="appoint_state_communicating">分诊中</string>
+    <string name="appoint_state_wait_pay">等待支付</string>
+    <string name="appoint_state_wait_communication">等待沟通</string>
+    <string name="appoint_state_pay_timeout">支付超时</string>
+    <string name="appoint_state_check_report">查看报告</string>
+    <string name="appoint_state_close">就诊关闭</string>
+    <string name="appoint_state_complete">就诊完成</string>
+    <string name="appoint_state_all_complete">全部完成</string>
+    <!-- 预约卡片按钮动作-->
+    <string name="appoint_action_give_advice">出具医嘱</string>
+    <string name="appoint_action_view_record">查看病历</string>
+    <string name="appoint_action_manage_data">管理资料</string>
+    <string name="appoint_action_enter_the_consulting_room">进入诊室</string>
+    <string name="appoint_action_no_state">未知状态</string>
+
+    <!--服务类型-->
+    <string name="service_type_remote_consult">远程会诊</string>
+    <string name="service_type_remote_advice">远程咨询</string>
+    <string name="service_type_remote_outpatient">远程门诊</string>
+    <string name="service_type_remote_wards">远程查房</string>
+    <string name="service_type_remote_image_consult">远程影像会诊</string>
+
+    <!-- 底部按钮 -->
+    <string name="bottom_home_btn">39医院</string>
+    <string name="bottom_user_center_btn">个人中心</string>
+    <string name="bottom_doctor_btn">名医在</string>
+    <string name="bottom_medical_college">医学院</string>
+    <!-- 顶部action_bar -->
+    <string name="action_bar_cancel">取消</string>
+    <string name="action_bar_ok">完成</string>
+
+    <!-- 预约中心 -->
+    <string name="appoint_screen">筛选</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="waiting_for_video">等待视频</string>
+    <string name="waiting_for_advice">等待医嘱</string>
+    <string name="report_trim">报告整理</string>
+
+    <!--时间描述-->
+    <string name="time_description_application">申请时间:</string>
+    <string name="time_description_predict">预计时间:</string>
+    <string name="time_description_finished">完成时间:</string>
+    <string name="common_space">&#160;</string>
+
+    <!--pickerView-->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+
+    <!--消息-->
+    <string name="message_balance_change">余额变更</string>
+    <string name="message_withdraw">提现到账</string>
+    <string name="message_appointment_today">今日预约</string>
+    <string name="message_39_activity">39活动</string>
+    <string name="message_balance_change_tips">您的账户余额有变更</string>
+    <string name="message_withdraw_tips">您申请的提现金额已到账</string>
+    <string name="message_appointment_today_tips">今日您有%1$s个预约就诊</string>
+    <string name="message_center_delete_message">删除此消息</string>
+    <string name="message_new_message_notice_tips">您有一条新的消息，39互联网医院</string>
+    <string name="history_record">历史记录</string>
+    <string name="sure_delete_title">确认删除</string>
+    <string name="sure_delete_message">确认删除历史搜索记录？</string>
+
+    <string name="pdfvp_ready_to_download">即将加载</string>
+
+    <!-- <string name="bookmark_picker_name">Bookmarks</string>
+     <string name="button_add_calendar">Add to calendar</string>
+     <string name="button_add_contact">Add contact</string>
+     <string name="button_book_search">Book Search</string>
+     <string name="button_cancel">Cancel</string>
+     <string name="button_custom_product_search">Custom search</string>
+     <string name="button_dial">Dial number</string>
+     <string name="button_email">Send email</string>
+     <string name="button_get_directions">Get directions</string>
+     <string name="button_mms">Send MMS</string>
+
+     <string name="button_open_browser">Open browser</string>
+     <string name="button_product_search">Product search</string>
+     <string name="button_search_book_contents">Search contents</string>
+     <string name="button_share_app">Application</string>
+     <string name="button_share_bookmark">Bookmark</string>
+     <string name="button_share_by_email">Share via email</string>
+     <string name="button_share_by_sms">Share via SMS</string>
+     <string name="button_share_clipboard">Clipboard</string>
+     <string name="button_share_contact">Contact</string>
+     <string name="button_show_map">Show map</string>
+     <string name="button_sms">Send SMS</string>
+     <string name="button_web_search">Web search</string>
+     <string name="button_wifi">Connect to Network</string>
+     <string name="contents_contact">Contact info</string>
+     <string name="contents_email">Email address</string>
+     <string name="contents_location">Geographic coordinates</string>
+     <string name="contents_phone">Phone number</string>
+     <string name="contents_sms">SMS address</string>
+     <string name="contents_text">Plain text</string>
+     <string name="history_clear_text">Clear history</string>
+     <string name="history_clear_one_history_text">Clear</string>
+     <string name="history_email_title">Barcode Scanner history</string>
+     <string name="history_empty">Empty</string>
+     <string name="history_empty_detail">No barcode scans have been recorded</string>
+     <string name="history_send">Send history</string>
+     <string name="history_title">History</string>
+     <string name="menu_encode_mecard">Use MECARD</string>
+     <string name="menu_encode_vcard">Use vCard</string>
+     <string name="menu_help">Help</string>
+     <string name="menu_history">History</string>
+     <string name="menu_settings">Settings</string>
+     <string name="menu_share">Share</string>
+     <string name="msg_bulk_mode_scanned">Bulk mode: barcode scanned and saved</string>
+
+     <string name="msg_default_format">Format</string>
+     <string name="msg_default_meta">Metadata</string>
+     <string name="msg_default_mms_subject">Hi</string>
+     <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+     <string name="msg_default_time">Time</string>
+     <string name="msg_default_type">Type</string>
+     <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
+     <string name="msg_error">Error</string>
+     <string name="msg_google_books">Google</string>
+     <string name="msg_google_product">Google</string>
+     <string name="msg_intent_failed">Sorry, the requested application could not be launched. The barcode contents may be invalid.</string>
+     <string name="msg_invalid_value">Invalid value</string>
+     <string name="msg_redirect">Redirect</string>
+     <string name="msg_sbc_book_not_searchable">Sorry, this book is not searchable.</string>
+     <string name="msg_sbc_failed">Sorry, the search encountered a problem.</string>
+     <string name="msg_sbc_no_page_returned">No page returned</string>
+     <string name="msg_sbc_page">Page</string>
+     <string name="msg_sbc_results">Results</string>
+     <string name="msg_sbc_searching_book">Searching book\u2026</string>
+     <string name="msg_sbc_snippet_unavailable">Snippet not available</string>
+     <string name="msg_share_explanation">You can share data by displaying a barcode on your screen and scanning it with another phone.</string>
+     <string name="msg_share_text">Or type some text and press Enter</string>
+     <string name="msg_sure">Are you sure?</string>
+     <string name="msg_unmount_usb">Sorry, the SD card is not accessible.</string>
+     <string name="preferences_actions_title">When a barcode is found\u2026</string>
+     <string name="preferences_auto_focus_title">Use auto focus</string>
+     <string name="preferences_auto_open_web_title">Open web pages automatically</string>
+     <string name="preferences_bulk_mode_summary">Scan and save many barcodes continuously</string>
+     <string name="preferences_bulk_mode_title">Bulk scan mode</string>
+     <string name="preferences_copy_to_clipboard_title">Copy to clipboard</string>
+     <string name="preferences_custom_product_search_summary" formatted="false">Substitutions: %s = contents, %f = format, %t = type</string>
+     <string name="preferences_custom_product_search_title">Custom search URL</string>
+     <string name="preferences_decode_1D_industrial_title">1D Industrial</string>
+     <string name="preferences_decode_1D_product_title">1D Product</string>
+     <string name="preferences_decode_Aztec_title">Aztec</string>
+     <string name="preferences_decode_Data_Matrix_title">Data Matrix</string>
+     <string name="preferences_decode_PDF417_title">PDF417 (β)</string>
+     <string name="preferences_decode_QR_title">QR Codes</string>
+     <string name="preferences_device_bug_workarounds_title">Device Bug Workarounds</string>
+     <string name="preferences_disable_barcode_scene_mode_title">No barcode scene mode</string>
+     <string name="preferences_disable_continuous_focus_summary">Use only standard focus mode</string>
+     <string name="preferences_disable_continuous_focus_title">No continuous focus</string>
+     <string name="preferences_disable_exposure_title">No exposure</string>
+     <string name="preferences_disable_metering_title">No metering</string>
+     <string name="preferences_front_light_summary">Improves scanning in low light on some phones, but may cause glare. Does not work on all phones.</string>
+     <string name="preferences_front_light_title">Use front light</string>
+     <string name="preferences_front_light_auto">Automatic</string>
+     <string name="preferences_front_light_off">Off</string>
+     <string name="preferences_front_light_on">On</string>
+     <string name="preferences_general_title">General settings</string>
+     <string name="preferences_invert_scan_title">Invert scan</string>
+     <string name="preferences_invert_scan_summary">Scan for white barcodes on black background. Not available on some devices.</string>
+     <string name="preferences_name">Settings</string>
+     <string name="preferences_orientation_title">No automatic rotation</string>
+     <string name="preferences_play_beep_title">Beep</string>
+     <string name="preferences_remember_duplicates_summary">Store multiple scans of the same barcode in History</string>
+     <string name="preferences_remember_duplicates_title">Remember duplicates</string>
+     <string name="preferences_result_title">Result settings</string>
+     <string name="preferences_scanning_title">When scanning for barcodes, decode\u2026</string>
+     <string name="preferences_search_country">Search country</string>
+     <string name="preferences_supplemental_summary">Try to retrieve more information about the barcode contents</string>
+     <string name="preferences_supplemental_title">Retrieve more info</string>
+     <string name="preferences_vibrate_title">Vibrate</string>
+     <string name="result_address_book">Found contact info</string>
+     <string name="result_calendar">Found calendar event</string>
+     <string name="result_email_address">Found email address</string>
+     <string name="result_geo">Found geographic coordinates</string>
+     <string name="result_isbn">Found book</string>
+     <string name="result_product">Found product</string>
+     <string name="result_sms">Found SMS address</string>
+     <string name="result_tel">Found phone number</string>
+     <string name="result_text">Found plain text</string>
+     <string name="result_uri">Found URL</string>
+     <string name="result_wifi">Found WLAN Configuration</string>
+     <string name="sbc_name">Google Book Search</string>
+     <string name="wifi_changing_network">Requesting connection to network\u2026</string>-->
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="viewfinderview_status_text1">将二维码/条码放入取景框内</string>
+    <string name="viewfinderview_status_text2">即可自动扫描</string>
+    <string name="button_ok">OK</string>
+</resources>

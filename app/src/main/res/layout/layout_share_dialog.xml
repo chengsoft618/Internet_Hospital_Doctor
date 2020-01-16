@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_eaeaea"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/share_dialog_share_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="15dp"
+        android:listSelector="@null"
+        android:numColumns="4"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/share_dialog_cancel_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_layout_item_common"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_size_18" />
+</LinearLayout>

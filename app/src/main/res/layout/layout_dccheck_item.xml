@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/layout_dccheck_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7.5dp"
+        android:background="@drawable/bg_solid_ffffff_stroke_666666_radius_45"
+        android:paddingLeft="17dp"
+        android:paddingTop="6dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="6dp"
+        android:text="心电图"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_12" />
+</LinearLayout>

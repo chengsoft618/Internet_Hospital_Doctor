@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="81dp"
+    android:layout_height="81dp"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/item_data_manage_photo_img_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f2f2"
+        android:scaleType="center" />
+
+    <RelativeLayout
+        android:id="@+id/item_data_manage_media_control_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_grid_media_default" />
+
+        <cn.longmaster.hospital.doctor.view.RoundProgressBar
+            android:id="@+id/item_data_manage_media_progress_bar"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_centerInParent="true"
+            app:roundColor="@color/color_white"
+            app:roundProgressColor="@color/color_22a6ff"
+            app:roundWidth="1.5dip"
+            app:rpbTextColor="@color/color_white"
+            app:rpbTextSize="@dimen/font_size_12"
+            app:textIsDisplayable="true" />
+
+        <ImageView
+            android:id="@+id/item_data_manage_media_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_media_not_download" />
+
+        <ImageView
+            android:id="@+id/item_data_manage_media_control_btn"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_media_download_btn"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/item_data_manage_photo_delete_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/bg_data_manage_delete"
+        android:visibility="visible" />
+
+</RelativeLayout>

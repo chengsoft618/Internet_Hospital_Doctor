@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/fg_home_page_title_abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="10dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_049eff"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <include
+                    layout="@layout/include_home_page_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="69dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <include layout="@layout/include_home_page_title_close" />
+
+                    <include layout="@layout/include_home_page_title_open" />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <View style="@style/horizontal_line_light_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical">
+
+                <RadioGroup
+                    android:id="@+id/fg_home_page_consult_rg"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/fg_home_page_rounds_rb"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bg_rounds_doctor_tab"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/rounds"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_18" />
+
+                    <RadioButton
+                        android:id="@+id/fg_home_page_consultation_rb"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/bg_rounds_doctor_tab"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/consultation"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_16" />
+                </RadioGroup>
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/ic_home_page_consult_list" />
+
+                <TextView
+                    android:id="@+id/fg_home_page_consult_list_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="预约列表"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fg_home_page_consult_fl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

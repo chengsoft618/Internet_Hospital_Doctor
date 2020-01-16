@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e3ebf1"
+    android:orientation="vertical"
+    tools:context=".ui.consult.consultant.RepresentFunctionActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="title|left_btn"
+        doctor:titleText="@string/represent_function" />
+
+    <GridView
+        android:id="@+id/activity_represent_function_list_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="1dp"
+        android:numColumns="2"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:verticalSpacing="1dp" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/include_home_page_title_close_ll"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    android:background="@color/color_049eff"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:id="@+id/include_home_page_title_close_msb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_below="@+id/include_home_page_title_close_msb"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="21dp"
+            android:text="39互联网医院"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/include_home_page_title_close_scan_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ic_home_page_scan_small" />
+
+        <ImageView
+            android:id="@+id/include_home_page_title_close_consult_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:src="@mipmap/ic_home_page_consult_small" />
+
+        <ImageView
+            android:id="@+id/include_home_page_title_close_department_construction_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:src="@mipmap/ic_home_page_department_construction_small" />
+
+        <ImageView
+            android:id="@+id/include_home_page_title_close_material_manage_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_home_page_material_manage_small" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/include_home_page_title_close_bg_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

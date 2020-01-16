@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_doctor_list_main_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical"
+    tools:context=".ui.doctor.DoctorListActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:id="@+id/act_doctor_list_aab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="选择医生" />
+
+    <include layout="@layout/include_doctor_list_search_title" />
+
+    <include layout="@layout/include_doctor_list_filter" />
+
+    <FrameLayout
+        android:id="@+id/act_doctor_list_content_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/act_doctor_list_srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/act_doctor_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include
+            layout="@layout/include_choose_doctor_no_data_list"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

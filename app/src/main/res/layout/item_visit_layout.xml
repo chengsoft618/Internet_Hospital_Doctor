@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_visit_above_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_solid_ffffff_stroke_c8c7cc_radius_5">
+
+        <TextView
+            android:id="@+id/item_visit_rounds_identification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_rounds"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/item_visit_check"
+            android:layout_toRightOf="@+id/item_visit_rounds_identification"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_visit_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_visit_patient_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/item_visit_num_tv"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxEms="3"
+                android:singleLine="true"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_visit_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/item_visit_patient_name"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLength="7"
+                android:singleLine="true"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/item_visit_pay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:textColor="@color/color_ff8714"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_visit_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_visit_selected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_visit_below_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_visit_list_below"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/item_visit_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_portrait" />
+
+        <TextView
+            android:id="@+id/item_visit_assistant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/item_visit_ic"
+            android:ellipsize="end"
+            android:maxEms="3"
+            android:singleLine="true"
+            android:textColor="@color/color_36a3f0"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/item_visit_assistant_name_medical_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/consult_payment_confirm_record_cb"
+            android:textColor="@color/color_36a3f0"
+            android:textSize="@dimen/font_size_14" />
+
+
+        <TextView
+            android:id="@+id/item_visit_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/capture_photo_upload"
+            android:textColor="@color/color_36a3f0"
+            android:textSize="@dimen/font_size_14" />
+    </RelativeLayout>
+</LinearLayout>

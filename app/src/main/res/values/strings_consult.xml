@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campaign_consult_title">已发起就诊</string>
+    <string name="reconsult_tag">(复诊)</string>
+    <string name="no_patient">暂无患者</string>
+    <string name="no_backlog">暂无查房待办事项</string>
+    <!-- 出具医嘱 -->
+    <string name="give_advice_title">出具医嘱</string>
+    <string name="give_advice_wait_give">稍后出具</string>
+    <string name="need_re_consult_yes_or_no">是否需提醒患者复诊</string>
+    <string name="no_need_re_consult">无需复诊</string>
+    <string name="please_give_advice_info">请出具医嘱内容</string>
+    <string name="please_give_treatment_advice">请输入诊疗意见</string>
+
+    <!-- 文字输入 -->
+    <string name="text_input_hint">请根据患者病情及视频问诊出具会诊意见</string>
+    <string name="text_input_empty">请输入文字</string>
+
+    <!-- 发起会诊 填写会诊信息-->
+    <string name="fill_consult_information">填写会诊信息</string>
+    <string name="select_doctor_and_service">选择医生及服务</string>
+    <string name="select_doctor_and_schedule_tip">若您不选择医生，将由分诊中心为您推荐</string>
+    <string name="appointed_doctor">您预约的医生：</string>
+    <string name="change_doctor">修改</string>
+    <string name="appointed_time">预约时间：</string>
+    <string name="last_appointed_time">上次就诊的时间：</string>
+    <string name="appointed_mode">申请模式：</string>
+    <string name="appointed_mode_consult">会诊</string>
+    <string name="appointed_mode_advice">医学咨询</string>
+    <string name="appointed_mode_imaging_consult">远程影像会诊</string>
+    <string name="consult_cost">就诊费用：</string>
+    <string name="waiting_for_appointment_doctor">请耐心等待分诊中心为您预约该医生</string>
+    <string name="patient_information">患者信息&#160;*</string>
+    <string name="patient_name_hint">请输入患者姓名</string>
+    <string name="patient_summarize">患者概述&#160;*</string>
+    <string name="patient_phone_num_hint">请输入患者联系电话</string>
+    <string name="patient_summarize_hint">可输入患者病情，会诊诉求，意向就诊医院等</string>
+    <string name="patient_name_tip">请输入患者姓名</string>
+    <string name="patient_summarize_tip">请输入患者概述</string>
+    <string name="patient_phone_num_tip">请输入联系电话</string>
+    <string name="patient_phone_num_error_format_tip">请输入正确的手机号码</string>
+    <string name="consult_launch_consult">发起就诊</string>
+    <string name="fill_consult_information_help">如需帮助，请联系客服热线400&#8211;860&#8211;3939</string>
+    <string name="fill_consult_dialog_finish_title">是否确认结束预约？</string>
+    <string name="fill_consult_dialog_finish_message">您正在填写预约申请信息，确认结束预约申请吗？</string>
+    <string name="fill_consult_dialog_ok">确认</string>
+    <string name="fill_consult_dialog_cancel">取消</string>
+
+    <!-- 提交成功 -->
+    <string name="consult_submit_successful">提交成功</string>
+    <string name="consult_submit_successful_text">成功提交预约就诊！</string>
+    <string name="consult_number">就诊编号：</string>
+    <string name="relation_password">关联密码：</string>
+    <string name="consult_sequence_number">就诊序号：</string>
+    <string name="consult_tips_has_doctor">请提醒患者关注微信号或下载app，协助患者完成后续就诊流程！</string>
+    <string name="consult_tips_no_doctor">39互联医院医生助理将会协助患者进行后续就诊流程</string>
+    <string name="reconsult_tips">请等待分诊中心为您设置复诊时间，请保持关注就诊动态。</string>
+    <string name="drop_out_reconsult">不参与复诊</string>
+    <string name="select_reconsult_time">选择复诊时间</string>
+    <string name="select_look_consult">查看就诊.管理资料</string>
+    <string name="select_department">选择科室</string>
+
+    <!-- 医生列表 -->
+    <string name="doctor_list">医生列表</string>
+    <string name="choose_later">稍后选择</string>
+    <string name="select_doctor_from_department">按科室选择医生</string>
+    <string name="select_doctor_no_doctor">暂无医生</string>
+
+    <!-- 医生详情 -->
+    <string name="doctor_detail_price">远程会诊：%s元</string>
+    <string name="doctor_detail_level">/%s</string>
+    <string name="doctor_detail_short_line">-</string>
+    <string name="doctor_detail_doctor_skill">擅长疾病</string>
+    <string name="doctor_detail_doctor_info">个人简介</string>
+    <string name="doctor_detail_doctor_work_time">接诊时间示例表</string>
+    <string name="doctor_detail_doctor_work_time_desc">按照接诊时间段，专家接诊概率更大</string>
+    <string name="doctor_detail_feedback">用户反馈</string>
+    <string name="doctor_detail_recommend_reason">推荐理由</string>
+    <string name="doctor_detail_personal_resume">个人履历</string>
+    <string name="doctor_detail_belong_team">所在专家团队</string>
+    <string name="doctor_detail_expert_article">专家文章</string>
+    <string name="doctor_detail_expert_practice">专家出诊视频精选片段</string>
+    <string name="doctor_detail_expert_class">专家精讲课程集</string>
+    <string name="doctor_authority_dialog_message">当前医生暂无此服务请选择其他医生进行预约</string>
+    <string name="doctor_authority_dialog_ok">确定</string>
+    <string name="doctor_detail_not_to_self_initiate_consultation">医生不能向自己发起会诊</string>
+
+    <!--专家团队详情-->
+    <string name="doctor_team_detail_info">团队介绍</string>
+    <string name="doctor_team_detail_leader">团队领衔专家</string>
+    <string name="doctor_team_detail_member">团队其他成员</string>
+
+    <!--升窗-->
+    <string name="price_format">￥%1$s</string>
+    <string name="no_price">￥</string>
+    <string name="quote_string_format">“%1$s”</string>
+    <string name="raise_window_select_visit_type_please">请选择就诊类型</string>
+    <string name="raise_window_select_visit_type">选择就诊类型</string>
+    <string name="raise_window_select_service">选择服务</string>
+    <string name="raise_window_select_visit_time">选择就诊排班</string>
+    <string name="raise_window_select_group_consultation">会诊</string>
+    <string name="raise_window_select_imaging_consult">影像会诊</string>
+    <string name="raise_window_select_medical_consultation">医学咨询</string>
+    <string name="raise_window_select_triage_center">分诊中心</string>
+    <string name="raise_window_config">确认</string>
+    <string name="raise_window_have_select">已选择：</string>
+    <string name="raise_window_no_service">当前医生暂无服务\n可选择分诊中心预约该专家</string>
+    <string name="raise_window_no_schedule">当前医生暂无排班\n请选择分诊中心预约该上级专家</string>
+
+    <string name="no_select_service">请选择服务项目</string>
+    <string name="triage_center_recommend">分诊中心推荐</string>
+    <string name="triage_center_recommend_tips">分诊中心将根据患者病情为患者推荐最适合的专家及会诊时间</string>
+    <string name="schedule_change_dialog_title">该排班已有预约患者，请联系医生助理为您处理</string>
+    <string name="schedule_change_dialog_message">该排班已有预约患者，不能修改此排班信息，如需修改，可输入修改理由，工作人员将为您尽快处理。</string>
+    <string name="schedule_change_dialog_hint">请输入修改排班理由</string>
+    <string name="schedule_change_dialog_cancel">取\t消</string>
+    <string name="schedule_change_dialog_ok">确\t认</string>
+    <string name="image_consult_introduce_title">远程影像会诊说明</string>
+    <string name="image_consult_introduce_introduce1">远程影像会诊是远程会诊的重要形式之一。基于对患者的CT、MR等影像资料的远程传输技术，由远端的影像学专家对患者影像学材料进行会诊。</string>
+    <string name="image_consult_introduce_introduce2">影像会诊需上传Dicom文件，请至39互联网医院官网www.39hospital.com进行上传。</string>
+    <string name="image_consult_introduce_item_title_1">1、什么是DICOM文件？</string>
+    <string name="image_consult_introduce_item_content_1">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;医院在对病人做检查时，用X光机、CT机器对病人扫描产生的检查结果，能够以DICOM协议规定格式的形式保存起来，此类文件信息须使用专业的软件打开查看。DICOM文件能帮助医生全方位动态查看病人的医学成像结果，从而辅助医生对病情做更细致、专业的判断。\n&#160;&#160;目前，DICOM被广泛应用于放射医疗，心血管成像以及放射诊疗诊断设备（X射线，CT，核磁共振，超声等）并且在眼科和牙科等其他医学领域得到越来越深入广泛的应用。</string>
+    <string name="image_consult_introduce_item_title_2">2、如何获得DICOM文件？</string>
+    <string name="image_consult_introduce_item_content_2">DICOM文件是医生给患者做X射线，CT，核磁共振，超声等检查之后，使用专业的设备生成的电子化数据，可保存在光盘或存储移动设备中，方便携带。</string>
+    <string name="image_consult_introduce_item_title_3">3、怎么上传DICOM文件？</string>
+    <string name="image_consult_introduce_item_content_3">a、将文件压缩包以患者手机号码命名，发送邮件到file@39hospital.com \nb、 或者联系医生助理帮您解决\nc、登录39互联网医院官方网站www.39hospital.com进行上传</string>
+
+    <!--上传须知Dialog-->
+    <string name="upload_instruction_title">图片上传须知</string>
+    <string name="upload_instruction_content">1.请在光线充足的环境下进行拍摄。拍摄时要注意避免反光；在拍摄胶片时，要关闭相机的闪光灯。\n\n
+    2.翻拍胶片时的背景可以选择：医院的阅片箱、白色灯箱、投影仪的白色幕布；将电脑的显示屏调成完全的白色作为背景；使用洁净、没有颜色或者花纹的窗户或白墙壁作为背景。避免背景出现建筑物等阴影。\n\n
+    3.应在检查资料的正上方垂直进行拍摄，并保证拍摄的字迹和图案清晰完整。避免上传不清晰、不合格的照片，如有需要请重拍。\n\n
+    4.请勿对翻拍的照片做其他修改或使用效果。\n\n
+    5.您的资料非常重要，请勿重复上传或者漏传。\n\n</string>
+    <string name="upload_instruction_dicom_title">Dicom文件上传须知</string>
+    <string name="upload_instruction_dicom_content">1、什么是DICOM文件？\n医院在对病人做检查时，用X光机、CT机器对病人扫描产生的检查结果，能够以DICOM协议规定格式的形式保存起来，此类文件信息须使用专业的软件打开查看。DICOM文件能帮助医生全方位动态查看病人的医学成像结果，从而辅助医生对病情做更细致、专业的判断。\n目前，DICOM被广泛应用于放射医疗，心血管成像以及放射诊疗诊断设备（X射线，CT，核磁共振，超声等）并且在眼科和牙科等其他医学领域得到越来越深入广泛的应用。\n\n
+    2、如何获得DICOM文件？\nDICOM文件是医生给患者做X射线，CT，核磁共振，超声等检查之后，使用专业的设备生成的电子化数据，可保存在光盘或存储移动设备中，方便携带。\n\n
+    3、怎么上传DICOM文件？\na、将文件压缩包以患者手机号码命名，发送邮件到file@39hospital.com\nb、或者联系医生助理帮您解决\nc、登录39互联网医院官方网站www.39hospital.com 进行上传</string>
+    <string name="upload_instruction_mail_title">邮寄上传须知</string>
+    <string name="upload_instruction_mail_content">1、请使用正规的快递。\n\n
+    2、我们会将您的资料连同二次诊疗报告一同原路返回邮寄给您，请您务必填写好详细的收件地址。\n\n
+    3、请在邮件中注明订单号与患者姓名。\n\n
+    4、请支付寄出费用，不接受到付。\n\n
+    北京市海淀区北四环西路66号中国技术交易大厦B座20层高端医疗业务部收\n\n
+    电话：010-82652998&#160;&#160;&#160;&#160;&#160;&#160;&#160;邮编：100000\n\n
+    </string>
+
+    <!-- 资料管理 -->
+    <string name="help">帮&#160;助</string>
+    <string name="remark">备&#160;注</string>
+    <string name="data_manage_patient">患者：</string>
+    <string name="data_manage_consult_number">就诊编号：</string>
+    <string name="auxiliary_examination">辅助检查</string>
+    <string name="relate_record">关联病历</string>
+    <string name="add_relate_record">添加关联病历</string>
+    <string name="select_relate_record">选择关联病历</string>
+    <string name="add_relate">添加关联</string>
+    <string name="confirm_relate">确认关联</string>
+    <string name="related_record">已关联病历</string>
+    <string name="data_manage_relate_record_tips_1">您可以对患者现有的病历进行关联，关联后可在患者病历中进行查看</string>
+    <string name="data_manage_upload_tips_1">请上传患者的病历资料及检查结果，医生助理将在1个工作日内协助患者完成资料的审核及补充</string>
+    <string name="data_manage_upload_tips_2">注：也可以邮寄资料，因邮寄时间较长，请耐心等待。若您需上传Dicom文件，请至上传须知中查看详情。</string>
+    <string name="data_manage_imaging_tips_1">请上传患者的Dicom文件检查资料，上传完成后，医生助理将在1个工作日内为您整理规范病历。</string>
+    <string name="data_manage_imaging_tips_2">远程影像会诊需上传Dicom文件，请至39互联网医院官网www.39hospital.com进行上传。</string>
+    <string name="no_dicom_file">暂无Dicom文件</string>
+    <string name="data_manager_dicom_not_complete">资料暂不齐全</string>
+    <string name="data_manager_dicom_complete">资料已齐全</string>
+    <string name="data_manager_not_pass">未通过审核资料</string>
+    <string name="data_manager_pass">通过审核资料</string>
+    <string name="dialog_photo_way_album">选择相册</string>
+    <string name="dialog_photo_way_camera">相机拍摄</string>
+    <string name="dialog_photo_way_close">关闭</string>
+    <string name="data_manage_dialog_delete_title">删除失败</string>
+    <string name="data_manage_dialog_delete_message">该图片已审核成功，不可删除。</string>
+    <string name="data_manage_dialog_delete_ok">确定</string>
+    <string name="data_upload_success">上传成功</string>
+    <string name="data_upload_fail">上传失败</string>
+    <string name="data_delete_success">删除成功</string>
+    <string name="data_delete_fail">删除失败</string>
+    <string name="data_commit_success">提交成功</string>
+    <string name="no_network">你的手机还没有联网，请连入互联网。</string>
+    <string name="no_wifi">你还没有连接wifi，是否继续上传资料？</string>
+    <string name="upload_temporary">暂不上传</string>
+    <string name="upload_continue">继续上传</string>
+    <string name="data_manager_shot">拍摄</string>
+    <string name="upload_queue">上传队列</string>
+    <string name="upload_queue_pause">暂停</string>
+    <string name="upload_queue_empty">清空</string>
+    <string name="upload_ing">正在上传</string>
+    <string name="upload_line_up">排队中</string>
+    <string name="data_upload_recovery">恢复上传</string>
+    <string name="data_upload_no_record">无上传记录</string>
+    <string name="data_queue_determine_empty">确定清空上传成功的记录吗？</string>
+    <string name="data_queue_pause_upload_data">已暂停上传资料</string>
+    <string name="data_queue_upload_result">上传结果</string>
+    <string name="data_queue_upload_result_see">查看</string>
+    <string name="data_queue_upload_result_again">重传</string>
+    <string name="data_queue_upload_result_all_success">全部成功</string>
+    <string name="data_queue_upload_result_fail">失败%1$d张</string>
+    <string name="data_queue_upload_num">已上传资料:&#160;%1$d项</string>
+    <string name="data_queue_upload_success">已上传</string>
+    <string name="data_queue_upload_ing">上传中</string>
+
+    <!-- 资料管理 -->
+    <string name="photo_picker_title">相机胶卷</string>
+    <string name="photo_picker_confirm">完成</string>
+    <string name="photo_picker_confirm_count">完成(%1$d)</string>
+    <string name="photo_picker_max_tips">你最多只能选择%1$d张照片</string>
+    <string name="capture_cancel">取消</string>
+    <string name="capture_photo_upload">上传</string>
+    <string name="capture_photo_sure_delete">确定删除</string>
+    <string name="confirm_delete">确认删除</string>
+
+    <!-- 大图预览-->
+    <string name="pic_browse_delete">删除</string>
+    <string name="pic_browse_upload_again">重新上传</string>
+    <string name="pic_browse_check_hospital">检查医院:&#160;%1$s</string>
+    <string name="pic_browse_check_time">检查时间:&#160;%1$s</string>
+    <string name="pic_browse_check_result">检查结果:&#160;%1$s</string>
+    <string name="pic_browse_fail_check_result">审核失败原因:&#160;%1$s</string>
+    <string name="pic_browse_last_pic_tips_next">已是最后一张图片，滑动继续查看下一类检查</string>
+    <string name="pic_browse_last_pic_tips_none">已是最后一张图片，后面已无检查资料</string>
+    <string name="pic_browse_first_pic_tips_next">已是第一张图片，滑动继续查看上一类检查</string>
+    <string name="pic_browse_first_pic_tips_none">已是第一张图片，前面已无检查资料</string>
+
+    <!-- 患者信息 -->
+    <string name="title_bar_patient_information">患者信息</string>
+    <string name="manage">管&#160;理</string>
+    <string name="report_medical">基础病历</string>
+    <string name="report_assist_examine">辅助检查</string>
+    <string name="report_relate_medical">关联病历</string>
+    <string name="report_relate_medical_no_record">暂无关联病历</string>
+    <string name="report_consult_idea">会诊意见</string>
+    <string name="enter_the_consulting_room">进入诊室</string>
+    <string name="enter_the_im_room">聊天室</string>
+    <string name="table_medical_consultation_information">医学咨询信息</string>
+    <string name="table_consultation_information">会诊信息</string>
+    <string name="table_patient_name">患者姓名</string>
+    <string name="table_contact_information">联系方式</string>
+    <string name="table_apply_time">申请时间</string>
+    <string name="table_advice_purpose">咨询目的</string>
+    <string name="table_consult_purpose">会诊目的</string>
+    <string name="table_apply_doctor">申请医师</string>
+    <string name="table_advice_doctor">咨询医生</string>
+    <string name="table_consult_doctor">会诊医生</string>
+    <string name="table_doctor_assistant">医生助理</string>
+    <string name="table_hospital_name">39互联网医院</string>
+    <string name="table_consult_num">就诊编号：</string>
+    <string name="first_doctor">首诊医生</string>
+    <string name="oneself">本人</string>
+    <string name="patient_linkman">患者联系人</string>
+    <string name="wait_for_consult">等待就诊</string>
+    <string name="first_diagnosis">初次诊断：%1$s</string>
+    <string name="patient_readme">患者自述</string>
+    <string name="illness_digest">病情摘要</string>
+    <string name="voice_readme">语音医嘱：</string>
+    <string name="table_name">姓名：</string>
+    <string name="table_age">年龄：</string>
+    <string name="table_sex">性别：</string>
+    <string name="table_consult_hospital">就诊医院：%1$s</string>
+    <string name="table_record_time">记录时间</string>
+    <string name="table_medical_history_narrator">病史叙述者：%1$s</string>
+    <string name="table_main_narrator">主诉</string>
+    <string name="table_present_medical_history">现病史</string>
+    <string name="table_past_medical_history">既往史</string>
+    <string name="table_personal_history">个人史</string>
+    <string name="table_obstetric_history">婚育史</string>
+    <string name="table_menstrual_history">月经史</string>
+    <string name="table_family_history">家族史</string>
+    <string name="table_allergic_history">过敏史</string>
+    <string name="table_operation_history">手术史</string>
+    <string name="table_present_medical_history_format">现病史：%1$s</string>
+    <string name="table_past_medical_history_format">既往史：%1$s</string>
+    <string name="table_personal_history_format">个人史：%1$s</string>
+    <string name="table_obstetric_history_format">婚育史：%1$s</string>
+    <string name="table_family_history_format">家族史：%1$s</string>
+    <string name="table_allergic_history_format">过敏史：%1$s</string>
+    <string name="table_operation_history_format">手术史：%1$s</string>
+    <string name="no_have">无</string>
+    <string name="medical_examination">体格检查</string>
+    <string name="table_height">身&#160;高</string>
+    <string name="table_temperature">体&#160;温</string>
+    <string name="table_weight">体&#160;重</string>
+    <string name="table_pulse">脉&#160;搏</string>
+    <string name="table_blood_pressure">血&#160;压</string>
+    <string name="table_breathing">呼&#160;吸</string>
+    <string name="treatment_plan">治疗方案</string>
+    <string name="medical_treatment">药物治疗</string>
+    <string name="surgical_treatment">手术治疗</string>
+    <string name="physics_treatment">物理治疗</string>
+    <string name="table_medical_name">药名：</string>
+    <string name="table_dosage">用量：</string>
+    <string name="table_treatment_course">疗程：</string>
+    <string name="recovery_situation">康复情况</string>
+    <string name="doctor_signature">医生签名：</string>
+    <string name="doctor_no_report">暂无会诊意见</string>
+    <string name="report_date">日&#160;期：</string>
+    <string name="remark_add">添加备注</string>
+    <string name="remark_input_hint">请输入备注信息</string>
+    <string name="user_type_assistant_doctor">医生助理</string>
+    <string name="user_type_superior_doctor">上级专家</string>
+    <string name="user_type_attending_doctor">首诊医生</string>
+    <string name="patient_height_format">%1$scm</string>
+    <string name="patient_temperature_format">%1$s℃</string>
+    <string name="patient_weight_format">%1$skg</string>
+    <string name="patient_pluse_format">%1$s次/分</string>
+    <string name="patient_blood_pressure_format">%1$s/%2$smmHg</string>
+    <string name="patient_breath_format">%1$s次/分</string>
+    <string name="phone_format">电话：%1$s</string>
+    <string name="patient">患者</string>
+    <string name="doctor_assistant">医生助理</string>
+    <string name="job_num">工&#160;号：%1$s</string>
+    <string name="phone_num">手机号：%1$s</string>
+    <string name="contact_assistant_doctor">联系医生助理</string>
+    <string name="menu_data_manage">资料管理</string>
+    <string name="menu_give_advice">出具医嘱</string>
+    <string name="menu_launch_reconsult">发起复诊</string>
+    <string name="assist_examine_by_type">按类型查看</string>
+    <string name="assist_examine_by_time">按时间查看</string>
+    <string name="recovery_situation_good">良好</string>
+    <string name="recovery_situation_general">一般</string>
+    <string name="recovery_situation_bad">差</string>
+    <string name="assist_examine_no_material">暂无辅助检查资料</string>
+    <string name="dialog_can_not_operate">当前就诊状态下，不可进行此操作</string>
+    <string name="patient_desc_type_diagnosis_and_therapeutic">明确诊断及治疗方案</string>
+    <string name="patient_desc_type_diagnosis">明确诊断</string>
+    <string name="patient_desc_type_therapeutic">更佳治疗方案</string>
+    <string name="patient_desc_type_other">其他</string>
+    <string name="time_to_be_determined">时间待定</string>
+    <string name="diagnosis_time">诊断时间:&#160;%1$s</string>
+    <string name="disease_name">疾病名称:&#160;%1$s</string>
+
+    <!-- 搜索 -->
+    <string name="search_doctor_hint">输入医生姓名进行搜索</string>
+    <string name="search_patient_hint">请输入患者编号、姓名查找</string>
+    <string name="search_no_result">无搜索结果</string>
+    <string name="search_no_content">请输入搜索内容</string>
+    <string name="search_consultation_hint">输入内容点击按钮即可查找</string>
+
+    <!--出具医嘱-->
+    <string name="consult_patient_title">患者</string>
+    <string name="consult_patient_age">%s</string>
+    <string name="consult_appointment_id">就诊编号：%d</string>
+    <string name="consult_del">删除</string>
+    <string name="consult_deleting_voice_file">正在删除,请稍候</string>
+    <string name="consult_del_voice_file_field">删除失败,请重试</string>
+    <string name="consult_record">录制语音</string>
+    <string name="consult_recording">录制中</string>
+    <string name="consult_be_recording">正在录音</string>
+    <string name="consult_click_stop">点击结束录音</string>
+    <string name="consult_click_start">点击开始录音</string>
+    <string name="consult_record_too_short">最低时长录制不得少于3秒</string>
+
+    <!-- 待办事项排班 -->
+    <string name="im_consult_patient_name">%1$s(%2$d)</string>
+    <string name="im_group_status_waiting">待接诊</string>
+    <string name="im_group_status_consulting">就诊中</string>
+    <string name="im_group_status_refused">已拒诊</string>
+    <string name="im_group_status_complete">已完成</string>
+    <string name="im_group_status_following">随诊中</string>
+    <string name="im_group_role_name">%s:</string>
+    <string name="im_group_new_situation">新动态！</string>
+    <string name="im_group_pic">[图片]</string>
+    <string name="im_group_voice">[语音]</string>
+    <string name="im_group_no_consult">暂无就诊</string>
+
+    <!-- ic_doctor_detail_share -->
+    <string name="share_wei_chat">微信</string>
+    <string name="share_friend_circle">朋友圈</string>
+    <string name="share_qq">QQ</string>
+    <string name="share_my_consult">我的就诊</string>
+    <string name="share_copy_link">复制链接</string>
+    <string name="share_qr_code">二维码</string>
+    <string name="share_save_img">保存为图片</string>
+    <string name="already_share_save_img">已保存为图片</string>
+    <string name="share_link_copied">已复制链接到剪贴板</string>
+    <string name="share_wechat_not_installed">设备未安装微信，无法使用微信分享功能</string>
+
+    <!-- 医生二维码 -->
+    <string name="doctor_qr_code">医生二维码</string>
+    <string name="have_a_scan">扫一扫，获取医生详情</string>
+
+    <!-- 分享医生名片 -->
+    <string name="share_send_card_to">发送名片至：</string>
+    <string name="share_consult_num">就诊编号：</string>
+    <string name="share_patient_name">患　　者：</string>
+    <string name="share_doctor_card">医生名片</string>
+    <string name="share_suggest">推荐建议</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_failed">分享失败</string>
+    <string name="im_room_non_existent">IM房间不存在</string>
+
+    <!-- 会诊管理 -->
+    <string name="consultation_manage_hint">查找医生、就诊编号</string>
+    <string name="consultation_manage_all">全部</string>
+    <string name="consultation_manage_triage">分诊</string>
+    <string name="consultation_manage_carry_on">进行</string>
+    <string name="consultation_search_num">搜编号</string>
+    <string name="consultation_search_doctor">搜首诊</string>
+    <string name="consultation_search_history">搜索记录</string>
+    <string name="consultation_search_clear_history">清除记录</string>
+    <string name="consultation_manage_not_completed_tips">有未分诊的预约，点击查看</string>
+    <string name="advance">垫付</string>
+    <string name="advance_result">垫付结果</string>
+    <string name="advance_result_fail">垫付失败</string>
+    <string name="advance_result_suc">垫付成功</string>
+    <string name="advance_result_fail_num">失败了%d个就诊</string>
+    <string name="advance_result_suc_num">已成功垫付%d个就诊</string>
+    <string name="advance_again">重新垫付</string>
+    <string name="determine_advance">确定垫付</string>
+    <string name="advance_return">去支付</string>
+    <string name="screen_time">时间:</string>
+    <string name="screen_doctor">医生:</string>
+    <string name="screen_no_doctor">无首诊</string>
+    <string name="screen_start_time">开始时间</string>
+    <string name="screen_end_time">结束时间</string>
+    <string name="screen_arrive">到</string>
+    <string name="screen_two_month">二月</string>
+    <string name="screen_three_month">三月</string>
+    <string name="screen_half_year">半年</string>
+    <string name="screen_a_year">一年</string>
+    <string name="advance_num">编号:</string>
+    <string name="advance_first_visit">首诊:</string>
+    <string name="advance_d">d: </string>
+    <string name="visit_already_paid">已支付 </string>
+    <string name="visit_unpaid">未支付 </string>
+    <string name="visit_consultation">会 </string>
+    <string name="visit_consult">咨 </string>
+    <string name="visit_complex">复 </string>
+    <string name="visit_surface">面 </string>
+    <string name="visit_turn">转 </string>
+    <string name="visit_img">影 </string>
+    <string name="visit_illness">病 </string>
+    <string name="visit_many">多 </string>
+    <string name="visit_abroad">外 </string>
+    <string name="visit_door">门 </string>
+    <string name="visit_check">查 </string>
+    <string name="advance_money">￥%s</string>
+    <string name="no_advance_appointment">没有可需垫付预约</string>
+    <string name="visit_dialog_send_massage">发送消息</string>
+    <string name="advance_common_visit">共%1$d个就诊,总共垫付%2$s元</string>
+    <string name="visit_select_screen">请选择筛选条件</string>
+    <string name="visit_screen_no_data">医生载入失败，点击重新获取</string>
+    <string name="no_result_prompt">没有找到你想要的内容</string>
+    <string name="appointment_complete">已完成不能上传资料</string>
+
+    <!-- 支付确认单 -->
+    <string name="consult_payment_confirm">支付确认单</string>
+    <string name="consult_payment_confirm_schedule_id">ID：%s</string>
+    <string name="consult_payment_confirm_num">共%s例</string>
+    <string name="consult_payment_confirm_doctor">D：%s</string>
+    <string name="consult_payment_confirm_consult_id">就诊：</string>
+    <string name="consult_payment_confirm_way">方式：</string>
+    <string name="consult_payment_confirm_date">日期：</string>
+    <string name="consult_payment_confirm_duration">时长：</string>
+    <string name="consult_payment_confirm_money">金额：</string>
+    <string name="consult_payment_confirm_image">图片：</string>
+    <string name="consult_payment_confirm_duration_cb">时长</string>
+    <string name="consult_payment_confirm_record_cb">病历</string>
+    <string name="consult_payment_confirm_date_hint">请选择日期</string>
+    <string name="consult_payment_confirm_begin_time_hint">开始时间</string>
+    <string name="consult_payment_confirm_end_time_hint">结束时间</string>
+    <string name="consult_payment_confirm_minute">分钟</string>
+    <string name="consult_payment_confirm_yuan">元</string>
+    <string name="consult_payment_confirm_modify">修&#160;改</string>
+    <string name="consult_payment_confirm_toast">请填写所有内容</string>
+    <string name="consult_payment_confirm_dialog_title">请确认时长、金额填写无误</string>
+    <string name="consult_payment_confirm_pic_upload_max">最多上传%d张图片</string>
+
+    <string name="consult_help_center">帮助中心</string>
+    <string name="consult_help_center_break">返回</string>
+    <string name="consult_help_center_help_end">一键协助结束</string>
+    <string name="consult_help_evaluate">请您为我的服务评分</string>
+    <string name="consult_help_thanks_evaluation">感谢您的评价</string>
+    <string name="consult_help_time">本次协助用时&#160;%1$s</string>
+    <string name="consult_help_doctor_assistant">%1$s&#160;医生助理</string>
+    <string name="consult_help_customer_service_personnel">客服人员</string>
+
+</resources>

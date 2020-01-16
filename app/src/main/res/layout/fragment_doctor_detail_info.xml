@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/fragment_doctor_detail_info_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_solid_ffffff_radius_5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/fragment_doctor_detail_info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_feed_back_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bg_solid_eeeeee_radius_8"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_service_fraction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_fe7725"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_service_fraction_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fragment_doctor_detail_service_fraction"
+                            android:layout_marginTop="5dp"
+                            android:text="综合评价"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_14" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_doctor_skill_level_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="医疗水平："
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_doctor_skill_fraction_desc_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/fragment_doctor_detail_doctor_skill_level_tv"
+                            android:textColor="@color/color_fe7725"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_doctor_skill_level_desc_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/fragment_doctor_detail_doctor_skill_fraction_desc_tv"
+                            android:textColor="@color/color_049eff"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_doctor_service_level_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fragment_doctor_detail_doctor_skill_level_tv"
+                            android:layout_marginTop="8dp"
+                            android:text="服务态度："
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_doctor_service_level_fraction_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fragment_doctor_detail_doctor_skill_level_tv"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/fragment_doctor_detail_doctor_service_level_tv"
+                            android:textColor="@color/color_fe7725"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <TextView
+                            android:id="@+id/fragment_doctor_detail_doctor_service_level_desc_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fragment_doctor_detail_doctor_skill_level_tv"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/fragment_doctor_detail_doctor_service_level_fraction_tv"
+                            android:textColor="@color/color_049eff"
+                            android:textSize="@dimen/font_size_14" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fragment_doctor_detail_doctor_service_fbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:alignContent="flex_start"
+                    app:flexWrap="wrap" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="16dp"
+                    android:background="@color/color_app_main_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/doctor_detail_doctor_skill"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_doctor_detail_doctor_skill_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingMultiplier="1.1"
+                android:text="暂无"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="16dp"
+                    android:background="@color/color_app_main_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/doctor_detail_doctor_info"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_doctor_detail_doctor_info_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingMultiplier="1.1"
+                android:text="暂无"
+                android:textColor="@color/color_1a1a1a"
+                android:textSize="@dimen/font_size_14" />
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_work_time_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/doctor_detail_doctor_work_time"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/doctor_detail_doctor_work_time_desc"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/font_size_12" />
+                </LinearLayout>
+
+                <cn.longmaster.hospital.doctor.view.timetable.ReceptionScheduleView
+                    android:id="@+id/fragment_doctor_detail_work_time_st"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:leftMargin="0dp"
+                    app:rightMargin="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_recommend_reason_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/doctor_detail_recommend_reason"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fragment_doctor_detail_recommend_reason_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_doctor_detail_belong_team_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="16dp"
+                        android:background="@color/color_app_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/doctor_detail_belong_team"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_doctor_detail_belong_team_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        layout="@layout/include_no_data_doctor_info"
+        android:visibility="gone" />
+</FrameLayout>

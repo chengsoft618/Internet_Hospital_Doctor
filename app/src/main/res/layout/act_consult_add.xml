@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff">
+
+        <ImageView
+            android:id="@+id/iv_tool_bar_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="14dp"
+            android:src="@mipmap/ic_actionbar_back_white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="@string/fill_consult_information"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_18" />
+
+        <TextView
+            android:id="@+id/tv_tool_bar_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_solid_035cc0_radius_45"
+            android:gravity="center_vertical"
+            android:maxLength="4"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="分诊中心"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_049eff">
+
+                <RelativeLayout
+                    android:id="@+id/act_consult_add_check_type_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="64dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/act_consult_add_choose_type_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="39.5dp"
+                        android:gravity="bottom|center_horizontal">
+
+                        <TextView
+                            android:id="@+id/act_consult_add_choose_expert_tv"
+                            android:layout_width="115dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bg_solid_0290ef_radius_45"
+                            android:gravity="center"
+                            android:paddingRight="4dp"
+                            android:text="选择专家"
+                            android:textColor="@color/color_white"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp">
+
+                            <TextView
+                                android:id="@+id/act_consult_add_choose_triage_tv"
+                                android:layout_width="115dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/bg_solid_ffffff_radius_45"
+                                android:gravity="center"
+                                android:text="选择分诊中心"
+                                android:textColor="@color/color_049eff"
+                                android:textSize="@dimen/font_size_16" />
+
+                            <ImageView
+                                android:id="@+id/act_consult_add_choose_triage_iv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginLeft="-16dp"
+                                android:layout_toRightOf="@+id/act_consult_add_choose_triage_tv"
+                                android:src="@mipmap/ic_rounds_add_checked_type" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/act_consult_add_choose_type_note_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_choose_type_ll"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="提示："
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_choose_type_note_desc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_choose_type_ll"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_toRightOf="@+id/act_consult_add_choose_type_note_tv"
+                        android:text="分诊中心将会为您精准匹配，若有意向专家，可自主选择专家"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/act_consult_add_doctor_info_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="52dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/act_consult_add_doctor_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="预约医生"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_doctor_desc_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="64dp"
+                        android:layout_toRightOf="@+id/act_consult_add_doctor_tv"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_expert_hospital_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_doctor_desc_tv"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_cast_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_expert_hospital_tv"
+                        android:layout_marginTop="8dp"
+                        android:text="就诊费用："
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_cast_desc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_expert_hospital_tv"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/act_consult_add_cast_tv"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <ImageView
+                        android:id="@+id/act_consult_mould_modify_expert_iv"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:padding="6dp"
+                        android:src="@mipmap/ic_rounds_add_mod_expert" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-32dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/act_consult_add_consult_type_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_solid_ffffff_radius_8"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/act_consult_add_consult_type_v"
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_consult_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/act_consult_add_consult_type_v"
+                        android:gravity="center"
+                        android:text="选择就诊类型*"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <RadioGroup
+                        android:id="@+id/act_consult_add_consult_type_rg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_consult_type_tv"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/act_consult_add_consult_remote_consult_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="7.5dp"
+                            android:background="@drawable/bg_cb_doctor_list_filter"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:text="远程会诊"
+                            android:textColor="@drawable/bg_txt_color_121415_049eff" />
+
+                        <RadioButton
+                            android:id="@+id/act_consult_add_consult_remote_advice_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="7.5dp"
+                            android:background="@drawable/bg_cb_doctor_list_filter"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:text="远程咨询"
+                            android:textColor="@drawable/bg_txt_color_121415_049eff" />
+                    </RadioGroup>
+
+                    <View
+                        android:id="@+id/act_consult_add_consult_time_v"
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_below="@+id/act_consult_add_consult_type_rg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_consult_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_consult_type_rg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/act_consult_add_consult_time_v"
+                        android:gravity="center"
+                        android:text="选择就诊排班时间"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/act_consult_add_consult_time_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_consult_time_tv"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="20dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_consult_no_time_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/act_consult_add_consult_time_tv"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:text="暂无排班"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_size_16" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_solid_ffffff_radius_8">
+
+                    <View
+                        android:id="@+id/act_consult_add_patient_info_v"
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_patient_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/act_consult_add_patient_info_v"
+                        android:gravity="center"
+                        android:text="患者信息*"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/act_consult_add_patient_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_below="@+id/act_consult_add_patient_info_tv"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="16dp"
+                        android:hint="@string/patient_name_hint"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <EditText
+                        android:id="@+id/act_consult_add_patient_phone_num_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_below="@+id/act_consult_add_patient_name_et"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="14dp"
+                        android:hint="@string/patient_phone_num_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/font_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_solid_ffffff_radius_8">
+
+                    <View
+                        android:id="@+id/act_consult_add_patient_overview_v"
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/color_049eff" />
+
+                    <TextView
+                        android:id="@+id/act_consult_add_patient_overview_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/act_consult_add_patient_overview_v"
+                        android:text="患者概述*"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/act_consult_add_patient_overview_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/act_consult_add_patient_overview_tv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_solid_f8f8f8_radius_3"
+                        android:gravity="top|left"
+                        android:hint="@string/patient_summarize_hint"
+                        android:imeOptions="actionDone"
+                        android:minLines="5"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/font_size_14" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/fill_consult_information_help"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/act_consult_add_info_next_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_solid_049eff_radius_45"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+    </FrameLayout>
+</LinearLayout>

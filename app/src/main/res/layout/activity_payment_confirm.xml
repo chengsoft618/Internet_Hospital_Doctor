@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:doctor="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_eeeeee"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ui.consult.consultant.PaymentConfirmActivity">
+
+    <cn.longmaster.hospital.doctor.view.AppActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        doctor:function="left_btn|title|right_btn"
+        doctor:rightBtnClick="rightClick"
+        doctor:rightBtnImage="@drawable/bg_btn_right_consult"
+        doctor:titleText="@string/consult_payment_confirm" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/activity_payment_confirm_schedule_id_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consult_payment_confirm_schedule_id"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/activity_payment_confirm_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_size_12" />
+
+        <TextView
+            android:id="@+id/activity_payment_confirm_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consult_payment_confirm_num"
+            android:textColor="@color/color_36a3f0"
+            android:textSize="@dimen/font_size_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="7dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/activity_payment_confirm_doctor_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consult_payment_confirm_doctor"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/activity_payment_confirm_hospital_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:text="@string/consult_payment_confirm_consult_id"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_payment_confirm_consult_id_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="11dp"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/font_size_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_way"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <RadioGroup
+                    android:id="@+id/activity_payment_confirm_way_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/activity_payment_confirm_duration_rb"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/bg_checkbox"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/consult_payment_confirm_duration_cb"
+                        android:textColor="@color/text_color_45aef8_white" />
+
+                    <RadioButton
+                        android:id="@+id/activity_payment_confirm_record_rb"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/bg_checkbox"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/consult_payment_confirm_record_cb"
+                        android:textColor="@color/text_color_45aef8_white" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_date"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/activity_payment_confirm_date_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/consult_payment_confirm_date_hint"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/color_bbbbbb"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:id="@+id/activity_payment_confirm_right_arrow_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_right_arrow_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_date"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/activity_payment_confirm_begin_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/consult_payment_confirm_begin_time_hint"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/color_bbbbbb"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/color_bbbbbb" />
+
+                <TextView
+                    android:id="@+id/activity_payment_confirm_end_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/consult_payment_confirm_end_time_hint"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/color_bbbbbb"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_duration"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <EditText
+                    android:id="@+id/activity_payment_confirm_duration_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_transport"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:minWidth="35dp"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_minute"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/color_bbbbbb"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_money"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <EditText
+                    android:id="@+id/activity_payment_confirm_money_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_transport"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:minWidth="45dp"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_yuan"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/color_bbbbbb"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/color_white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/consult_payment_confirm_image"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14" />
+
+                <cn.longmaster.hospital.doctor.view.ScrollGridView
+                    android:id="@+id/activity_payment_confirm_img_list_sgv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:listSelector="@color/color_transport"
+                    android:numColumns="4" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/activity_payment_confirm_save_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_btn_blue"
+                android:text="@string/save"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_18" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

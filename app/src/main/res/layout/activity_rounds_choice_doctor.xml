@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical">
+
+    <cn.longmaster.hospital.doctor.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_049eff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_049eff">
+
+        <ImageView
+            android:id="@+id/iv_tool_bar_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="14dp"
+            android:src="@mipmap/ic_actionbar_back_white" />
+
+        <RadioGroup
+            android:id="@+id/act_rounds_choose_doctor_rg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/act_rounds_choose_commend_doctor_rb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounds_doctor_choose_tab"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/rounds_choice_doctor_common_expert"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_18"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/act_rounds_choose_more_doctor_rb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_049eff"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/rounds_choice_doctor_more_expert"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_16" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/act_rounds_choose_commend_doctor_v"
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/act_rounds_choose_doctor_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
