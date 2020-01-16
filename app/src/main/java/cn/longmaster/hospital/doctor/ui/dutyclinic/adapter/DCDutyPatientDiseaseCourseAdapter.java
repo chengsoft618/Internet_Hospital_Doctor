@@ -39,6 +39,7 @@ public class DCDutyPatientDiseaseCourseAdapter extends BaseQuickAdapter<DCDutyPa
     protected void convert(@NonNull BaseViewHolder helper, DCDutyPatientDiseaseItemInfo item) {
         View timeLineView = helper.getView(R.id.item_dc_duty_patient_disease_time_line_view);
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) timeLineView.getLayoutParams();
+        timeLineView.setLayoutParams(layoutParams);
         if (helper.getAdapterPosition() == 0) {
             if (LibCollections.size(getData()) >= 2) {
                 layoutParams.setMargins(DisplayUtil.dp2px(22), DisplayUtil.dp2px(37), 0, 0);
